@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bebas+Neue&family=Jost:wght@200&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;overflow:hidden;background:#dce8ef;font-family:"Archivo",sans-serif;color:#0b0b0b}
+#p{position:absolute;inset:0;overflow:hidden}
+svg{position:absolute;inset:0;width:100%;height:100%}
+svg text{font-family:"Archivo";font-weight:900;font-stretch:125%}
+.pc{position:absolute;height:auto;filter:drop-shadow(0 26px 30px rgba(0,0,0,.28));will-change:transform}
+.lg{position:relative;display:inline-grid;place-items:center;width:1.9em;height:2.2em;padding:.24em 0 .14em;line-height:1;font-size:30px}
+.lg::before,.lg::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:.05em solid currentColor}
+.lg::before{left:0;border-right:0}.lg::after{right:0;border-left:0}
+.lg b{font-family:"Jost";font-weight:200;font-size:.92em;letter-spacing:.06em;margin-top:.14em}
+.lg i{font-family:"Bebas Neue";font-style:normal;font-size:.39em;letter-spacing:.08em;margin-top:-.1em}
+#top{position:absolute;left:30px;right:30px;top:26px;display:flex;justify-content:space-between;font-size:15px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+#rod{position:absolute;left:30px;right:30px;bottom:28px;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:600}
+#rod b{background:#0b0b0b;color:#f3f0ea;font-size:16px;letter-spacing:.14em;text-transform:uppercase;padding:17px 24px}
+#fim{position:absolute;inset:0;background:#0b0b0b;color:#f3f0ea;display:grid;place-items:center;text-align:center;opacity:0}
+#fim .lg{font-size:120px}#fim p{margin-top:36px;font-size:24px;letter-spacing:.16em}
+</style></head><body><div id="p">
+<div id="top"><span class="lg"><b>BK</b><i>CLOTHING</i></span><span>Joinville · envio para todo o Brasil</span></div>
+<svg id="wd" viewBox="0 0 1080 1080"><text x="30" y="370" textLength="1020" lengthAdjust="spacingAndGlyphs" font-size="198">BOMBER</text></svg>
+<img class="pc" id="j0" src="../site2/img/cut/1914784.webp" style="width:490px;left:288px;top:694px">
+<img class="pc" id="j2" src="../site2/img/cut/1914786.webp" style="width:490px;left:792px;top:694px">
+<img class="pc" id="j1" src="../site2/img/cut/1914785.webp" style="width:510px;left:540px;top:674px">
+<div id="rod"><span>Jaqueta bomber em três cores</span><b>Ver na loja →</b></div>
+<div id="fim"><div><span class="lg"><b>BK</b><i>CLOTHING</i></span><p>bkclothing.com.br</p></div></div>
+</div><script>
+const $=s=>document.querySelector(s);
+const fora=x=>x<0?0:x>1?1:1-Math.pow(1-x,3);
+const volta=x=>{x=Math.max(0,Math.min(1,x));const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+window.render=async t=>{
+  const w=fora((t-.1)/.6);$('#wd').style.clipPath=`inset(${(1-w)*100}% 0 0 0)`;$('#wd').style.transform=`translateY(${(1-w)*40}px)`;
+  [['#j0',.6,-8],['#j1',1.0,0],['#j2',1.4,8]].forEach(([s,ini,rot],i)=>{
+    const k=volta((t-ini)/.75),vis=t>=ini?1:0,bal=t>2.4?Math.sin((t-2.4)*1.6+i)*5:0;
+    $(s).style.opacity=vis;$(s).style.transform=`translate(-50%,-50%) translateY(${(1-k)*-1000+bal}px) rotate(${rot+(1-k)*14}deg)`;});
+  $('#rod').style.opacity=fora((t-2.3)/.5);$('#top').style.opacity=fora((t-.2)/.5);
+  $('#fim').style.opacity=fora((t-5.05)/.35);
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+};
+</script></body></html>

@@ -1,0 +1,1788 @@
+[
+ {
+  "id": "1914784",
+  "slug": "jaqueta-tommy",
+  "name": "Jaqueta Tommy",
+  "price": "299,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1ffefb20-99a5-405b-91a8-4665367ce00f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/bb156bb8-f1d7-4d91-8752-1dccdbab8ebc.jpeg"
+  ],
+  "cats": [
+   "Jaqueta"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1914785",
+  "slug": "jaqueta-tommy",
+  "name": "Jaqueta Tommy",
+  "price": "299,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/91276dd1-4655-4fc1-8fce-4850d1cf16c4.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ed91b0d3-af53-4d3f-b223-733b9379c2b3.jpeg"
+  ],
+  "cats": [
+   "Jaqueta"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1914786",
+  "slug": "jaqueta-tommy",
+  "name": "Jaqueta Tommy",
+  "price": "299,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/39fdefd7-daa0-4bfe-9ac3-7b8d7a317909.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a28b5feb-ca0c-405f-80d9-9d3ac004ddcd.jpeg"
+  ],
+  "cats": [
+   "Jaqueta"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1910184",
+  "slug": "moletom-comp",
+  "name": "Moletom Comp",
+  "price": "299,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9e09a938-b08d-4051-9f81-cc101050de85.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9f274f6b-535d-4c55-8b76-d09690f3e658.jpeg"
+  ],
+  "cats": [
+   "Moletom"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703192",
+  "slug": "bag-high",
+  "name": "Bag High",
+  "price": "69,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/c9a66b75-4aeb-40cf-8322-f1ed7c05cd3b.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/746608f5-a9cf-410e-b1b4-c6997d745a6c.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7f91c82c-8fb3-47f9-98ea-9d85f65b8422.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849655",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/065ce654-8ca2-4f56-8e97-4aee234f9b59.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b615cbcf-891f-4445-9391-08efb09db5b1.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853949",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/90a4091d-13c3-4b0c-889f-7b464271c4fa.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853948",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/df4b1f31-8e8d-43d9-904e-8e7155f55ac9.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853947",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9a230356-ba1c-4143-9421-d720f142e02f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/be11faa8-7296-418a-9974-57c50d55da3d.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688198",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/115d19aa-6e83-4bc8-8587-334caf3284a9.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9d407bb8-9856-46dd-afbf-583766b81e5c.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853950",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/be5c5039-73ac-42ac-8071-fed993f45103.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849656",
+  "slug": "bermuda-armani",
+  "name": "Bermuda Armani",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9949ff63-07c1-437a-a1fc-67388282abe8.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a246069c-52f8-4f59-b9d8-a2637dc2aaa4.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690982",
+  "slug": "bermuda-boss",
+  "name": "Bermuda Boss",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/08c6cd27-630d-447a-9f44-9ddd0b08a27e.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853956",
+  "slug": "bermuda-diesel",
+  "name": "Bermuda Diesel",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9c275fec-74b7-4c2a-9983-27f592ddfc5b.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853955",
+  "slug": "bermuda-diesel",
+  "name": "Bermuda Diesel",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4a264743-0367-4dd8-a704-c9ddd7fc40a8.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853951",
+  "slug": "bermuda-diesel",
+  "name": "Bermuda Diesel",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e9083764-dd04-49ae-81de-9a06da76fb68.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853952",
+  "slug": "bermuda-diesel",
+  "name": "Bermuda Diesel",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0916f11c-b3b3-4f32-af9a-d92e2fb0b495.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1685959",
+  "slug": "bermuda-high",
+  "name": "Bermuda High",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4a7c0986-23f8-492e-b259-bcadafc28d09.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/50b4e381-186b-4a4c-8d1c-3dcfb32c1ea9.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9352846a-9f91-475c-84bf-fb7d8c121aa8.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4292756d-3e40-4008-aaab-dfc35cc445fa.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688196",
+  "slug": "bermuda-high",
+  "name": "Bermuda High",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/767d18bf-4247-4db7-a50f-06a1267157c5.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/38304c36-c01f-4544-bac6-5c0c05b475bd.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/eb44cf3d-1260-4d17-80a6-ef456cf0e996.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0c0aa3d5-988d-4323-a9fa-a58a0c18d116.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853953",
+  "slug": "bermuda-high",
+  "name": "Bermuda High",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2b6726d5-f888-4e25-90d9-86745ce206c2.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d1e1044b-c1fa-4c9b-b4ea-daac5d83d1b5.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4fc65c1a-cb06-409c-8d78-dd143029e65b.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703184",
+  "slug": "bermuda-jeans",
+  "name": "Bermuda Jeans",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b6322f6b-5f1e-4c14-af66-ad8edb460825.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703185",
+  "slug": "bermuda-jeans",
+  "name": "Bermuda Jeans",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9dd9f206-6851-4790-a38b-bf036f8f4438.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703187",
+  "slug": "bermuda-jeans",
+  "name": "Bermuda Jeans",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ad88d54a-0c64-4677-9981-4e3b952adaaa.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703190",
+  "slug": "bermuda-jeans",
+  "name": "Bermuda Jeans",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/254eec10-a6d4-475f-942e-e431908b0e50.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679477",
+  "slug": "bermuda-jordan",
+  "name": "Bermuda Jordan",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/488c1244-03a5-4230-8404-9253ecfbb00a.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853954",
+  "slug": "bermuda-jordan",
+  "name": "Bermuda Jordan",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e0345772-2002-4f5c-a5e0-966413a2c7dd.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679480",
+  "slug": "bermuda-jordan",
+  "name": "Bermuda Jordan",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/03ea5c96-c4db-457e-8823-a199ba74c36f.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678829",
+  "slug": "bermuda-lacoste",
+  "name": "Bermuda Lacoste",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/8780de98-7418-4c33-a377-8482123baf91.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/71372aab-c1e2-4584-8c0f-38a30e4f9768.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678830",
+  "slug": "bermuda-lacoste",
+  "name": "Bermuda Lacoste",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/720ac5e3-3498-4ecd-9d9d-4817c828ae05.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678831",
+  "slug": "bermuda-lacoste",
+  "name": "Bermuda Lacoste",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2c209bb9-0a7d-4a74-81f7-34fb415bba1b.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678832",
+  "slug": "bermuda-lacoste",
+  "name": "Bermuda Lacoste",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1351d8d3-396b-4f01-bdeb-c8d64e50f2ef.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703181",
+  "slug": "bermuda-linho",
+  "name": "Bermuda Linho",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7912d4d4-21b5-4a24-adfa-4e203242f907.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679487",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/98df30e6-b221-4ae5-8a8f-5965a8dd1813.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678811",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d568bc3b-1378-4bc8-856c-1963041c2f42.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703179",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f30843fe-5f76-4942-b9ac-1c370539b60f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e4cff8bf-f365-46d7-85d8-b790c7b35953.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4b6599c5-5bce-4afb-b669-16741380cc53.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/634201a1-4d88-427e-aec4-dc7dc43268bb.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1701346",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1eaf6f70-25ad-4f0c-bc77-d12d10e09eff.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/89a39e38-f7ec-4e6f-a4f3-0d03cef685b2.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7e3be984-e1c2-4cdb-87df-8e985dc20f5d.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/803bc999-b6d0-4afc-87f7-d0d8ce16757f.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1701345",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a2c30a63-2229-4ab2-8bbd-76ffb9d3a692.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1fd9dd89-db35-4047-a607-af86c91d70a4.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d5c56104-58cc-465e-baa2-416b1897f602.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ff89ce3b-c8f2-4b5a-ae45-4750f2c03120.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f34532bf-78d1-4ff1-9b55-c0c33abdf7f1.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1701344",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0da0d5f7-c8cb-49ca-86e5-998ac292184a.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0555c495-ad2d-4577-97cd-ffbd2961ab9b.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/50b98459-ea06-49fa-8431-d4f1d0352e18.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e7dc7582-1698-4c0b-95e2-f5d4b5c22684.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b0eb41a1-ffee-4304-804a-c08e09fee14e.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1701343",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/87044886-85da-4098-a8de-581a62364290.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0acfec2b-f9fc-4300-986f-c28e38eccf8c.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/78a97823-2482-46a8-a5e1-e3d40c9ed135.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2cef4113-bbf1-4bb0-ba20-356c15fa05ef.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690987",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2bc15c9b-c043-48ee-8cdb-e34c28f65231.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690985",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/677c8a89-2db2-4425-a848-4bbf987dffe8.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/54f75246-71d0-4aae-aaf1-0f3d09838d55.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2aa5f60a-7c48-4f22-aa14-38f6ce3604fa.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703195",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/c6e7bbf3-052a-4687-a88d-0eacc27024b6.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/addbc8ca-2b18-47b4-a7a7-c7db801e1b4f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b1dd7583-7d01-4807-9085-df6d8fa28ce4.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/8896a2c0-baa3-4b8f-b799-1fcff0c8a57a.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703197",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/04c25804-9d0a-41f2-8028-bb3bb3f5e641.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/cda0f143-7c87-402e-b2dd-db02580ab0f7.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1e78d5b9-a572-475d-a786-be038fae0d73.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e3832d34-3444-475f-b945-399ce201f266.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703198",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/57a273b0-bcf9-4e29-b334-17357221a587.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/afb521b1-faea-4571-b7da-eb19ea16ad86.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e7b24c69-7dbf-49c1-9f32-c12bfe10c554.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/54c29901-3503-4ab0-b613-b1f0b991491e.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703213",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/8a3ea439-03c0-42f9-aa1e-4a095054a9c7.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/971ee6ee-d47f-4225-bddc-97d5590191db.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1174438c-a23a-4613-a1bd-99f6572c51ec.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d1115aee-4afd-4326-bb59-0dadb455dc2c.jpeg"
+  ],
+  "cats": [
+   "Bermudas"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679486",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9689f4d6-c5cc-415b-8a36-b473faf4e738.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679484",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/98042551-2596-49a9-aaf2-dcb8e0f48bd1.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679476",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e0c73255-9cdb-406e-bd9e-742f300b5e22.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679490",
+  "slug": "bermuda-nike",
+  "name": "Bermuda Nike",
+  "price": "80,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5174b678-d6c3-470e-9daa-9bcb299945f8.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703201",
+  "slug": "bermuda-sarja-nike",
+  "name": "Bermuda Sarja Nike",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/705696a1-eafb-44f4-825d-f80368a3d56d.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a297185e-fe80-41d9-9b00-1186057875e0.jpeg"
+  ],
+  "cats": [
+   "Sarja + Linho"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703203",
+  "slug": "bermuda-sarja-nike",
+  "name": "Bermuda Sarja Nike",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7005752d-5cbc-4776-973e-8f80d8f05fb9.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679459",
+  "slug": "calca-cargo-effel",
+  "name": "Calça Cargo EFFEL",
+  "price": "149,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b540995b-11a9-4b41-a467-9f0f803e8e17.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/fc95f3ed-1424-46e3-9d5d-61d17747340a.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/040d6207-2f4f-433f-934c-418e56408112.jpeg"
+  ],
+  "cats": [
+   "Calça Cargo"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1910182",
+  "slug": "calca-moletom-comp",
+  "name": "Calça Moletom Comp",
+  "price": "199,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f117a1a1-5d61-41cc-929f-cc517c51da08.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/aa0ff29a-2f0f-4f2b-8fed-123c11b255ed.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5fdda66b-7f6f-4112-89c0-7134d046ddba.jpeg"
+  ],
+  "cats": [
+   "Calça Cargo"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703207",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b640bab4-a626-4829-8f1e-680df6a5f57c.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703209",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/12be43d8-da60-4e05-ad62-151ae7aa1989.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703210",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d6a52362-e5a0-4663-b13d-787908aa018d.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703211",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/01691a34-e6be-492d-ac85-eed4b2a3ef9d.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849978",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/0c13ad6c-54e1-4231-ba12-7d8241456bd7.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849979",
+  "slug": "camiseta-armani",
+  "name": "Camiseta Armani",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/50349f79-5372-4517-9654-8fec580f63d2.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849983",
+  "slug": "camiseta-boss",
+  "name": "Camiseta Boss",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e54ecd0e-2ce3-469c-b792-8b494249f952.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678825",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/10563c2a-989a-4b55-b56f-46db4e15c67f.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678826",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5adb2253-f9ae-44ef-9953-92c7563a6015.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678827",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/db88f946-0f98-4a4b-853c-ebb4caa96043.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678828",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d412dceb-d74d-4042-a2e5-ac3280eb3d1a.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679431",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "90,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a287c40c-37dd-4d63-81d9-2ce836f75495.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690131",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1cc5e989-866c-4b8a-85ca-e7bc88ee8e30.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690984",
+  "slug": "camiseta-calvin-klein",
+  "name": "Camiseta Calvin Klein",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/665a66bf-1b40-4236-9649-9fd943855549.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1910183",
+  "slug": "camiseta-comp",
+  "name": "Camiseta Comp",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/9475d47a-4a00-45cc-b328-9602e185e5a6.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1b848183-7a71-48fb-ad2a-21e5f9eb647e.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1914792",
+  "slug": "camiseta-comp",
+  "name": "Camiseta Comp",
+  "price": "199,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/acb24770-99a7-46e0-a2a9-11f6fe7bdd61.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/31c1dc04-1dcf-4ab1-b0af-2afc717489a0.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/290d9f39-7a7d-4f32-adc9-63b5b54cbffa.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1685957",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/6dbd2a64-2ac6-4569-ae56-266b1ff9dece.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1685958",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e72b3504-473c-4bea-a6d6-5eec8f93b331.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688772",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7bb262f3-3f4f-4afd-aa63-8b13bac6c372.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688774",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5b8b43d3-65b9-43e2-adac-7b39fee58fcb.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688775",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/e3685fab-03c3-4a64-810c-1b6bec8ee500.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688776",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/648688df-d9c0-4ced-b295-95837c5a3bef.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688777",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/05915ce7-e518-4ffe-849c-2f693e551eef.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688779",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/91f68774-dacd-466d-a38a-0dd00e84c963.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688781",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7e8920c6-67ab-433a-9ff2-703f61c4ca48.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849977",
+  "slug": "camiseta-diesel",
+  "name": "Camiseta Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/3aa0edb4-248f-4102-8aa3-d0d510287369.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679430",
+  "slug": "camiseta-hugo-boss",
+  "name": "Camiseta Hugo Boss",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/30a6e2bf-6538-4371-989a-ba59f6c242e2.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2c291490-0707-47e4-96e2-2b5ccfda1021.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688209",
+  "slug": "camiseta-hugo-boss",
+  "name": "Camiseta Hugo Boss",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ae8076eb-a7a7-42c1-b830-9402a365d998.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703212",
+  "slug": "camiseta-hugo-boss",
+  "name": "Camiseta Hugo Boss",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/dd586884-05c2-43f4-86ab-29db3d00bc26.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679464",
+  "slug": "camiseta-lacoste",
+  "name": "Camiseta Lacoste",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1fb3d83b-4d9f-4b25-b1e3-0e26f4321376.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1680196",
+  "slug": "camiseta-lacoste",
+  "name": "Camiseta Lacoste",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/77b58191-70f7-42d7-ae4d-03b3b3b00377.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849984",
+  "slug": "camiseta-lisa",
+  "name": "Camiseta Lisa",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/527b1090-2164-44cb-a2b6-79f7bf95430f.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679450",
+  "slug": "camiseta-mr-bunny",
+  "name": "Camiseta MR BUNNY",
+  "price": "",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5014840c-2249-4800-8d79-971d750c019b.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b3843e6e-20b2-4b39-8ed6-94ccd543239a.jpeg"
+  ],
+  "cats": [],
+  "desc": "Tamanho: M / G",
+  "variants": ""
+ },
+ {
+  "id": "1679455",
+  "slug": "camiseta-mr-bunny",
+  "name": "Camiseta MR BUNNY",
+  "price": "",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/964760f6-1d3e-40f0-90ba-a093cf98dc09.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679468",
+  "slug": "camiseta-oversized",
+  "name": "Camiseta Oversized",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4df11f45-a3e2-4eb9-8db6-5114ce42687d.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849728",
+  "slug": "camiseta-oversized-casa-blanca",
+  "name": "Camiseta Oversized Casa Blanca",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b403a381-bf7b-47cb-adb0-27156a3330c6.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1680218",
+  "slug": "camiseta-oversized-high",
+  "name": "Camiseta Oversized High",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/104058ed-cb3b-4e09-920f-718e70431529.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679465",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/bb9ee2b5-1ec1-4a36-860c-019bcda5953e.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690980",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d35f279a-3650-45b7-9992-55fe6795df04.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703204",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5a1a94d4-f08d-4c04-af48-f2905d4ff59c.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/23857670-5530-4906-9912-037d00cfa1c1.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703206",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/42665a24-e5c4-437d-9b21-c65a008984da.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853957",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/50ca7f41-ceb8-47b7-ba44-d620326bca5b.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853958",
+  "slug": "camiseta-oversized-nike",
+  "name": "Camiseta Oversized Nike",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/93226336-fe23-4b0a-a655-2e618be38dad.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1688211",
+  "slug": "camiseta-oversized-nike-sb",
+  "name": "Camiseta Oversized Nike SB",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/485028fc-c365-4f62-8d7b-f96cf1bb483f.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1853959",
+  "slug": "camiseta-oversized-ny",
+  "name": "Camiseta Oversized NY",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ad9b2c36-59ca-4a34-b16c-dfb269fc469e.jpeg"
+  ],
+  "cats": [
+   "Camiseta Oversized"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703205",
+  "slug": "camiseta-oversized-palm-angels",
+  "name": "Camiseta Oversized Palm Angels",
+  "price": "119,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f9e0d1aa-214a-4e9f-b18a-e8b6be5158f3.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849980",
+  "slug": "camiseta-polo",
+  "name": "Camiseta Polo",
+  "price": "110,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/826c3adb-99d1-40b9-8d8d-9237cfb53a87.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849981",
+  "slug": "camiseta-polo",
+  "name": "Camiseta Polo",
+  "price": "110,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/c434f9e2-b674-4f9a-92be-2550a0002334.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849982",
+  "slug": "camiseta-polo",
+  "name": "Camiseta Polo",
+  "price": "110,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/bd3b246a-53a6-470c-91c1-0941ee4ee618.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1680215",
+  "slug": "camiseta-tommy",
+  "name": "Camiseta Tommy",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/dbc8d879-b2f1-4e8f-b380-67ebc6ff3c99.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703180",
+  "slug": "camiseta-tommy",
+  "name": "Camiseta Tommy",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ace0ba8f-5386-49e4-93ba-5e089dc907a7.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703214",
+  "slug": "camiseta-tommy",
+  "name": "Camiseta Tommy",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f31bcb30-84ad-4668-a477-b772f0f6087e.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849976",
+  "slug": "camiseta-tommy",
+  "name": "Camiseta Tommy",
+  "price": "110,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/28048b83-d61c-4d06-af8c-bad44ea37cdd.jpeg"
+  ],
+  "cats": [
+   "Camisetas Premium"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679438",
+  "slug": "conjunto-dry-fit-adidas",
+  "name": "Conjunto Dry Fit Adidas",
+  "price": "129,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5595492e-d61f-4b9a-aab0-59c4097a8e42.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679439",
+  "slug": "conjunto-dry-fit-nike",
+  "name": "Conjunto Dry Fit Nike",
+  "price": "129,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b50c8667-2580-4d89-be93-0a8080d9c0d6.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1679440",
+  "slug": "conjunto-dry-fit-nike",
+  "name": "Conjunto Dry Fit Nike",
+  "price": "129,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/91b388d3-b442-4374-924e-4b4a759d49d3.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703189",
+  "slug": "conjunto-nike",
+  "name": "Conjunto Nike",
+  "price": "189,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/84d93b65-c6ce-4354-a1b1-7b19226b5f7a.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849694",
+  "slug": "conjunto-nike",
+  "name": "Conjunto Nike",
+  "price": "189,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/85ad28ca-96b1-47f5-a668-0fcd78b30cbb.jpeg"
+  ],
+  "cats": [
+   "Conjuntos / Camiseta + Bermuda"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1910185",
+  "slug": "conjunto-nike",
+  "name": "Conjunto Nike",
+  "price": "349,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ce4f25ef-23da-4271-a78e-dd6059bccea5.jpeg"
+  ],
+  "cats": [
+   "Conjunto Inverno"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703216",
+  "slug": "cueca-armani",
+  "name": "Cueca Armani",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/116ed447-6b61-4e55-839c-d07cbc3a7291.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678820",
+  "slug": "cueca-calvin-klein",
+  "name": "Cueca Calvin Klein",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/3a63b762-b02f-44be-8637-e4f4f3acdb55.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703215",
+  "slug": "cueca-diesel",
+  "name": "Cueca Diesel",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/b4ca2460-8469-4a3b-a0f7-072ca87d2b09.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703217",
+  "slug": "cueca-hugo-boss",
+  "name": "Cueca Hugo Boss",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/337b3a8c-95ba-4f9f-9231-027addd61a51.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678821",
+  "slug": "cueca-tommy",
+  "name": "Cueca Tommy",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/dcab8b00-fb0c-48aa-913e-239c455d2970.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1914787",
+  "slug": "jaqueta-tommy",
+  "name": "Jaqueta Tommy",
+  "price": "299,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/46e2ccd3-d0da-45ec-a13c-5d600f3276bb.jpeg"
+  ],
+  "cats": [
+   "Jaqueta"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1914788",
+  "slug": "jaqueta-tommy",
+  "name": "Jaqueta Tommy",
+  "price": "299,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/63db2088-9c37-49c0-9acb-8e5324ff6a38.jpeg"
+  ],
+  "cats": [
+   "Jaqueta"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1678815",
+  "slug": "meia-cano-alto",
+  "name": "Meia Cano Alto",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/394657ba-c681-40e3-ac4b-11989cde2a4d.jpeg"
+  ],
+  "cats": [],
+  "desc": "1 PAR ( BRANCO ou PRETO) por apenas R$20,00\n39 ao 43",
+  "variants": ""
+ },
+ {
+  "id": "1678816",
+  "slug": "meia-cano-alto-nike",
+  "name": "Meia Cano Alto Nike",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/7af60981-1751-42b8-b7ab-ffc2486e0c40.jpeg"
+  ],
+  "cats": [],
+  "desc": "1 PAR ( BRANCO ou PRETO) por apenas R$20,00\n39 ao 43",
+  "variants": ""
+ },
+ {
+  "id": "1678818",
+  "slug": "meia-cano-alto-nike",
+  "name": "Meia Cano Alto Nike",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/1d3926b5-0412-4b91-b7a4-86eaa5684f07.jpeg"
+  ],
+  "cats": [],
+  "desc": "1 PAR ( BRANCO ou PRETO) por apenas R$20,00\n39 ao 43",
+  "variants": ""
+ },
+ {
+  "id": "1688212",
+  "slug": "meia-nike",
+  "name": "Meia Nike",
+  "price": "20,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/19c49cdc-9f71-43c0-85b9-628c76780d36.jpeg"
+  ],
+  "cats": [],
+  "desc": "1 PAR ( BRANCO ou PRETO) por apenas R$20,00\n39 ao 43",
+  "variants": ""
+ },
+ {
+  "id": "1849734",
+  "slug": "mochila-high",
+  "name": "Mochila High",
+  "price": "159,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/068977f1-20d1-4a39-ae1e-9bbb56331e77.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/6d39798b-1c67-40f6-8e67-5aa06512849e.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/ae048bc2-5a50-4847-bbb7-6c561e21d527.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1910186",
+  "slug": "moletom-comp",
+  "name": "Moletom Comp",
+  "price": "299,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a9b82797-f712-4f36-9d97-e7fd8aa8658e.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d97a918d-4888-4c1f-828c-c37a423251ec.jpeg"
+  ],
+  "cats": [
+   "Moletom"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1703193",
+  "slug": "pochete-jordan",
+  "name": "Pochete Jordan",
+  "price": "79,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/37c1377f-165c-4a2f-8ec3-8b53daf21d2a.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/a7e67aa8-a6ab-46a1-ad19-aec360da649c.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/107afc85-5910-4d7a-912b-ac8beef4801b.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/815e5080-31d4-4134-8a01-96e637ac969f.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690115",
+  "slug": "regata-canelada-nike",
+  "name": "Regata Canelada Nike",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/777f31e6-64cd-4d0d-a734-f348da45b02d.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/2743f7e8-54ce-44aa-b8aa-346c0d211c21.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690118",
+  "slug": "regata-canelada-nike",
+  "name": "Regata Canelada Nike",
+  "price": "89,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/c0272397-5122-4401-9248-397a46b98ca9.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/5df62211-ce04-490c-9ca0-5fb402e8b755.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690119",
+  "slug": "regata-dry-fit-nike",
+  "name": "Regata Dry Fit Nike",
+  "price": "79,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4161e62a-202e-4810-83b6-112d6db563bb.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690121",
+  "slug": "regata-dry-fit-nike",
+  "name": "Regata Dry Fit Nike",
+  "price": "79,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/f5496ebc-08e7-4740-a5f4-c9deb53820e8.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690124",
+  "slug": "regata-dry-fit-nike",
+  "name": "Regata Dry Fit Nike",
+  "price": "79,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/4edf6767-ee1c-4604-9994-45acf61a09b2.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1690126",
+  "slug": "regata-dry-fit-nike",
+  "name": "Regata Dry Fit Nike",
+  "price": "79,90",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/11f507c7-ff6b-40a0-a60b-269689f73c87.jpeg"
+  ],
+  "cats": [],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849985",
+  "slug": "short-linho-boss",
+  "name": "Short Linho Boss",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/c3378379-911b-4236-ae82-5456ffd9306f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/8a84c938-9379-42cb-97f0-3520a8eebf7f.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/254f377b-cd4e-4ff4-ab7d-5eb001d14e61.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/bd952bf8-262f-44b3-b578-beef33383ebc.jpeg"
+  ],
+  "cats": [
+   "Sarja + Linho"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849986",
+  "slug": "short-sarja-diesel",
+  "name": "Short Sarja Diesel",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/6e9086b1-6f56-4877-bca0-2a14361a5603.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/04d660c8-7998-4c13-9d81-3c28c1b12a72.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d6e2e473-4f08-4f0d-9132-b58dd8a6cef1.jpeg"
+  ],
+  "cats": [
+   "Sarja + Linho"
+  ],
+  "desc": "",
+  "variants": ""
+ },
+ {
+  "id": "1849987",
+  "slug": "sort-linho-ralph-lauren",
+  "name": "Sort Linho Ralph Lauren",
+  "price": "100,00",
+  "imgs": [
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/84733b51-4578-457e-bb07-1c34fad1dd30.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/d16b7c12-52d7-4a44-b8c9-b393f603f286.jpeg",
+   "https://supliutech.nyc3.cdn.digitaloceanspaces.com/products2/26f3beec-2faf-4b74-b471-07604c3a41a8.jpeg"
+  ],
+  "cats": [
+   "Sarja + Linho"
+  ],
+  "desc": "",
+  "variants": ""
+ }
+]

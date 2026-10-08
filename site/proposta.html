@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  ============================================================
+  PROPOSTA BK CLOTHING · ONDE EDITAR
+  ============================================================
+  1) VALORES: procure por class="preco" (seção 05, id="investimento").
+     Cada valor está num <span class="preco">. São 5 ao todo:
+     valor cheio, valor no PIX, parcela em 3x, Perfil no Google,
+     acompanhamento mensal. Se mudar o valor cheio, refaça na mão
+     o PIX (5% de desconto) e a parcela (valor dividido por 3).
+
+  2) SEU WHATSAPP: procure por SEU_NUMERO (aparece uma única vez,
+     no botão da seção 07, id="fechamento"). Troque por DDI + DDD +
+     número, só dígitos. Exemplo: 5547999999999
+
+  3) DEMO: os botões "Ver a demonstração" apontam para index.html,
+     que precisa estar na mesma pasta deste arquivo.
+  ============================================================
+-->
+<title>BK Clothing | Proposta de novo site</title>
+<meta name="description" content="Proposta de novo site para a BK Clothing, moda masculina em Joinville.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0c0c0c;
+    --fg: #f3f0ea;
+    --mute: #8a857c;
+    --line: rgba(255,255,255,.12);
+    --sand: #c8b89a;
+    --gutter: clamp(20px, 5vw, 64px);
+    --max: 1120px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  p { margin: 0 0 1em; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 500; }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+  h1, h2, h3, .display {
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: .95;
+    margin: 0;
+    overflow-wrap: break-word;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+
+  /* Botões */
+  .btn {
+    display: inline-block;
+    padding: 17px 30px;
+    border: 1px solid var(--fg);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .btn-solid { background: var(--fg); color: var(--bg); }
+  .btn-solid:hover, .btn-solid:focus-visible { background: var(--sand); border-color: var(--sand); }
+  .btn-line:hover, .btn-line:focus-visible { background: var(--fg); color: var(--bg); }
+  .btn:focus-visible { outline: 2px solid var(--sand); outline-offset: 4px; }
+
+  /* Capa */
+  .capa {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 36px;
+  }
+  .capa-topo, .capa-base {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .capa-meio { padding: 64px 0; }
+  .capa h1 { font-size: clamp(4.5rem, 17vw, 13rem); line-height: .86; }
+  .capa .sub {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-size: clamp(1.35rem, 3.4vw, 2.2rem);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--sand);
+    line-height: 1;
+  }
+  .capa .sub::before {
+    content: "";
+    flex: 0 0 clamp(32px, 8vw, 96px);
+    height: 1px;
+    background: var(--sand);
+  }
+  .capa .abre {
+    max-width: 30em;
+    margin: 40px 0 40px;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    line-height: 1.5;
+  }
+
+  /* Seções */
+  section { border-top: 1px solid var(--line); padding: clamp(72px, 11vw, 140px) 0; }
+  .cab {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+  .num {
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: .12em;
+    color: var(--sand);
+  }
+  .cab h2 { font-size: clamp(2.9rem, 8.5vw, 6rem); }
+  .cab .lead { max-width: 34em; color: var(--mute); margin-top: 10px; }
+
+  /* 02 Achados */
+  .achados { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .achados li {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px 40px;
+    padding: 34px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .achados .n {
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-size: 1.5rem;
+    color: var(--mute);
+    line-height: 1.1;
+  }
+  .achados h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1; margin-bottom: 10px; }
+  .achados .fato { color: var(--fg); }
+  .achados .efeito { color: var(--mute); }
+  .achados .efeito b {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--sand);
+  }
+  .nota { margin-top: 36px; max-width: 38em; color: var(--mute); }
+
+  /* 03 Comparativo */
+  .comp { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  .comp th, .comp td {
+    text-align: left;
+    vertical-align: top;
+    padding: 22px 24px 22px 0;
+    border-bottom: 1px solid var(--line);
+    overflow-wrap: break-word;
+  }
+  .comp thead th {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--mute);
+    padding-top: 0;
+    border-bottom-color: rgba(255,255,255,.3);
+  }
+  .comp thead th:last-child { color: var(--sand); }
+  .comp col.c1 { width: 24%; }
+  .comp col.c2 { width: 38%; }
+  .comp col.c3 { width: 38%; }
+  .comp tbody th {
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-weight: 400;
+    font-size: 1.45rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+  .comp td.hoje { color: var(--mute); }
+  .comp td.novo { color: var(--fg); padding-right: 0; }
+
+  /* 04 Incluso */
+  .incluso { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px 72px; }
+  .incluso h3 { font-size: 1.7rem; margin-bottom: 18px; }
+  .lista { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .lista li {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .lista li::before { content: ""; width: 12px; height: 1px; background: var(--sand); margin-top: .8em; }
+  .lista small { display: block; font-size: .88em; color: var(--mute); }
+
+  /* 05 Investimento */
+  .valor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px 72px; align-items: end; }
+  .valor .grande { font-size: clamp(5rem, 19vw, 12rem); line-height: .82; white-space: nowrap; }
+  .valor .grande .preco { color: var(--fg); }
+  .pag { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .pag li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .pag .preco, .opc .preco {
+    font-family: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: .03em;
+    white-space: nowrap;
+    color: var(--sand);
+    line-height: 1;
+  }
+  .pag small { display: block; color: var(--mute); font-size: .85em; }
+  .opcionais { margin-top: clamp(56px, 8vw, 96px); }
+  .opcionais > .eyebrow { display: block; margin-bottom: 20px; }
+  .opc {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 40px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+  .opc:last-of-type { border-bottom: 1px solid var(--line); }
+  .opc h3 { font-size: 1.6rem; margin-bottom: 8px; }
+  .opc p { color: var(--mute); max-width: 36em; }
+  .opc .q { text-align: right; }
+  .opc .q small { display: block; color: var(--mute); font-size: .8em; margin-bottom: 4px; }
+
+  /* 06 Prazo */
+  .prazo-topo { font-size: clamp(4rem, 14vw, 9rem); margin-bottom: clamp(40px, 6vw, 72px); }
+  .prazo-topo span { color: var(--sand); }
+  .etapas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .etapas li { padding: 28px 32px 8px 0; border-top: 1px solid rgba(255,255,255,.3); }
+  .etapas li + li { padding-left: 32px; border-left: 1px solid var(--line); }
+  .etapas .eyebrow { display: block; margin-bottom: 14px; color: var(--sand); }
+  .etapas h3 { font-size: 1.9rem; margin-bottom: 12px; }
+  .etapas p { color: var(--mute); }
+
+  /* 07 Fechamento */
+  .fim h2 { font-size: clamp(3.4rem, 12vw, 9rem); line-height: .88; margin-bottom: 36px; }
+  .fim p { max-width: 32em; font-size: clamp(1.05rem, 2vw, 1.3rem); }
+  .acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0 44px;
+    color: var(--mute);
+    font-size: 14px;
+  }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; }
+  footer i { font-style: normal; color: var(--sand); }
+
+  /* Celular */
+  @media (max-width: 760px) {
+    body { font-size: 17px; }
+    .btn { padding: 16px 22px; letter-spacing: .16em; }
+    .achados li { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 28px 0; }
+    .incluso, .valor { grid-template-columns: minmax(0, 1fr); }
+    .etapas { grid-template-columns: minmax(0, 1fr); }
+    .etapas li, .etapas li + li { padding: 24px 0 28px; border-left: 0; border-top: 1px solid var(--line); }
+    .etapas li:first-child { border-top-color: rgba(255,255,255,.3); }
+    .opc { grid-template-columns: minmax(0, 1fr); }
+    .opc .q { text-align: left; margin-top: 8px; }
+    .acoes .btn { width: 100%; text-align: center; }
+
+    /* tabela vira blocos empilhados */
+    .comp, .comp tbody, .comp tr, .comp th, .comp td { display: block; width: 100%; }
+    .comp colgroup, .comp thead { display: none; }
+    .comp tr { padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .comp tbody tr:first-child { border-top: 1px solid rgba(255,255,255,.3); }
+    .comp th, .comp td { border: 0; padding: 0; }
+    .comp tbody th { font-size: 1.6rem; margin-bottom: 16px; }
+    .comp td { padding-left: 16px; border-left: 1px solid var(--line); }
+    .comp td.novo { border-left-color: var(--sand); margin-top: 16px; }
+    .comp td::before {
+      content: attr(data-rotulo);
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+    .comp td.novo::before { color: var(--sand); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+
+  /* Impressão / salvar em PDF */
+  @media print {
+    :root { --bg: #fff; --fg: #000; --mute: #444; --line: #bbb; --sand: #000; }
+    @page { margin: 16mm; }
+    body { background: #fff; color: #000; font-size: 11pt; font-weight: 400; overflow: visible; }
+    .wrap { max-width: none; padding: 0; }
+    .capa { min-height: 0; display: block; padding: 0 0 24pt; }
+    .capa-meio { padding: 24pt 0 0; }
+    .capa h1 { font-size: 64pt; }
+    .capa .abre { margin: 16pt 0; }
+    section { padding: 22pt 0; }
+    .cab { margin-bottom: 14pt; }
+    .cab h2 { font-size: 30pt; }
+    .valor .grande { font-size: 60pt; }
+    .prazo-topo { font-size: 40pt; margin-bottom: 14pt; }
+    .fim h2 { font-size: 36pt; margin-bottom: 12pt; }
+    .comp thead th { border-bottom-color: #000; }
+    .etapas li { border-top-color: #000; }
+    .achados li, .comp tr, .opc, .etapas li, .lista li, .pag li { break-inside: avoid; }
+    .cab { break-after: avoid; }
+    .btn { border: 1px solid #000; background: none; color: #000; padding: 8pt 12pt; }
+    .btn-solid { background: none; color: #000; }
+    .capa .btn::after { content: "  (index.html)"; letter-spacing: 0; text-transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 01 CAPA -->
+<header class="capa wrap" id="capa">
+  <div class="capa-topo eyebrow">
+    <span>01 / Proposta</span>
+    <span>Joinville, outubro de 2026</span>
+  </div>
+
+  <div class="capa-meio">
+    <h1>BK Clothing</h1>
+    <div class="sub">Proposta de novo site</div>
+    <p class="abre">Bruno, você já vende bem no WhatsApp e no grupo VIP. Montei um site para o digital ficar à altura da loja.</p>
+    <a class="btn btn-solid" href="index.html">Ver a demonstração</a>
+  </div>
+
+  <div class="capa-base eyebrow">
+    <span>Vista estilo, vista BK Clothing</span>
+    <span>Sem compromisso</span>
+  </div>
+</header>
+
+<main>
+
+<!-- 02 O QUE EU ENCONTREI -->
+<section id="achados">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">02</span>
+      <h2>O que eu encontrei</h2>
+      <p class="lead">Passei pelo site, pelo Instagram e pelo Linktree como um cliente passaria. A loja vende. O que está em volta dela na internet é que ficou para trás.</p>
+    </div>
+
+    <ol class="achados">
+      <li>
+        <span class="n">01</span>
+        <div class="fato">
+          <h3>O link sai sem foto no WhatsApp</h3>
+          <p>Quando alguém cola o link do catálogo numa conversa, o preview aparece sem imagem.</p>
+        </div>
+        <p class="efeito"><b>Na prática</b>Seu cliente indica a loja para um amigo e manda um link seco, sem cara de nada. Justo no canal onde você mais vende.</p>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <div class="fato">
+          <h3>Produto com pouca informação</h3>
+          <p>São 135 produtos no catálogo. 96 têm só uma foto. Quase nenhum tem descrição ou tamanho.</p>
+        </div>
+        <p class="efeito"><b>Na prática</b>Toda venda começa com "tem no M?" e "tem mais foto?". Você responde no WhatsApp o que a página já podia ter respondido.</p>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <div class="fato">
+          <h3>O site não tem a cara da BK</h3>
+          <p>A página se chama "CATÁLOGO BK CLOTHING" e usa o tema cinza padrão da plataforma. Não tem política de troca nem de envio.</p>
+        </div>
+        <p class="efeito"><b>Na prática</b>Quem já é cliente compra do mesmo jeito. Quem é de fora de Joinville e chega pelo link não tem onde pegar confiança.</p>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <div class="fato">
+          <h3>Links do rodapé quebrados</h3>
+          <p>Os botões de Instagram e Facebook no rodapé do site levam para página de erro.</p>
+        </div>
+        <p class="efeito"><b>Na prática</b>Quem quer ver mais da loja antes de comprar clica e dá de cara com um erro.</p>
+      </li>
+      <li>
+        <span class="n">05</span>
+        <div class="fato">
+          <h3>Linktree com endereço do Canadá</h3>
+          <p>O bloco de endereço mostra "172 Main St W, Listowel", o exemplo que vem na ferramenta. No rodapé, o plano grátis anuncia outros perfis.</p>
+        </div>
+        <p class="efeito"><b>Na prática</b>Quem clica no link da bio vê um endereço que não é o seu e ainda recebe sugestão para sair da sua página.</p>
+      </li>
+    </ol>
+
+    <p class="nota">Nada disso é difícil de resolver. E nada disso muda o que já funciona: o atendimento no WhatsApp continua sendo o centro da venda.</p>
+  </div>
+</section>
+
+<!-- 03 HOJE X NOVO SITE -->
+<section id="comparativo">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">03</span>
+      <h2>Hoje x Novo site</h2>
+      <p class="lead">Lado a lado, ponto por ponto. A coluna da direita você confere na demonstração.</p>
+    </div>
+
+    <table class="comp">
+      <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+      <thead>
+        <tr><th scope="col">&nbsp;</th><th scope="col">Hoje</th><th scope="col">Novo site</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Identidade</th>
+          <td class="hoje" data-rotulo="Hoje">Tema cinza padrão da plataforma. Página chamada "CATÁLOGO BK CLOTHING".</td>
+          <td class="novo" data-rotulo="Novo site">Visual próprio da BK, com a logo e o slogan na frente. Cara de marca, não de lista de preços.</td>
+        </tr>
+        <tr>
+          <th scope="row">Página de produto</th>
+          <td class="hoje" data-rotulo="Hoje">Nome, preço e, na maioria, uma foto. Sem descrição e sem tamanho.</td>
+          <td class="novo" data-rotulo="Novo site">Galeria de fotos, descrição da peça e tamanhos para escolher.</td>
+        </tr>
+        <tr>
+          <th scope="row">Pedido pelo WhatsApp</th>
+          <td class="hoje" data-rotulo="Hoje">Carrinho da plataforma, com a opção de combinar pelo WhatsApp. Como o produto não mostra tamanho, a conversa começa do zero.</td>
+          <td class="novo" data-rotulo="Novo site">Sacola que já monta a mensagem pronta, com as peças e os tamanhos. O cliente só aperta enviar.</td>
+        </tr>
+        <tr>
+          <th scope="row">Página de links</th>
+          <td class="hoje" data-rotulo="Hoje">Linktree grátis, com endereço errado e anúncio de outros perfis.</td>
+          <td class="novo" data-rotulo="Novo site">Página própria dentro do seu domínio. WhatsApp, catálogo, grupo VIP e como chegar, sem propaganda de ninguém.</td>
+        </tr>
+        <tr>
+          <th scope="row">Galeria e lookbook</th>
+          <td class="hoje" data-rotulo="Hoje">Não tem no site. O feed do Instagram está parado desde 23/05/2026.</td>
+          <td class="novo" data-rotulo="Novo site">Lookbook das coleções dentro do site, para mostrar a peça vestida e o estilo da loja.</td>
+        </tr>
+        <tr>
+          <th scope="row">Preview no WhatsApp</th>
+          <td class="hoje" data-rotulo="Hoje">Link sai sem imagem.</td>
+          <td class="novo" data-rotulo="Novo site">Link sai com foto, nome da loja e descrição. Cada produto com a sua foto.</td>
+        </tr>
+        <tr>
+          <th scope="row">Velocidade e celular</th>
+          <td class="hoje" data-rotulo="Hoje">Plataforma genérica de catálogo. O banner da loja aparece cortado no celular.</td>
+          <td class="novo" data-rotulo="Novo site">Site leve, desenhado primeiro para a tela do celular, que é onde seu cliente está.</td>
+        </tr>
+        <tr>
+          <th scope="row">Google em Joinville</th>
+          <td class="hoje" data-rotulo="Hoje">O site aparece para quem busca "bk clothing". Não tem texto nem página por categoria para quem busca pelo produto.</td>
+          <td class="novo" data-rotulo="Novo site">Título, descrição, endereço e páginas por categoria escritos para o Google entender que é uma loja de moda masculina em Joinville.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 04 O QUE ESTÁ INCLUSO -->
+<section id="incluso">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">04</span>
+      <h2>O que está incluso</h2>
+      <p class="lead">Um valor só, com tudo isto dentro. Você recebe o site no ar e sabendo mexer nele.</p>
+    </div>
+
+    <div class="incluso">
+      <div>
+        <h3>Site completo</h3>
+        <ul class="lista">
+          <li><span>Home <small>A vitrine da loja, com a identidade da BK.</small></span></li>
+          <li><span>Catálogo com filtros e busca <small>Para o cliente achar a peça rápido.</small></span></li>
+          <li><span>Página de produto com tamanhos <small>Fotos, descrição e grade.</small></span></li>
+          <li><span>Sacola que fecha o pedido no WhatsApp <small>A mensagem chega pronta para você.</small></span></li>
+          <li><span>Lookbook <small>Galeria das coleções.</small></span></li>
+          <li><span>Página de links <small>No lugar do Linktree, no seu domínio.</small></span></li>
+          <li><span>Políticas de troca e envio <small>Escritas com as suas regras.</small></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Junto com o site</h3>
+        <ul class="lista">
+          <li><span>Migração dos 135 produtos <small>Tudo que está no catálogo atual vai para o novo.</small></span></li>
+          <li><span>Domínio bkclothing.com.br apontado <small>O endereço continua o mesmo.</small></span></li>
+          <li><span>Treinamento <small>Para você mesmo cadastrar produto, sem depender de mim.</small></span></li>
+          <li><span>30 dias de ajustes <small>Depois de publicado, o que precisar acertar eu acerto.</small></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 INVESTIMENTO · edite os valores nos <span class="preco"> -->
+<section id="investimento">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">05</span>
+      <h2>Investimento</h2>
+    </div>
+
+    <div class="valor">
+      <div>
+        <span class="eyebrow">Site novo, tudo da seção 04</span>
+        <div class="display grande"><span class="preco">R$&nbsp;3.990</span></div>
+      </div>
+      <ul class="pag">
+        <li>
+          <span>À vista no PIX <small>5% de desconto</small></span>
+          <span class="preco">R$&nbsp;3.790,50</span>
+        </li>
+        <li>
+          <span>Parcelado <small>em 3 vezes</small></span>
+          <span class="preco">3x R$&nbsp;1.330</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="opcionais">
+      <span class="eyebrow">Opcionais, separados do site</span>
+
+      <div class="opc">
+        <div>
+          <h3>Perfil da Empresa no Google</h3>
+          <p>Quando fiz o diagnóstico, não encontrei a BK no Google Maps. Eu cadastro a loja com endereço, horário, fotos e botão de WhatsApp.</p>
+        </div>
+        <div class="q"><small>valor único</small><span class="preco">R$&nbsp;490</span></div>
+      </div>
+
+      <div class="opc">
+        <div>
+          <h3>Acompanhamento mensal</h3>
+          <p>Para quem prefere não cuidar disso sozinho: site e perfil no Google sempre atualizados. O que entra a gente combina.</p>
+        </div>
+        <div class="q"><small>a partir de</small><span class="preco">R$&nbsp;690/mês</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PRAZO -->
+<section id="prazo">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">06</span>
+      <h2>Prazo</h2>
+    </div>
+
+    <div class="display prazo-topo">2 a 3 <span>semanas</span></div>
+
+    <ol class="etapas">
+      <li>
+        <span class="eyebrow">Etapa 1</span>
+        <h3>Alinhar</h3>
+        <p>Uma conversa na loja. Você me passa logo, fotos e as regras de troca e envio. Fechamos o que entra.</p>
+      </li>
+      <li>
+        <span class="eyebrow">Etapa 2</span>
+        <h3>Montar</h3>
+        <p>Eu monto o site e migro os 135 produtos. Você acompanha por um link e pede os ajustes.</p>
+      </li>
+      <li>
+        <span class="eyebrow">Etapa 3</span>
+        <h3>Publicar</h3>
+        <p>O site entra no ar no bkclothing.com.br. Faço o treinamento e começam os 30 dias de ajustes.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 07 FECHAMENTO -->
+<section id="fechamento" class="fim">
+  <div class="wrap">
+    <div class="cab">
+      <span class="num">07</span>
+      <span class="eyebrow">Próximo passo</span>
+    </div>
+
+    <h2>Passo na loja esta semana</h2>
+    <p>Dá uma olhada na demonstração com calma. Se fizer sentido, eu passo na loja esta semana e a gente conversa pessoalmente. Sem compromisso.</p>
+
+    <div class="acoes">
+      <!-- TROQUE SEU_NUMERO pelo WhatsApp do Guilherme: DDI + DDD + número, só dígitos. Ex.: 5547999999999. É o único lugar. -->
+      <a class="btn btn-solid" href="https://wa.me/SEU_NUMERO?text=Oi%2C%20Guilherme.%20Vi%20a%20proposta%20do%20site%20da%20BK.%20Vamos%20conversar%3F">Chamar o Guilherme no WhatsApp</a>
+      <a class="btn btn-line" href="index.html">Ver a demonstração</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Proposta preparada por Guilherme para a BK Clothing</span>
+    <span>Rua Santa Catarina, 2348, Floresta, Joinville/SC</span>
+    <span><i>@bkclothiing</i></span>
+  </div>
+</footer>
+
+</body>
+</html>

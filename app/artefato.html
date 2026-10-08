@@ -1,0 +1,33 @@
+<title>BK Gestão</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+<style>
+/* Versão para abrir dentro do Claude (artefato). É o mesmo aplicativo de index.html: mesmas telas, dados e regras.
+   Muda só o encaixe: a moldura do Claude já reserva as bordas do telefone, então o aplicativo ocupa 100% dela. */
+html, body { height: 100%; }
+.app { height: 100%; }
+.topo { padding-top: 0; }
+.hoje { padding-top: 1rem; }
+.abas { padding-bottom: 0; }
+.folha { padding-bottom: 1rem; }
+</style>
+
+<div class="app" id="app">
+  <header class="topo" id="topo" hidden></header>
+  <main class="tela" id="tela"></main>
+  <a class="cobrar" id="cobrar" href="#/vender/cobrar" hidden></a>
+  <nav class="abas" id="abas" aria-label="Principal">
+    <a href="#/" data-aba="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></svg>Início</a>
+    <a href="#/estoque" data-aba="estoque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Estoque</a>
+    <a href="#/vender" data-aba="vender" class="vd"><span class="cx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>Vender</a>
+    <a href="#/vendas" data-aba="vendas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Vendas</a>
+    <a href="#/mais" data-aba="mais"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Mais</a>
+  </nav>
+  <div class="veu" id="veu" hidden></div>
+  <section class="folha" id="folha" hidden></section>
+  <div class="aviso" id="aviso" role="status" hidden></div>
+</div>
+
+<script src="js/catalogo.js"></script>
+<script src="js/base.js"></script>
+<script src="js/app.js"></script>

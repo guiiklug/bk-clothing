@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BK Gestão</title>
+<meta name="description" content="Estoque e vendas da BK Clothing no celular (demonstração).">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="img/icone-192.png">
+<link rel="apple-touch-icon" href="img/icone-apple.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BK Gestão">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app" id="app">
+  <header class="topo" id="topo" hidden></header>
+  <main class="tela" id="tela"></main>
+  <a class="cobrar" id="cobrar" href="#/vender/cobrar" hidden></a>
+  <nav class="abas" id="abas" aria-label="Principal">
+    <a href="#/" data-aba="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-6h-5v6H4z"/></svg>Início</a>
+    <a href="#/estoque" data-aba="estoque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg>Estoque</a>
+    <a href="#/vender" data-aba="vender" class="vd"><span class="cx"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>Vender</a>
+    <a href="#/vendas" data-aba="vendas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>Vendas</a>
+    <a href="#/mais" data-aba="mais"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Mais</a>
+  </nav>
+  <div class="veu" id="veu" hidden></div>
+  <section class="folha" id="folha" hidden></section>
+  <div class="aviso" id="aviso" role="status" hidden></div>
+</div>
+<script src="js/catalogo.js"></script>
+<script src="js/base.js"></script>
+<script src="js/app.js"></script>
+<script>
+// aplicativo instalável: só registra quando servido por http(s) e fora da gravação do vídeo
+if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0 && !/[?&]agora=/.test(location.search)) {
+  navigator.serviceWorker.register('sw.js').catch(function () {});
+}
+</script>
+</body>
+</html>

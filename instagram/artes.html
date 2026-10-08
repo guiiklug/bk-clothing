@@ -1,0 +1,61 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:"Jost",sans-serif;display:flex;flex-wrap:wrap;gap:20px;padding:20px}
+.arte{position:relative;overflow:hidden;flex:none;background:#0b0b0b;color:#f3f0ea}
+.arte img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.arte img.pk{mix-blend-mode:multiply}
+.arte img.solta{inset:auto 0 auto 0;top:560px;height:830px;object-fit:cover;object-position:50% 46%}
+.post{width:1080px;height:1350px}.capa{width:1080px;height:1080px}.story{width:1080px;height:1920px}
+.lg{position:relative;display:inline-grid;place-items:center;width:1.9em;height:2.2em;padding:.24em 0 .14em;line-height:1;font-size:44px}
+.lg::before,.lg::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:.045em solid currentColor}
+.lg::before{left:0;border-right:0}.lg::after{right:0;border-left:0}
+.lg b{font-weight:200;font-size:.92em;letter-spacing:.06em;margin-top:.14em}
+.lg i{font-family:"Bebas Neue";font-style:normal;font-size:.39em;letter-spacing:.08em;margin-top:-.1em}
+.mk{position:absolute;left:64px;bottom:64px;z-index:2}
+.cor,.peca{color:#0b0b0b}
+.palavra{position:absolute;left:0;right:0;top:34px;text-align:center;font-family:"Bebas Neue";font-weight:400;font-size:410px;line-height:.86;letter-spacing:-.005em;text-transform:uppercase;white-space:nowrap;color:#0b0b0b;z-index:0}
+.cor img.pk{z-index:1}
+.frase{position:absolute;left:64px;right:64px;top:70px;font-family:"Bebas Neue";font-weight:400;font-size:300px;line-height:.84;text-transform:uppercase}
+.frase span{display:block}
+.tipo-claro{color:#0b0b0b}
+.tipo .frase{font-size:340px}
+.centro{position:absolute;inset:0;display:grid;place-items:center}.centro .lg{font-size:250px}
+.pg{position:absolute;top:60px;right:60px;font-size:30px;font-weight:500;letter-spacing:.12em;color:#0b0b0b;z-index:3}.pg.w{color:#f3f0ea}
+.ficha .frase{font-size:230px}
+.ficha dl{position:absolute;left:64px;right:64px;bottom:70px}
+.ficha dl div{display:grid;grid-template-columns:300px 1fr;padding:32px 0;border-top:2px solid rgba(243,240,234,.3);font-size:42px}
+.ficha dt{font-size:28px;letter-spacing:.2em;text-transform:uppercase;color:#c8b89a;padding-top:8px}
+.ficha dd{font-weight:400}
+.capa h3{position:absolute;inset:0;display:grid;place-items:center;font-family:"Bebas Neue";font-weight:400;font-size:330px;letter-spacing:.02em}
+.story.foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(11,11,11,.62) 0,rgba(11,11,11,0) 36%,rgba(11,11,11,0) 60%,rgba(11,11,11,.8) 100%)}
+.topo{position:absolute;top:260px;left:70px;right:70px;z-index:2}
+.story h2{font-family:"Bebas Neue";font-weight:400;font-size:300px;line-height:.84;text-transform:uppercase}
+.story .base{position:absolute;left:70px;right:70px;bottom:360px;z-index:2}
+.story .base b{display:block;font-family:"Bebas Neue";font-weight:400;font-size:96px;text-transform:uppercase;line-height:1}
+.story .base p{font-size:42px;font-weight:400;line-height:1.3;margin-top:10px;max-width:22ch}
+.story .w{color:#f3f0ea}
+.trio{position:absolute;top:840px;left:0;right:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.trio img{position:static;aspect-ratio:4/5;height:auto}
+.adesivo{position:absolute;top:1370px;left:150px;right:150px;background:#fff;color:#0b0b0b;border-radius:28px;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;font-size:40px;font-weight:500;text-align:center}
+.adesivo span{padding:44px 0}.adesivo span+span{border-left:2px solid #ddd}
+.grade{display:flex;gap:14px;margin-bottom:26px}
+.grade span{width:150px;height:150px;border:3px solid #0b0b0b;display:grid;place-items:center;font-size:60px;font-weight:400;background:rgba(255,255,255,.35)}
+.grade .x{opacity:.35;text-decoration:line-through}
+.link{display:inline-block;margin-top:30px;background:#fff;color:#0b0b0b;border-radius:18px;padding:22px 34px;font-size:38px;font-weight:500}
+.caixa{position:absolute;left:70px;right:70px;top:1130px;background:#fff;color:#0b0b0b;border-radius:30px;padding:50px;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.caixa b{display:block;font-size:46px;font-weight:500;margin-bottom:34px}
+.caixa span{display:block;background:#efefef;border-radius:18px;padding:34px;font-size:38px;color:#888}
+</style></head><body>
+<div class="arte story" id="s-1-chegou" style="background:#0b0b0b"><img class="solta" src="../_coleta/piloto/1849734.png"><div class="topo"><h2>Chegou</h2></div>
+  <div class="base"><p>Mochila High. Responda QUERO e a gente separa a sua</p></div></div>
+<div class="arte story" id="s-2-enquete" style="background:#0b0b0b"><div class="topo"><h2 style="font-size:250px">Qual você<br>leva?</h2></div>
+  <div class="trio"><img src="feed/01-preta.jpg"><img src="feed/02-marinho.jpg"><img src="feed/03-bege.jpg"></div>
+  <div class="adesivo"><span>Preta</span><span>Marinho</span><span>Bege</span></div></div>
+<div class="arte story" id="s-3-tamanhos" style="background:#ddd6c4;color:#0b0b0b"><img class="pk" src="../_coleta/piloto/1679459.png" style="transform:scale(2.2) rotate(-14deg) translate(4%,6%)"><div class="topo"><h2>Ainda<br>tem</h2></div>
+  <div class="base"><div class="grade"><span>P</span><span class="x">M</span><span>G</span><span>GG</span></div><p>Calça cargo. M esgotou. Chame no direct para garantir a sua</p></div></div>
+<div class="arte story foto" id="s-4-quem-usa"><img class="bg" src="raw/m_DYZv6EcEdTi.jpg" style="object-position:50% 20%"><div class="topo w"><h2>Quem<br>usa BK</h2></div>
+  <div class="base w"><p>Marque @bkclothiing na sua foto e apareça aqui</p></div></div>
+<div class="arte story foto" id="s-5-loja"><img class="bg" src="../site/img/loja.webp" style="object-position:66% 40%"><div class="topo w"><h2>Passe<br>na loja</h2></div>
+  <div class="base w"><b>Rua Santa Catarina, 2348</b><p>Floresta · Joinville</p><div class="link">Como chegar</div></div></div>
+<div class="arte story" id="s-6-caixinha" style="background:#f3f0ea;color:#0b0b0b"><div class="topo"><h2 style="font-size:236px">Que peça<br>você quer<br>ver aqui?</h2></div>
+  <div class="caixa"><b>Conta pra gente</b><span>Digite alguma coisa...</span></div><div class="mk" style="top:auto;bottom:380px"><span class="lg"><b>BK</b><i>CLOTHING</i></span></div></div></body></html>

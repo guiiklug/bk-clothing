@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Palco da gravação</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Quadro de 1080x1920 para gravar o vídeo: frase em cima, o aplicativo de verdade embaixo, e um ponto que mostra o toque. */
+html,body{margin:0;width:1080px;height:1920px;background:#0b0b0b;color:#f3f0ea;font-family:Jost,sans-serif;overflow:hidden}
+.topo{position:absolute;left:112px;right:112px;top:0;height:222px;display:flex;align-items:center;gap:34px}
+.topo svg{width:62px;height:70px;flex:none;fill:none;stroke:#f3f0ea;stroke-width:1.1}
+#frase{font-size:43px;line-height:1.16;font-weight:400;letter-spacing:.005em;transition:opacity .28s,transform .28s}
+#frase.sai{opacity:0;transform:translateY(12px)}
+.tel{position:absolute;left:120px;top:222px;width:840px;height:1637px;overflow:hidden;outline:2px solid rgba(243,240,234,.28);background:#f4f2ed}
+iframe{display:block;border:0;width:390px;height:760px;transform:scale(2.154);transform-origin:0 0}
+#dedo{position:absolute;left:0;top:0;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(200,184,154,.42);box-shadow:0 0 0 3px rgba(11,11,11,.55),0 0 0 6px rgba(243,240,234,.85);
+  transform:translate(540px,2100px);transition:transform .42s cubic-bezier(.3,.6,.2,1),opacity .3s;pointer-events:none;z-index:9}
+#dedo.toca{animation:toca .32s ease-out}
+@keyframes toca{0%{scale:1}35%{scale:.62}100%{scale:1}}
+</style>
+</head>
+<body>
+<div class="topo">
+  <svg viewBox="0 0 30 34" aria-hidden="true"><path d="M10 2H2v30h8M20 2h8v30h-8"/><text x="15" y="21" text-anchor="middle" font-family="Jost,sans-serif" font-weight="300" font-size="11" fill="#f3f0ea" stroke="none">BK</text></svg>
+  <div id="frase" class="sai"></div>
+</div>
+<div class="tel"><iframe id="app" src="about:blank" title="BK Gestão"></iframe></div>
+<div id="dedo"></div>
+<script>
+const elFrase = document.getElementById('frase'), elDedo = document.getElementById('dedo');
+function legenda(t) { elFrase.classList.add('sai'); setTimeout(() => { elFrase.textContent = t; elFrase.classList.remove('sai'); }, 290); }
+function dedo(x, y) { elDedo.style.transform = 'translate(' + x + 'px,' + y + 'px)'; }
+function toca() { elDedo.classList.remove('toca'); void elDedo.offsetWidth; elDedo.classList.add('toca'); }
+function abrir(q) { document.getElementById('app').src = '../index.html' + q; }
+</script>
+</body>
+</html>

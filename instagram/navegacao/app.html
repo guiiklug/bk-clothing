@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Navegação no Instagram da BK (simulação para gravar)</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@200;400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:360px;height:640px;overflow:hidden;background:#000;color:#f5f5f5;font-family:"Segoe UI",system-ui,sans-serif;font-size:13px;line-height:1.3}
+#tela{position:relative;width:360px;height:640px;overflow:hidden;background:#000}
+.status{position:absolute;top:0;left:0;right:0;height:28px;display:flex;justify-content:space-between;align-items:center;padding:0 18px;font-weight:600;font-size:13px;z-index:30}
+.status i{display:inline-block;width:22px;height:10px;border:1.5px solid #f5f5f5;border-radius:3px;position:relative}
+.status i::after{content:"";position:absolute;inset:1.5px;right:5px;background:#f5f5f5;border-radius:1px}
+.topo{position:absolute;top:28px;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-weight:700;font-size:19px;background:#000;z-index:5}
+.topo span:last-child{display:flex;gap:16px}
+svg.ic{width:24px;height:24px;fill:none;stroke:#f5f5f5;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#rolo{position:absolute;top:72px;left:0;right:0;bottom:50px;overflow:hidden}
+#conteudo{will-change:transform}
+.cab{display:grid;grid-template-columns:78px 1fr;gap:18px;align-items:center;padding:8px 14px}
+.av{width:78px;height:78px;border-radius:50%;background:#fff;color:#0b0b0b;display:grid;place-items:center}
+.lg{position:relative;display:inline-grid;place-items:center;width:1.9em;height:2.2em;padding:.24em 0 .14em;line-height:1;font-size:19px}
+.lg::before,.lg::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:.05em solid currentColor}
+.lg::before{left:0;border-right:0}.lg::after{right:0;border-left:0}
+.lg b{font-family:"Jost";font-weight:200;font-size:.92em;letter-spacing:.06em;margin-top:.14em}
+.lg i{font-family:"Bebas Neue";font-style:normal;font-size:.39em;letter-spacing:.08em;margin-top:-.1em}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;font-size:12.5px}.nums b{display:block;font-size:16px}
+.bio{padding:2px 14px 10px}.bio b{display:block}.bio a{color:#85a1ff;font-weight:600}
+.bts{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 14px 12px}
+.bts span{border-radius:8px;padding:7px;text-align:center;font-weight:600;background:#25292e}.bts span:first-child{background:#4a5df9}
+.dst{display:flex;gap:12px;padding:2px 14px 12px;overflow:hidden}
+.dst div{flex:none;width:62px;text-align:center;font-size:10.5px;white-space:nowrap}
+.dst img{width:58px;height:58px;border-radius:50%;border:1.5px solid #3a3a3a;padding:2px;object-fit:cover;display:block;margin:0 auto 4px}
+.abas{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #262626;text-align:center;color:#888}
+.abas span{padding:9px 0}.abas span:first-child{color:#fff;box-shadow:inset 0 -1.5px 0 #fff}
+#grade{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px}
+#grade div{position:relative;aspect-ratio:4/5;overflow:hidden}
+#grade img{width:100%;height:100%;object-fit:cover;display:block}
+#grade .v::after{content:"";position:absolute;top:7px;right:7px;width:0;height:0;border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;filter:drop-shadow(0 0 3px rgba(0,0,0,.6))}
+.nav{position:absolute;left:0;right:0;bottom:0;height:50px;background:#000;border-top:1px solid #1c1c1c;display:flex;justify-content:space-around;align-items:center;z-index:5}
+.nav .eu{width:26px;height:26px;border-radius:50%;background:#fff;border:2px solid #fff}
+/* publicação aberta */
+#post{position:absolute;inset:28px 0 0 0;background:#000;z-index:10;opacity:0;will-change:transform,opacity}
+.pt{height:50px;display:flex;align-items:center;gap:10px;padding:0 12px;font-weight:600}
+.pt .mini{width:32px;height:32px;border-radius:50%;background:#fff;color:#0b0b0b;display:grid;place-items:center}.pt .mini .lg{font-size:8px}
+#janela{position:relative;width:360px;height:450px;overflow:hidden}
+#tira{display:flex;width:720px;height:450px;will-change:transform}
+#tira img{width:360px;height:450px;object-fit:cover;flex:none}
+#cora{position:absolute;left:50%;top:50%;width:110px;height:110px;margin:-55px 0 0 -55px;opacity:0;fill:#fff;filter:drop-shadow(0 4px 14px rgba(0,0,0,.4))}
+.acoes{display:flex;gap:16px;padding:12px 14px 6px;align-items:center}
+.pontos{margin:0 auto;display:flex;gap:4px;transform:translateX(-40px)}.pontos i{width:6px;height:6px;border-radius:50%;background:#555}.pontos i.on{background:#4a9bff}
+.leg{padding:2px 14px;font-size:13px}.leg b{font-weight:600;margin-right:5px}
+/* reel */
+#reel{position:absolute;inset:0;background:#000;z-index:20;opacity:0;will-change:transform,opacity}
+#reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 72%,rgba(0,0,0,.42) 100%);pointer-events:none}
+#reel .rt,#reel .lado,#reel .rb{z-index:2}
+#reel .rt{position:absolute;top:38px;left:16px;font-size:20px;font-weight:700;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+#reel .lado{position:absolute;right:12px;bottom:92px;display:grid;gap:20px;justify-items:center}
+#reel .lado svg{filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))}
+#reel .rb{position:absolute;left:14px;right:70px;bottom:26px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+#reel .rb b{display:flex;align-items:center;gap:8px;font-weight:600;margin-bottom:6px}
+#reel .rb .mini{width:30px;height:30px;border-radius:50%;background:#fff;color:#0b0b0b;display:grid;place-items:center}#reel .mini .lg{font-size:7.5px}
+#dedo{position:absolute;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:rgba(255,255,255,.55);border:2px solid rgba(255,255,255,.9);box-shadow:0 2px 14px rgba(0,0,0,.35);opacity:0;z-index:40;pointer-events:none}
+#fim{position:absolute;inset:0;background:#0b0b0b;z-index:50;opacity:0;display:grid;place-items:center;text-align:center}
+#fim .lg{font-size:74px}#fim p{margin-top:26px;font-size:17px;letter-spacing:.12em}
+</style>
+</head>
+<body>
+<div id="tela">
+  <div class="status"><span>9:41</span><i></i></div>
+  <div class="topo"><span>bkclothiing</span><span><svg class="ic" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span></div>
+  <div id="rolo"><div id="conteudo">
+    <div class="cab"><div class="av"><span class="lg"><b>BK</b><i>CLOTHING</i></span></div><div class="nums"><span><b>444</b>posts</span><span><b>1.428</b>seguidores</span><span><b>1.226</b>seguindo</span></div></div>
+    <div class="bio"><b>BK CLOTHING</b>Moda masculina · Joinville<br>Jaquetas, oversized, bermudas e acessórios<br>Loja: Rua Santa Catarina, 2348 · Floresta<br>Enviamos para todo o Brasil<br><a>bkclothing.com.br/links</a></div>
+    <div class="bts"><span>Seguir</span><span>Enviar mensagem</span></div>
+    <div class="dst" id="dst"></div>
+    <div class="abas"><span>Posts</span><span>Reels</span><span>Marcados</span></div>
+    <div id="grade"></div>
+  </div></div>
+  <div class="nav"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M10 9l5 3-5 3z"/></svg><span class="eu"></span></div>
+
+  <div id="post">
+    <div class="pt"><span class="mini"><span class="lg"><b>BK</b><i>CLOTHING</i></span></span>bkclothiing</div>
+    <div id="janela"><div id="tira"></div><svg id="cora" viewBox="0 0 24 24"><path d="M12 21s-7.500-4.600-9.600-9.200C.900 8.500 2.600 4.500 6.300 4.500c2.200 0 3.900 1.200 5.700 3.300 1.800-2.100 3.500-3.300 5.700-3.300 3.700 0 5.400 4 3.900 7.300C19.500 16.400 12 21 12 21z"/></svg></div>
+    <div class="acoes"><svg class="ic" id="like" viewBox="0 0 24 24"><path d="M12 20.500s-7.200-4.400-9.200-8.800C1.400 8.500 3 4.900 6.500 4.900c2.100 0 3.700 1.100 5.500 3.200 1.800-2.100 3.400-3.200 5.500-3.200 3.500 0 5.100 3.600 3.700 6.800-2 4.400-9.200 8.800-9.200 8.800z"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M20 11.500a8 8 0 0 1-11.800 7L4 20l1.400-4A8 8 0 1 1 20 11.500z"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></svg><span class="pontos"><i class="on"></i><i></i></span></div>
+    <div class="leg" id="leg"></div>
+  </div>
+
+  <div id="reel">
+    <video id="vid" muted playsinline preload="auto"></video>
+    <div class="rt">Reels</div>
+    <div class="lado"><svg class="ic" viewBox="0 0 24 24"><path d="M12 20.500s-7.200-4.400-9.200-8.800C1.400 8.500 3 4.900 6.500 4.900c2.100 0 3.700 1.100 5.500 3.200 1.800-2.100 3.400-3.200 5.500-3.200 3.500 0 5.100 3.600 3.700 6.800-2 4.400-9.200 8.800-9.200 8.800z"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M20 11.500a8 8 0 0 1-11.800 7L4 20l1.400-4A8 8 0 1 1 20 11.500z"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></svg></div>
+    <div class="rb"><b><span class="mini"><span class="lg"><b>BK</b><i>CLOTHING</i></span></span>bkclothiing</b><span id="rleg"></span></div>
+  </div>
+  <div id="dedo"></div>
+  <div id="fim"><div><span class="lg"><b>BK</b><i>CLOTHING</i></span><p>@bkclothiing</p></div></div>
+</div>
+<script>
+const CFGS={
+  verao:{base:'../verao/',posts:['01-verao-1','02-verao-2','03-verao-3','04-video-tee','05-detalhe-tee','06-nova','07-cargo','08-cargo-off','09-jeans','10-no-corpo-1','11-polo','12-no-corpo-2','13-regata','14-video-conjunto','15-bag','16-pochete','17-logo','18-conjunto'],
+    capas:['novo','quem-usa','tamanhos','envio','loja','vip'],abre:10,desliza:11,reel1:13,reel2:3,leg:'Verão 27 chegou. Chama no direct.',rleg:'Nova coleção na loja e no site.'},
+  inverno:{base:'../',posts:['01-preta','02-marinho','03-bege','04-video-bomber','05-detalhe-gola','06-inverno','07-mochila','08-video-mochila','09-detalhe-mochila','10-no-corpo-1','11-slogan','12-no-corpo-2','13-cargo','14-video-arara','15-conjunto','16-loja','17-logo','18-no-corpo-3'],
+    capas:['novo','quem-usa','tamanhos','envio','loja','vip'],abre:12,desliza:14,reel1:7,reel2:3,leg:'Bomber em três cores. Chama no direct.',rleg:'Inverno 26 na loja e no site.'}
+};
+const C=CFGS[new URLSearchParams(location.search).get('id')||'verao'];
+const $=s=>document.querySelector(s);
+const rot=['Novidades','Quem usa','Tamanhos','Envio','Loja','Grupo VIP'];
+$('#dst').innerHTML=C.capas.map((c,i)=>`<div><img src="${C.base}destaques/${c}.jpg">${rot[i]}</div>`).join('');
+$('#grade').innerHTML=C.posts.map(p=>`<div class="${p.includes('video-')?'v':''}"><img src="${C.base}feed/${p}.jpg"></div>`).join('');
+$('#tira').innerHTML=[C.abre,C.desliza].map(i=>`<img src="${C.base}feed/${C.posts[i]}.jpg">`).join('');
+$('#leg').innerHTML=`<b>bkclothiing</b>${C.leg}`;$('#rleg').textContent=C.rleg;
+const vsrc=i=>`tmp/${C.posts[i].split('video-')[1]}.mp4`;
+const vid=$('#vid');
+const cel=i=>$('#grade').children[i];
+const ease=x=>x<0?0:x>1?1:(x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2);
+const seg=(t,a,b)=>ease((t-a)/(b-a));
+// tempos em segundos
+const T={s1:[1.8,5.4],tap1:6.0,ab1:[6.3,6.75],cor:[7.3,8.2],des:[8.5,9.0],fe1:[9.9,10.3],s2:[10.5,12.9],tap2:13.3,ab2:[13.6,14.0],fe2:[18.2,18.6],s3:[18.9,21.4],tap3:21.9,ab3:[22.2,22.6],fim:[25.4,26.1]};
+window.DUR=26.6;
+let geo=null;
+function medir(){const g=$('#grade'),lin=cel(3).offsetTop-cel(0).offsetTop;const alt=$('#rolo').clientHeight;
+  const y=i=>Math.max(0,Math.min($('#conteudo').offsetHeight-alt,g.offsetTop+Math.floor(i/3)*lin-(alt-lin)/2+10));
+  geo={y1:y(C.abre),y2:y(C.reel1),y3:y(C.reel2)};}
+async function buscar(v,tempo){if(Math.abs(v.currentTime-tempo)<.004)return;await new Promise(r=>{v.addEventListener('seeked',r,{once:true});v.currentTime=tempo;});}
+window.render=async function(t){
+  if(!geo)medir();
+  let y=geo.y1*seg(t,...T.s1);
+  y+=(geo.y2-geo.y1)*seg(t,...T.s2);
+  y+=(geo.y3-geo.y2)*seg(t,...T.s3);
+  $('#conteudo').style.transform=`translateY(${-y}px)`;
+  // publicação
+  const p=seg(t,...T.ab1)-seg(t,...T.fe1);
+  const po=$('#post');po.style.opacity=p;po.style.transform=`translateY(${(1-p)*46}px) scale(${.93+.07*p})`;po.style.visibility=p>0.001?'visible':'hidden';
+  const d=seg(t,...T.des);$('#tira').style.transform=`translateX(${-360*d}px)`;
+  document.querySelectorAll('.pontos i').forEach((e,i)=>e.classList.toggle('on',i===(d>.5?1:0)));
+  const k=(t-T.cor[0])/(T.cor[1]-T.cor[0]);const co=$('#cora');
+  if(k>0&&k<1){const s=k<.25?k/.25*1.25:(k<.4?1.25-(k-.25)/.15*.25:1);co.style.opacity=k<.75?1:(1-k)/.25;co.style.transform=`scale(${s})`;}else co.style.opacity=0;
+  const lk=$('#like');lk.style.fill=t>T.cor[0]+.1?'#ff3040':'none';lk.style.stroke=t>T.cor[0]+.1?'#ff3040':'#f5f5f5';
+  // reels
+  const r1=seg(t,...T.ab2)-seg(t,...T.fe2),r2=seg(t,...T.ab3);const r=Math.max(r1,r2),re=$('#reel');
+  re.style.opacity=r;re.style.transform=`scale(${.9+.1*r})`;re.style.visibility=r>0.001?'visible':'hidden';
+  const qual=t<T.tap3-.3?C.reel1:C.reel2,ini=t<T.tap3-.3?T.ab2[0]:T.ab3[0];
+  if(vid.dataset.i!=qual){vid.dataset.i=qual;vid.src=vsrc(qual);await new Promise(r=>vid.addEventListener('loadeddata',r,{once:true}));}
+  await buscar(vid,Math.max(0,Math.min(4.95,(t-ini)%5)));
+  // dedo
+  const dd=$('#dedo');let alvo=null,quando=0;
+  for(const [tp,i] of [[T.tap1,C.abre],[T.tap2,C.reel1],[T.tap3,C.reel2]]){if(t>tp-.5&&t<tp+.35){alvo=i;quando=tp;}}
+  if(alvo!==null){const b=cel(alvo).getBoundingClientRect();const u=(t-quando+.5)/.85;
+    dd.style.left=(b.left+b.width/2)+'px';dd.style.top=(b.top+b.height/2)+'px';
+    dd.style.opacity=u<.35?u/.35:(u<.6?1:Math.max(0,(1-u)/.4));dd.style.transform=`scale(${u<.5?1.25-.45*(u/.5):.8+.5*((u-.5)/.5)})`;}
+  else dd.style.opacity=0;
+  $('#fim').style.opacity=seg(t,...T.fim);
+  await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo | BK Clothing, moda masculina em Joinville</title>
+<meta name="description" content="Catálogo completo da BK Clothing: jaquetas, moletons, oversized, camisetas, polos, bermudas, conjuntos e acessórios. Envio para todo o Brasil.">
+<meta property="og:title" content="Catálogo BK Clothing">
+<meta property="og:description" content="Monte sua sacola e feche o pedido pelo WhatsApp.">
+<meta property="og:image" content="https://bkclothing.com.br/img/og.jpg">
+<meta name="theme-color" content="#f3f0ea">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bebas+Neue&family=Jost:wght@200&display=swap" rel="stylesheet">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('bk_tema2')||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="stylesheet" href="css/style.css?v=31">
+</head>
+<body data-page="catalogo">
+
+<main>
+  <div class="cat-top">
+    <span class="num">Catálogo</span>
+    <h1 class="d" id="titulo">Tudo</h1>
+  </div>
+  <div class="bar"><div class="chips" id="chips" role="tablist" aria-label="Categorias"></div></div>
+  <div class="res">
+    <span id="conta"></span>
+    <button id="limpar" class="link" hidden>Limpar filtros</button>
+    <span class="tools">
+      <input class="fld" id="busca" type="search" placeholder="Buscar peça ou marca" aria-label="Buscar">
+      <select class="fld" id="marca" aria-label="Marca"></select>
+      <select class="fld" id="ordem" aria-label="Ordenar">
+        <option value="">Novidades</option>
+        <option value="asc">Menor preço</option>
+        <option value="desc">Maior preço</option>
+        <option value="az">A a Z</option>
+      </select>
+    </span>
+  </div>
+  <div class="cat-grid"><div class="grid" id="grid"></div></div>
+</main>
+
+<script src="js/produtos.js?v=31"></script>
+<script src="js/std.js?v=31"></script>
+<script src="js/cut.js?v=31"></script>
+<script src="js/app.js?v=31"></script>
+<script>
+(function () {
+  const top = new Set([...(window.BK_STD || []), ...(window.BK_LIMPAS || [])]);
+  const BK = window.BK, P = [...BK.P].sort((a, b) => top.has(b.id) - top.has(a.id)), $ = s => document.querySelector(s);
+  const cats = ['Jaquetas & Moletons', 'Oversized', 'Camisetas', 'Polos', 'Bermudas & Shorts', 'Calças', 'Conjuntos', 'Regatas', 'Acessórios'];
+  const q = new URLSearchParams(location.search);
+  const st = { c: cats.includes(q.get('c')) ? q.get('c') : '', b: '', o: '', s: '' };
+  const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  $('#chips').innerHTML = `<button class="chip" data-c="">Tudo</button>` + cats.map(c => `<button class="chip" data-c="${c}">${c}</button>`).join('');
+  const marcas = [...new Set(P.map(p => p.b).filter(Boolean))].sort();
+  $('#marca').innerHTML = `<option value="">Todas as marcas</option>` + marcas.map(m => `<option>${m}</option>`).join('');
+
+  function draw() {
+    let l = P.filter(p => (!st.c || p.c === st.c) && (!st.b || p.b === st.b) && (!st.s || norm(p.n + ' ' + p.b + ' ' + p.cor + ' ' + p.c).includes(norm(st.s))));
+    if (st.o === 'asc') l = [...l].sort((a, b) => (a.p ?? 1e9) - (b.p ?? 1e9));
+    if (st.o === 'desc') l = [...l].sort((a, b) => (b.p ?? -1) - (a.p ?? -1));
+    if (st.o === 'az') l = [...l].sort((a, b) => a.n.localeCompare(b.n, 'pt-BR'));
+    document.querySelectorAll('#chips .chip').forEach(c => c.classList.toggle('on', c.dataset.c === st.c));
+    $('#titulo').innerHTML = st.c ? st.c.replace(' & ', '<br>& ') : 'Tudo';
+    $('#conta').textContent = l.length + (l.length === 1 ? ' peça' : ' peças');
+    $('#limpar').hidden = !(st.c || st.b || st.s || st.o);
+    $('#grid').innerHTML = l.length ? l.map(p => BK.card(p)).join('') : '';
+    $('#grid').insertAdjacentHTML('afterend', '');
+    let none = $('.none'); if (none) none.remove();
+    if (!l.length) $('#grid').insertAdjacentHTML('afterend', `<div class="none"><p>Nada por aqui com esse filtro.</p><p style="margin-top:0.875rem"><a class="link" href="${BK.wa('Olá! Procurei no site e não achei: ' + (st.s || st.c))}" target="_blank" rel="noopener">Perguntar no WhatsApp →</a></p></div>`);
+    const u = new URL(location); st.c ? u.searchParams.set('c', st.c) : u.searchParams.delete('c');
+    history.replaceState(null, '', u.pathname + u.search + location.hash);
+  }
+  $('#chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; st.c = b.dataset.c; draw(); scrollTo({ top: 0, behavior: 'smooth' }); });
+  $('#marca').addEventListener('change', e => { st.b = e.target.value; draw(); });
+  $('#ordem').addEventListener('change', e => { st.o = e.target.value; draw(); });
+  $('#busca').addEventListener('input', e => { st.s = e.target.value.trim(); draw(); });
+  $('#limpar').addEventListener('click', () => { st.c = st.b = st.o = st.s = ''; $('#marca').value = $('#ordem').value = $('#busca').value = ''; draw(); });
+  draw();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instagram BK Clothing | Diagnóstico e proposta</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0b;--fg:#f3f0ea;--fg-rgb:243,240,234;--mute:#8f8a80;--accent:#c8b89a;--line:rgba(243,240,234,.16);--ig:#0c1014}
+*{box-sizing:border-box;margin:0;padding:0}
+html{font-size:clamp(16px,min(1.1111vw,1.78vh),52px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:"Jost",system-ui,sans-serif;font-weight:300;font-size:1.0625rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.w{max-width:84rem;margin:0 auto;padding:0 clamp(1.25rem,4vw,4rem)}
+h1,h2,h3{font-family:"Bebas Neue",sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.01em}
+h1{font-size:min(11rem,17vw)}
+h2{font-size:min(6.5rem,12vw);margin-bottom:2rem}
+h2 small{display:block;font-size:1.05rem;letter-spacing:.14em;color:var(--mute);margin-bottom:.9rem}
+h3{font-size:2rem;margin-bottom:.6rem;letter-spacing:.02em}
+p{max-width:62ch}
+p+p{margin-top:.9rem}
+.lead{font-size:1.3rem;color:rgba(var(--fg-rgb),.82);max-width:54ch}
+.m{color:var(--mute)}
+section{padding:clamp(4rem,8vw,8rem) 0;border-top:1px solid var(--line)}
+header.capa{padding:clamp(4rem,9vw,9rem) 0 clamp(3rem,6vw,6rem)}
+.capa .lead{margin-top:2rem}
+.lg{position:relative;display:inline-grid;place-items:center;width:1.9em;height:2.2em;padding:.24em 0 .14em;line-height:1;font-size:1.9rem;margin-bottom:3rem}
+.lg::before,.lg::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:.05em solid currentColor}
+.lg::before{left:0;border-right:0}.lg::after{right:0;border-left:0}
+.lg b{font-weight:200;font-size:.92em;letter-spacing:.06em;margin-top:.14em}
+.lg i{font-family:"Bebas Neue";font-style:normal;font-size:.39em;letter-spacing:.08em;margin-top:-.1em}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 2.5rem;margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* tabelas de fatos */
+.fatos{width:100%;border-collapse:collapse;margin-top:1rem}
+.fatos th{font-family:"Jost";font-weight:400;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 1.5rem .9rem 0}
+.fatos td{vertical-align:top;padding:1.35rem 1.5rem 1.35rem 0;border-top:1px solid var(--line)}
+.fatos td:first-child{width:46%;font-weight:400;font-size:1.15rem}
+.fatos td:last-child{color:rgba(var(--fg-rgb),.78)}
+.fatos b{font-family:"Bebas Neue";font-weight:400;font-size:1.9rem;letter-spacing:.02em;margin-right:.5rem;color:var(--accent)}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,6rem);align-items:start}
+.lista{list-style:none;margin-top:1.25rem}
+.lista li{padding:.9rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:3rem 1fr;gap:1rem}
+.lista li::before{content:counter(n,decimal-leading-zero);counter-increment:n;font-family:"Bebas Neue";font-size:1.3rem;color:var(--mute)}
+.lista{counter-reset:n}
+.lista b{font-weight:500}
+
+/* mock do perfil */
+.fone{width:100%;max-width:27rem;background:var(--ig);color:#f5f5f5;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:400;line-height:1.35;border:1px solid var(--line)}
+.fone .top{padding:1rem 1rem .25rem;font-weight:700;font-size:1.15rem}
+.fone .cab{display:grid;grid-template-columns:5.2rem 1fr;gap:1rem;align-items:center;padding:.75rem 1rem}
+.fone .av{width:5.2rem;height:5.2rem;border-radius:50%;background:#fff;color:#0b0b0b;display:grid;place-items:center;overflow:hidden}
+.fone .av .lg{font-size:1.25rem;margin:0}
+.fone .nums{display:grid;grid-template-columns:repeat(3,1fr);font-size:.82rem}
+.fone .nums b{display:block;font-size:1.05rem}
+.fone .bio{padding:0 1rem .75rem;font-size:.86rem}
+.fone .bio b{display:block;margin-bottom:.1rem}
+.fone .bio a{color:#85a1ff;font-weight:600}
+.fone .bts{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;padding:0 1rem .9rem}
+.fone .bts span{border-radius:.5rem;padding:.45rem;text-align:center;font-weight:600;font-size:.84rem;background:#25292e}
+.fone .bts span:first-child{background:#4a5df9}
+.fone .dst{display:flex;gap:.85rem;padding:.25rem 1rem 1rem;overflow:hidden}
+.fone .dst div{flex:none;width:4.1rem;text-align:center;font-size:.66rem;overflow:hidden;white-space:nowrap}
+.fone .dst img,.fone .dst .old{width:3.7rem;height:3.7rem;border-radius:50%;margin:0 auto .3rem;border:2px solid #333;padding:2px;background-clip:content-box;object-fit:cover}
+.fone .dst .old{background:#fff;color:#0b0b0b;display:grid;place-items:center}
+.fone .dst .old .lg{font-size:.72rem;margin:0}
+.fone .abas{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #262626;text-align:center;font-size:.8rem;color:#888}
+.fone .abas span{padding:.6rem 0}.fone .abas span:first-child{color:#fff;box-shadow:inset 0 -1px 0 #fff}
+.fone .gr{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.fone .gr img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.fone.hoje .gr img{aspect-ratio:4/5}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,5rem);margin-top:3rem;align-items:start;justify-items:center}
+.par figure{width:100%;max-width:27rem;min-width:0;margin:0}
+.sem,.fatos{table-layout:fixed}
+.par figcaption,.leg{margin-top:1rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* colunas da regra */
+.regra{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:2.5rem}
+.regra div{padding:1.75rem 1.75rem 0 0}
+.regra div+div{padding-left:1.75rem;border-left:1px solid var(--line)}
+.regra span{font-family:"Bebas Neue";font-size:1.1rem;letter-spacing:.14em;color:var(--mute)}
+.regra p{color:rgba(var(--fg-rgb),.78)}
+
+.fila{display:grid;gap:.75rem;margin-top:2.5rem}
+.fila.c3{grid-template-columns:repeat(3,1fr);max-width:62rem}
+.vids video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#111;display:block}
+.fone .gr video{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.fila.c4{grid-template-columns:repeat(4,1fr)}.fila.c6{grid-template-columns:repeat(6,1fr)}
+.fila figure{margin:0}.fila img{width:100%}
+.fila figcaption{margin-top:.75rem;font-size:.95rem;color:rgba(var(--fg-rgb),.78)}
+.fila figcaption b{display:block;font-family:"Bebas Neue";font-weight:400;font-size:1.35rem;letter-spacing:.03em;color:var(--fg)}
+.capas img{border-radius:50%;border:1px solid var(--line)}
+.sem{width:100%;border-collapse:collapse;margin-top:2rem}
+.sem th,.sem td{text-align:left;vertical-align:top;padding:1.1rem 1.5rem 1.1rem 0;border-top:1px solid var(--line)}
+.sem thead th{border-top:0;font-weight:400;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.sem tbody th{font-family:"Bebas Neue";font-weight:400;font-size:1.6rem;letter-spacing:.03em;width:8rem}
+.bio-nova{border:1px solid var(--line);padding:2rem;font-size:1.15rem;font-weight:400;line-height:1.7}
+.bio-nova b{font-weight:500}
+.bio-nova a{color:var(--accent)}
+.nota{font-size:.95rem;color:var(--mute);max-width:70ch}
+footer{padding:3rem 0 5rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--mute);letter-spacing:.06em}
+@media (max-width:860px){
+  .duas,.par{grid-template-columns:1fr}
+  .regra{grid-template-columns:1fr}.regra div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .fila.c4{grid-template-columns:repeat(2,1fr)}.fila.c3{grid-template-columns:1fr}.fila.c6{grid-template-columns:repeat(3,1fr)}
+  .fatos td{display:block;width:100%!important;padding-right:0}.fatos td:last-child{border-top:0;padding-top:0}.fatos thead{display:none}
+}
+@media print{body{background:#fff;color:#000}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="capa"><div class="w">
+  <span class="lg"><b>BK</b><i>CLOTHING</i></span>
+  <h1>Instagram<br>que vende</h1>
+  <p class="lead">Diagnóstico do perfil @bkclothiing e uma proposta completa de feed, destaques e stories, já montada com as peças da loja.</p>
+  <div class="meta"><span>Joinville, 7 de outubro de 2026</span><span>Base: os 60 posts mais recentes, os destaques e duas lojas de referência</span></div>
+</div></header>
+
+<section><div class="w">
+  <h2><small>01</small>O que o perfil mostra hoje</h2>
+  <p class="lead">A BK tem produto, loja bonita e cliente que posta usando. O perfil ainda não mostra isso para quem chega.</p>
+  <table class="fatos">
+    <thead><tr><th>O que eu vi</th><th>O que isso custa</th></tr></thead>
+    <tbody>
+      <tr><td><b>12</b>Os doze posts mais recentes saíram no mesmo dia, 23 de maio. Depois disso, nenhum.</td><td>Quem visita o perfil hoje vê uma loja parada há mais de quatro meses, mesmo com a loja funcionando e vendendo pelo WhatsApp.</td></tr>
+      <tr><td><b>5</b>Cinco jeitos diferentes de fotografar nas duas primeiras telas: peça flutuando em estúdio, piso de madeira, mesa com caixas ao fundo, modelo em parede de tijolo e a loja.</td><td>A grade não tem unidade. A peça boa fica ao lado de uma foto escura no chão e perde valor.</td></tr>
+      <tr><td><b>3</b>Três vídeos em sessenta posts.</td><td>É pelo vídeo que o perfil chega a quem ainda não segue. Sem ele, a loja fala só com quem já conhece.</td></tr>
+      <tr><td><b>7</b>Sete destaques com o mesmo nome, "Quem usa?", e a mesma capa. Os que abri têm de 84 a 117 semanas.</td><td>A prova de que cliente compra e usa existe, mas está espalhada, velha e sem ordem. Não há destaque de novidades, tamanhos ou envio.</td></tr>
+      <tr><td><b>1.226</b>O perfil segue 1.226 contas e tem 1.428 seguidores.</td><td>Para quem chega, lê como perfil pequeno. Reduzir quem a loja segue já muda essa leitura.</td></tr>
+      <tr><td>Várias fotos têm caixas de grifes de luxo ao fundo.</td><td>Sugere um produto que a loja não vende e tira a atenção da peça. Sai do padrão novo.</td></tr>
+      <tr><td>O link da bio leva a um Linktree com endereço de exemplo, de outro país.</td><td>O cliente que quer ir até a loja recebe um endereço errado.</td></tr>
+    </tbody>
+  </table>
+  <div class="duas" style="margin-top:4rem">
+    <div><h3>O que já funciona</h3><p>As fotos com modelo, na parede de tijolo. O vídeo mostrando a loja por dentro. A parede com o letreiro, que é a melhor imagem de marca que a BK tem. E os clientes que marcam a loja usando as peças.</p></div>
+    <div><h3>O que isso quer dizer</h3><p>Não falta conteúdo. Falta um padrão para a foto da peça, uma ideia por trás da grade e uma rotina. É isso que as próximas seções resolvem.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>02</small>Como as lojas grandes fazem</h2>
+  <div class="duas">
+    <div><p class="lead">Olhei dois perfis de loja multimarca de rua que vendem muito pelo Instagram, para copiar o que se repete e não inventar moda.</p></div>
+    <div>
+      <p><b style="font-weight:500">Guadalupe Store</b>, 306 mil seguidores. A peça aparece sozinha, em fundo neutro e sempre igual. A cada tanto entra uma foto vestida. O primeiro post é fixo e fala da loja. Os destaques têm nome e desenho próprios.</p>
+      <p><b style="font-weight:500">Cartel 011</b>, 77,9 mil seguidores. Mais editorial, quase tudo em vídeo, com destaques de "como chegar" e "fale conosco".</p>
+      <p class="m">O padrão que serve para a BK é o da primeira: produto limpo, fundo único, gente de vez em quando e a marca marcando presença.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>03</small>Uma ideia por linha</h2>
+  <p class="lead">Cada linha de três posts conta uma coisa só. Nada de moldura repetida nem etiqueta em toda foto: o que dá unidade é a peça limpa, a letra grande e o mesmo punhado de tons.</p>
+  <div class="regra">
+    <div><span>Linha de cor</span><h3>A peça em close</h3><p>A mesma jaqueta nas três cores, enorme, com o nome da cor atrás. É a linha que para o dedo.</p></div>
+    <div><span>Linha de vídeo</span><h3>A peça se mexendo</h3><p>Um vídeo curto da peça-chave, um detalhe de tecido de perto e a coleção em letra.</p></div>
+    <div><span>Linha no corpo</span><h3>Gente e loja</h3><p>Foto real vestida, a frase da marca, a parede da loja. Sem texto em cima da foto.</p></div>
+  </div>
+  <div class="par">
+    <figure><div class="fone hoje" id="perfil-hoje">
+      <div class="top">bkclothiing</div>
+      <div class="cab"><div class="av"><span class="lg"><b>BK</b><i>CLOTHING</i></span></div><div class="nums"><span><b>444</b>posts</span><span><b>1.428</b>seguidores</span><span><b>1.226</b>seguindo</span></div></div>
+      <div class="bio"><b>BK CLOTHING</b>vista estilo, vista bkclothing.<br>Rua Santa Catarina, 2348 - Floresta<br>Enviamos para todo Brasil.<br><a>linktr.ee/bkclothiing</a></div>
+      <div class="bts"><span>Seguir</span><span>Enviar mensagem</span></div>
+      <div class="dst" id="dst-hoje"></div>
+      <div class="abas"><span>Posts</span><span>Reels</span><span>Marcados</span></div>
+      <div class="gr" id="gr-hoje"></div>
+    </div><figcaption>Hoje</figcaption></figure>
+    <figure><div class="fone" id="perfil-novo">
+      <div class="top">bkclothiing</div>
+      <div class="cab"><div class="av"><span class="lg"><b>BK</b><i>CLOTHING</i></span></div><div class="nums"><span><b>444</b>posts</span><span><b>1.428</b>seguidores</span><span><b>1.226</b>seguindo</span></div></div>
+      <div class="bio"><b>BK CLOTHING</b>Moda masculina · Joinville<br>Jaquetas, oversized, bermudas e acessórios<br>Loja: Rua Santa Catarina, 2348 · Floresta<br>Enviamos para todo o Brasil<br><a>bkclothing.com.br/links</a></div>
+      <div class="bts"><span>Seguir</span><span>Enviar mensagem</span></div>
+      <div class="dst" id="dst-novo"></div>
+      <div class="abas"><span>Posts</span><span>Reels</span><span>Marcados</span></div>
+      <div class="gr" id="gr-novo"></div>
+    </div><figcaption>Proposta</figcaption></figure>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>04</small>Como destacar cada peça</h2>
+  <p class="lead">Peça importante vira um carrossel de quatro imagens. O valor fica para a conversa: quem quer saber chama, e a venda começa ali.</p>
+  <div class="fila c4">
+    <figure><img src="carrossel/1.jpg" alt=""><figcaption><b>1. Capa</b>A peça em close, com o nome da cor. É o que aparece na grade.</figcaption></figure>
+    <figure><img src="carrossel/2.jpg" alt=""><figcaption><b>2. A peça de verdade</b>A foto que a loja já tira hoje, sem texto.</figcaption></figure>
+    <figure><img src="carrossel/3.jpg" alt=""><figcaption><b>3. Detalhe</b>Gola, zíper, tecido. De perto.</figcaption></figure>
+    <figure><img src="carrossel/4.jpg" alt=""><figcaption><b>4. Ficha</b>Cores, tamanhos e como pedir.</figcaption></figure>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>05</small>Vídeo de peça-chave</h2>
+  <p class="lead">Três vídeos de cinco segundos, verticais, feitos a partir das fotos das peças. Entram no feed como reel e rodam em sequência nos stories.</p>
+  <div class="fila c3 vids">
+    <figure><video src="videos/bomber.mp4" poster="videos/bomber.jpg" autoplay muted loop playsinline controls></video><figcaption><b>Jaqueta bomber</b>A peça gira devagar. É o vídeo para fixar no topo do perfil.</figcaption></figure>
+    <figure><video src="videos/mochila.mp4" poster="videos/mochila.jpg" autoplay muted loop playsinline controls></video><figcaption><b>Mochila</b>A câmera dá a volta na peça.</figcaption></figure>
+    <figure><video src="videos/arara.mp4" poster="videos/arara.jpg" autoplay muted loop playsinline controls></video><figcaption><b>As três cores</b>As jaquetas na arara, como na loja.</figcaption></figure>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>06</small>Destaques</h2>
+  <p class="lead">Seis destaques com nome e capa próprios, na ordem em que o cliente novo faz as perguntas. As capas são recortes das próprias peças e da loja.</p>
+  <div class="fila c6 capas">
+    <figure><img src="destaques/novo.jpg" alt=""><figcaption><b>Novidades</b>O que chegou na semana. Limpar todo mês.</figcaption></figure>
+    <figure><img src="destaques/quem-usa.jpg" alt=""><figcaption><b>Quem usa</b>Os sete destaques de hoje viram um só, com os melhores primeiro.</figcaption></figure>
+    <figure><img src="destaques/tamanhos.jpg" alt=""><figcaption><b>Tamanhos</b>Tabela de medidas e a mesma peça em M e G no corpo.</figcaption></figure>
+    <figure><img src="destaques/envio.jpg" alt=""><figcaption><b>Envio</b>Como pedir, prazo, pagamento e troca.</figcaption></figure>
+    <figure><img src="destaques/loja.jpg" alt=""><figcaption><b>Loja</b>Fachada, provador, endereço e como chegar.</figcaption></figure>
+    <figure><img src="destaques/vip.jpg" alt=""><figcaption><b>Grupo VIP</b>O que é e o link para entrar.</figcaption></figure>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>07</small>Stories</h2>
+  <p class="lead">Seis modelos prontos, com o texto fora da área que o Instagram cobre em cima e embaixo. Todo story termina com uma ação.</p>
+  <div class="fila c6">
+    <figure><img src="stories/1-chegou.jpg" alt=""><figcaption><b>Chegou</b>A peça nova. Quem responde QUERO já entra na conversa.</figcaption></figure>
+    <figure><img src="stories/2-enquete.jpg" alt=""><figcaption><b>Enquete</b>O cliente escolhe a cor. Quem vota é quem está pensando em comprar.</figcaption></figure>
+    <figure><img src="stories/3-tamanhos.jpg" alt=""><figcaption><b>Ainda tem</b>Tamanhos que restam. Tamanho riscado apressa a decisão.</figcaption></figure>
+    <figure><img src="stories/4-quem-usa.jpg" alt=""><figcaption><b>Quem usa</b>Moldura para repostar a foto do cliente.</figcaption></figure>
+    <figure><img src="stories/5-loja.jpg" alt=""><figcaption><b>Passe na loja</b>Endereço com o botão de rota.</figcaption></figure>
+    <figure><img src="stories/6-caixinha.jpg" alt=""><figcaption><b>Caixinha</b>O cliente diz o que quer ver. Vira pauta de compra.</figcaption></figure>
+  </div>
+  <div class="duas" style="margin-top:4rem">
+    <div><h3>Mais ideias, sem custo</h3>
+      <ol class="lista">
+        <li><span><b>Provador.</b> Vídeo de dez segundos vestindo a peça, de frente e de costas.</span></li>
+        <li><span><b>Três jeitos de usar.</b> A mesma jaqueta com três combinações da loja.</span></li>
+        <li><span><b>M ou G.</b> A mesma peça nos dois tamanhos, na mesma pessoa.</span></li>
+        <li><span><b>Pedido saindo.</b> A embalagem do dia indo para o correio, com a cidade de destino.</span></li>
+        <li><span><b>Última unidade.</b> Uma peça, um tamanho.</span></li>
+      </ol></div>
+    <div><h3>&nbsp;</h3>
+      <ol class="lista" style="counter-reset:n 5">
+        <li><span><b>Antes do catálogo.</b> O que vai para o grupo VIP amanhã.</span></li>
+        <li><span><b>Contagem.</b> Adesivo de contagem regressiva para a coleção nova.</span></li>
+        <li><span><b>Reposição.</b> Caixa chegando e sendo aberta.</span></li>
+        <li><span><b>Voltou.</b> Peça que tinha esgotado e voltou.</span></li>
+        <li><span><b>Cliente falando.</b> Mensagem de quem recebeu, com autorização.</span></li>
+      </ol></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>08</small>A semana</h2>
+  <p class="lead">Três posts por semana, que fecham uma linha da grade, e stories todos os dias. Cabe na rotina de quem já fotografa para o grupo VIP.</p>
+  <table class="sem">
+    <thead><tr><th>Dia</th><th>Feed</th><th>Stories</th></tr></thead>
+    <tbody>
+      <tr><th>Segunda</th><td class="m">Sem post</td><td>Chegou hoje e enquete de cor</td></tr>
+      <tr><th>Terça</th><td>A peça: carrossel de quatro imagens</td><td>O mesmo carrossel, com "responda QUERO"</td></tr>
+      <tr><th>Quarta</th><td class="m">Sem post</td><td>Ainda tem (tamanhos) e caixinha</td></tr>
+      <tr><th>Quinta</th><td>Vídeo de peça-chave ou da loja</td><td>Provador ou três jeitos de usar</td></tr>
+      <tr><th>Sexta</th><td class="m">Sem post</td><td>Passe na loja e pedido saindo</td></tr>
+      <tr><th>Sábado</th><td>No corpo: foto vestida ou provador</td><td>Quem usa: fotos de clientes da semana</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section><div class="w">
+  <h2><small>09</small>Para vender mais</h2>
+  <div class="duas">
+    <ol class="lista">
+      <li><span><b>Vídeo no topo.</b> O vídeo da peça-chave fica fixado. É a primeira coisa que o visitante vê se mexer.</span></li>
+      <li><span><b>Uma palavra para pedir.</b> "Comente QUERO" ou "responda QUERO". O cliente não precisa escrever uma frase.</span></li>
+      <li><span><b>Grupo VIP primeiro.</b> A peça nova aparece lá um dia antes. Dá motivo para entrar no grupo.</span></li>
+      <li><span><b>Tamanho que resta.</b> Mostrar o que sobrou vende mais do que mostrar o que chegou.</span></li>
+    </ol>
+    <ol class="lista" style="counter-reset:n 4">
+      <li><span><b>Cliente toda semana.</b> Sábado é dia de repostar quem marcou a loja.</span></li>
+      <li><span><b>Um link só.</b> A bio leva para a página de links do site novo, onde o cliente monta a sacola e o pedido chega pronto no WhatsApp.</span></li>
+      <li><span><b>Post fixado.</b> Três posts fixos no topo: a loja, como comprar e a coleção atual.</span></li>
+      <li><span><b>Seguir menos.</b> Baixar as 1.226 contas seguidas para perto de 200.</span></li>
+    </ol>
+  </div>
+  <div class="duas" style="margin-top:4rem">
+    <div><h3>Bio nova</h3>
+      <div class="bio-nova"><b>BK CLOTHING</b><br>Moda masculina · Joinville<br>Jaquetas, oversized, bermudas e acessórios<br>Loja: Rua Santa Catarina, 2348 · Floresta<br>Enviamos para todo o Brasil<br><a>bkclothing.com.br/links</a></div></div>
+    <div><h3>As duas primeiras semanas</h3>
+      <ol class="lista">
+        <li><span>Trocar a bio e o link. Juntar os destaques em seis, com as capas novas.</span></li>
+        <li><span>Arquivar as fotos com caixas de grife ao fundo e fixar três posts.</span></li>
+        <li><span>Publicar as duas primeiras linhas da grade: as três cores e a linha do vídeo.</span></li>
+        <li><span>Stories todos os dias, seguindo a tabela da semana.</span></li>
+        <li><span>No fim, olhar três números: mensagens recebidas, respostas a stories e cliques no link.</span></li>
+      </ol></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2><small>10</small>O que é demonstração</h2>
+  <p class="nota">As fotos de peça usam o padrão já feito para o site, redesenhado a partir das fotos da loja; cada uma precisa ser conferida com a peça real antes de publicar. Os três vídeos foram gerados a partir dessas fotos e servem para mostrar a ideia: o definitivo é filmar a peça real na loja, no mesmo enquadramento. As fotos com modelo são as que já estão no perfil da BK. Tamanhos, cores disponíveis e o tamanho "esgotado" nos exemplos são ilustrativos. Não tive acesso às estatísticas do perfil, então não há número de alcance ou de venda aqui: o diagnóstico vem do que qualquer visitante vê. Vi os sessenta posts mais recentes dos 444; o perfil não carregou os mais antigos.</p>
+</div></section>
+
+<footer><div class="w">Preparado por Guilherme para a BK Clothing · Arquivos das artes nas pastas feed, carrossel, destaques e stories</div></footer>
+
+<script>
+const posts=['01-preta','02-marinho','03-bege','04-video-bomber','05-detalhe-gola','06-inverno','07-mochila','08-video-mochila','09-detalhe-mochila','10-no-corpo-1','11-slogan','12-no-corpo-2','13-cargo','14-video-arara','15-conjunto','16-loja','17-logo','18-no-corpo-3'];
+document.getElementById('gr-novo').innerHTML=posts.map(p=>{const v=p.match(/video-(.+)$/);return v?`<video src="videos/${v[1]}.mp4" poster="feed/${p}.jpg" autoplay muted loop playsinline></video>`:`<img src="feed/${p}.jpg" alt="">`}).join('');
+document.getElementById('gr-hoje').innerHTML=Array.from({length:12},(_,i)=>`<img src="../_coleta/insta/ig${i+1}.jpg" alt="">`).join('');
+const capas=[['novo','Novidades'],['quem-usa','Quem usa'],['tamanhos','Tamanhos'],['envio','Envio'],['loja','Loja'],['vip','Grupo VIP']];
+document.getElementById('dst-novo').innerHTML=capas.map(c=>`<div><img src="destaques/${c[0]}.jpg" alt="">${c[1]}</div>`).join('');
+const lg='<span class="lg"><b>BK</b><i>CLOTHING</i></span>';
+document.getElementById('dst-hoje').innerHTML=`<div><img src="../site/img/loja.webp" alt="">ENDEREÇO</div>`+Array(5).fill(`<div><div class="old">${lg}</div>Quem usa?</div>`).join('');
+</script>
+</body>
+</html>

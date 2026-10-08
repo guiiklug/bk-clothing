@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>CATÁLOGO BK CLOTHING</title>
+    <meta name="description" content="CATÁLOGO BK CLOTHING" />
+    <meta property="og:image" content="catalogoapp/f1239464-ddfa-483d-85aa-9f29a26c4fe6.jpeg" />
+    <meta property="og:description" content="Rua Santa Catarina 2348 - Floresta">
+    <meta property="og:type" content="company" />
+    <meta name="Robots" content="index,follow" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link href="https://bkclothing.com.br/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .nav-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 10px;
+        }
+
+        .bx-wrapper {
+            border: 0px;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            font-size: large;
+            color: #878787
+        }
+
+        .search-icon:hover {
+            color: #000
+        }
+
+        .text-gray-dark {
+            color: #FFF
+        }
+
+        .text-gray-dark:hover {
+            color: #565656
+        }
+
+        .card-img-top {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-img-detail {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .active>.page-link {
+            background-color: #BEBEBE;
+            border-color: #BEBEBE;
+        }
+
+        .itemListCartResponsive {
+            min-height: 0px !important;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .collection {
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collection .collection-item.avatar {
+            min-height: 84px;
+            padding-left: 72px;
+            position: relative;
+        }
+
+        .collection .collection-item.avatar:not(.circle-clipper)>.circle,
+        .collection .collection-item.avatar :not(.circle-clipper)>.circle {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            overflow: hidden;
+            left: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .collection .collection-item.avatar i.circle {
+            font-size: 18px;
+            line-height: 42px;
+            color: #fff;
+            background-color: #999;
+            text-align: center;
+        }
+
+        .collection .collection-item.avatar .title {
+            font-size: 16px;
+        }
+
+        .collection .collection-item.avatar p {
+            margin: 0;
+        }
+
+        .collection .collection-item.avatar .secondary-content {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        .collection.with-header .collection-item.avatar {
+            padding-left: 72px;
+        }
+
+        .name-company-navbar {
+            max-width: 232px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .hide-on-small-only,
+            .hide-on-small-and-down {
+                display: none !important;
+            }
+        }
+
+        @media only screen and (min-width: 601px) {
+            .hide-on-med-and-up {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .name-company-navbar {
+                max-width: none;
+            }
+        }
+
+        /* Estilos para o modal de busca no mobile */
+        @media (max-width: 767px) {
+            #searchModal .modal-dialog {
+                margin: 0.5rem;
+                max-width: calc(100% - 1rem);
+            }
+
+            #searchModal .modal-content {
+                border-radius: 8px;
+            }
+
+            #searchModal .form-check-input {
+                margin-right: 8px;
+            }
+
+            #searchModal .form-check-label {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            #searchModal .modal-body {
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+
+            #searchModal .ps-0 {
+                padding: 0 !important;
+            }
+
+            #searchModal .mb-2 {
+                margin-bottom: 12px !important;
+            }
+        }
+    </style>
+
+    </head>
+
+<body>
+    
+    <nav class="navbar fixed-top"
+        style="background-color: #BEBEBE; display: inline-flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;">
+        <div class="container">
+            <div class="d-flex justify-content-between w-100">
+
+                <div class="d-flex align-items-center">
+                    <a href="https://bkclothing.com.br">
+                        <div class="nav-logo d-none d-sm-flex"
+                            style="background-image: url('/storage/catalogoapp/f1239464-ddfa-483d-85aa-9f29a26c4fe6.jpeg');">
+                        </div>
+                        <a class="navbar-brand text-white fw-bold name-company-navbar" href="https://bkclothing.com.br"
+                            style="font-size: 22px;">CATÁLOGO BK CLOTHING</a>
+                    </a>
+                </div>
+
+                <div class="d-none d-md-flex">
+                    <div class="input-group" style="flex-wrap: nowrap">
+                        
+                                                    <button class="btn btn-secondary dropdown-toggle fw-bold" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"
+                                style="background-color: #e3e3e3!important; color: #303030; border: 1px solid #ccc!important">
+                                Categorias
+                            </button>
+
+                            <ul class="dropdown-menu" style="height: 25rem; overflow: auto">
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category228122" value="228122"
+                                                >
+                                            <label for="category228122"
+                                                class="form-check-label">Bermudas</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category206842" value="206842"
+                                                >
+                                            <label for="category206842"
+                                                class="form-check-label">Calça Cargo</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category206696" value="206696"
+                                                >
+                                            <label for="category206696"
+                                                class="form-check-label">Camiseta Oversized</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category228123" value="228123"
+                                                >
+                                            <label for="category228123"
+                                                class="form-check-label">Camisetas Premium</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category235015" value="235015"
+                                                >
+                                            <label for="category235015"
+                                                class="form-check-label">Conjunto Inverno</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category228126" value="228126"
+                                                >
+                                            <label for="category228126"
+                                                class="form-check-label">Conjuntos / Camiseta + Bermuda</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category235479" value="235479"
+                                                >
+                                            <label for="category235479"
+                                                class="form-check-label">Jaqueta</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category235014" value="235014"
+                                                >
+                                            <label for="category235014"
+                                                class="form-check-label">Moletom</label>
+                                        </div>
+                                    </li>
+                                                                    <li>
+                                        <div class="dropdown-item">
+                                            <input type="checkbox" class="form-check-input" name="categories[]"
+                                                id="category228146" value="228146"
+                                                >
+                                            <label for="category228146"
+                                                class="form-check-label">Sarja + Linho</label>
+                                        </div>
+                                    </li>
+                                                            </ul>
+                        
+                        <form id="search-form" class="d-flex w-100  rounded-end "
+                            method="get" style="background-color: #fff">
+                            <div class="d-flex w-100 ">
+                                <input id="search-input" class="form-control" placeholder="Pesquisar"
+                                    aria-label="Pesquisar" name="keyword" style="border: 0; box-shadow: none;"
+                                    value="">
+
+                                <span class="search-icon mt-1" style="width: 20px; margin-right: 1rem;"
+                                    onclick="document.getElementById('search-form').submit();">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="d-md-none py-4"></div>
+                </div>
+
+                <div class="d-flex align-items-center">
+
+                    <div class="mx-3 d-md-none">
+                        <span class="text-light ml-3" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <i class="fas fa-search text-gray-dark"></i>
+                        </span>
+                    </div>
+
+                                            <div class="mx-3">
+                            <a href="https://bkclothing.com.br/cart" class="text-light ml-3">
+                                <i class="fas fa-shopping-cart text-gray-dark"></i>
+                            </a>
+                        </div>
+                    
+                    
+                                    </div>
+            </div>
+
+
+
+
+        </div>
+    </nav>
+
+    <div style="margin-top: 59px !important;"></div>
+
+        <div>
+        
+                    <div class="w-100 p-4 mb-4" style="height: 150px; background-image: url('https://supliutech.nyc3.cdn.digitaloceanspaces.com/covers/e61dea88-7f3c-433c-a4e5-49f0fb7e2bc9.jpeg'); background-size: cover;">
+                <div class="logo" style="background-image: url('https://supliutech.nyc3.cdn.digitaloceanspaces.com/catalogoapp/f1239464-ddfa-483d-85aa-9f29a26c4fe6.jpeg');">
+                </div>
+            </div>
+                
+</div>
+
+    <!-- Home section-->
+    <section>
+        
+        <div class="container px-4 px-lg-5">
+    <h4 class="fw-bolder mb-4">Destaques que você vai amar</h4>
+
+    <div id="featured-products-carousel" class="carousel">
+        <!-- Slides do carrossel -->
+        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                    <div class="row gx-2 row-cols-2 row-cols-md-3 row-cols-xl-4">
+                                                    <div class="col mb-2">
+                                <div class="card h-100 p-2" style="background-color: #f6f8f9;">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1914784-jaqueta-tommy">
+                                            
+                                                                                    <img class="card-img-detail"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/1ffefb20-99a5-405b-91a8-4665367ce00f.jpeg" />
+                                                                            </a>
+    
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="fw-bolder fs-5">R$ 299,00</span>
+                                                                                                
+                                            <span class="d-block">Jaqueta Tommy</span>
+                                        </div>
+                                    </div>
+    
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent" style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1914784"
+                                                product_id="1914784"
+                                                variations="[]"
+                                                combinations="null"
+                                            >
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-2">
+                                <div class="card h-100 p-2" style="background-color: #f6f8f9;">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1914785-jaqueta-tommy">
+                                            
+                                                                                    <img class="card-img-detail"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/91276dd1-4655-4fc1-8fce-4850d1cf16c4.jpeg" />
+                                                                            </a>
+    
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="fw-bolder fs-5">R$ 299,00</span>
+                                                                                                
+                                            <span class="d-block">Jaqueta Tommy</span>
+                                        </div>
+                                    </div>
+    
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent" style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1914785"
+                                                product_id="1914785"
+                                                variations="[]"
+                                                combinations="null"
+                                            >
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-2">
+                                <div class="card h-100 p-2" style="background-color: #f6f8f9;">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1914786-jaqueta-tommy">
+                                            
+                                                                                    <img class="card-img-detail"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/39fdefd7-daa0-4bfe-9ac3-7b8d7a317909.jpeg" />
+                                                                            </a>
+    
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="fw-bolder fs-5">R$ 299,00</span>
+                                                                                                
+                                            <span class="d-block">Jaqueta Tommy</span>
+                                        </div>
+                                    </div>
+    
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent" style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1914786"
+                                                product_id="1914786"
+                                                variations="[]"
+                                                combinations="null"
+                                            >
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-2">
+                                <div class="card h-100 p-2" style="background-color: #f6f8f9;">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1910184-moletom-comp">
+                                            
+                                                                                    <img class="card-img-detail"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/9e09a938-b08d-4051-9f81-cc101050de85.jpeg" />
+                                                                            </a>
+    
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="fw-bolder fs-5">R$ 299,90</span>
+                                                                                                
+                                            <span class="d-block">Moletom Comp</span>
+                                        </div>
+                                    </div>
+    
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent" style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1910184"
+                                                product_id="1910184"
+                                                variations="[]"
+                                                combinations="null"
+                                            >
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                            </div>
+                </div>
+                    </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#featured-products-carousel"
+            data-bs-slide="prev" style="width: auto !important;">
+            <span class="carousel-control-prev-icon bg-secondary" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featured-products-carousel"
+            data-bs-slide="next" style="width: auto !important;">
+            <span class="carousel-control-next-icon bg-secondary" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+        <div class="container px-4 px-lg-5 my-3">
+            <div class="row gx-5">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="fw-bolder mb-4">Todos os produtos</h4>
+                        </div>
+                        <div class="col">
+                            <select class="form-select" aria-label="Ordenar por" name="orderBy" id="orderBy">
+                                <option selected disabled>
+                                    Ordenar por
+                                </option>
+                                <option value="lowPrice" >
+                                    Menor preço
+                                </option>
+                                <option value="highPrice" >
+                                    Maior preço
+                                </option>
+                                <option value="alphabeticalOrder"
+                                    >
+                                    Ordem alfabética
+                                </option>
+                                <option value="inclusionDateOld"
+                                    >
+                                    Data de inclusão (mais antiga)
+                                </option>
+                                <option value="inclusionDateLast"
+                                    >
+                                    Data de inclusão (mais recente)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row gx-2 row-cols-2 row-cols-md-3 row-cols-xl-5">
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688772-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/7bb262f3-3f4f-4afd-aa63-8b13bac6c372.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688772"
+                                                product_id="1688772"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688774-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/5b8b43d3-65b9-43e2-adac-7b39fee58fcb.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688774"
+                                                product_id="1688774"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688775-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/e3685fab-03c3-4a64-810c-1b6bec8ee500.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688775"
+                                                product_id="1688775"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688776-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/648688df-d9c0-4ced-b295-95837c5a3bef.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688776"
+                                                product_id="1688776"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688777-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/05915ce7-e518-4ffe-849c-2f693e551eef.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688777"
+                                                product_id="1688777"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688779-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/91f68774-dacd-466d-a38a-0dd00e84c963.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688779"
+                                                product_id="1688779"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688781-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/7e8920c6-67ab-433a-9ff2-703f61c4ca48.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688781"
+                                                product_id="1688781"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1849977-camiseta-diesel">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/3aa0edb4-248f-4102-8aa3-d0d510287369.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Diesel</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1849977"
+                                                product_id="1849977"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679430-camiseta-hugo-boss">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/30a6e2bf-6538-4371-989a-ba59f6c242e2.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Hugo Boss</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679430"
+                                                product_id="1679430"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1688209-camiseta-hugo-boss">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/ae8076eb-a7a7-42c1-b830-9402a365d998.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Hugo Boss</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1688209"
+                                                product_id="1688209"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1703212-camiseta-hugo-boss">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/dd586884-05c2-43f4-86ab-29db3d00bc26.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Hugo Boss</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1703212"
+                                                product_id="1703212"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679464-camiseta-lacoste">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/1fb3d83b-4d9f-4b25-b1e3-0e26f4321376.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Lacoste</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679464"
+                                                product_id="1679464"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1680196-camiseta-lacoste">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/77b58191-70f7-42d7-ae4d-03b3b3b00377.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Lacoste</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1680196"
+                                                product_id="1680196"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1849984-camiseta-lisa">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/527b1090-2164-44cb-a2b6-79f7bf95430f.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 100,00</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Lisa</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1849984"
+                                                product_id="1849984"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679450-camiseta-mr-bunny">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/5014840c-2249-4800-8d79-971d750c019b.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="text-muted fs-6">
+                                                        <s>R$ 100,00</s>
+                                                    </span>
+                                                    <br>
+                                                    <span class="fw-bolder fs-5">
+                                                        R$ 50,00
+                                                    </span>
+                                                                                            
+                                            <span class="d-block">Camiseta MR BUNNY</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679450"
+                                                product_id="1679450"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679455-camiseta-mr-bunny">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/964760f6-1d3e-40f0-90ba-a093cf98dc09.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span class="text-muted fs-6">
+                                                        <s>R$ 100,00</s>
+                                                    </span>
+                                                    <br>
+                                                    <span class="fw-bolder fs-5">
+                                                        R$ 50,00
+                                                    </span>
+                                                                                            
+                                            <span class="d-block">Camiseta MR BUNNY</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679455"
+                                                product_id="1679455"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679468-camiseta-oversized">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/4df11f45-a3e2-4eb9-8db6-5114ce42687d.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679468"
+                                                product_id="1679468"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1849728-camiseta-oversized-casa-blanca">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/b403a381-bf7b-47cb-adb0-27156a3330c6.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Casa Blanca</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1849728"
+                                                product_id="1849728"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1680218-camiseta-oversized-high">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/104058ed-cb3b-4e09-920f-718e70431529.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized High</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1680218"
+                                                product_id="1680218"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1679465-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/bb9ee2b5-1ec1-4a36-860c-019bcda5953e.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1679465"
+                                                product_id="1679465"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1690980-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/d35f279a-3650-45b7-9992-55fe6795df04.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1690980"
+                                                product_id="1690980"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1703204-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/5a1a94d4-f08d-4c04-af48-f2905d4ff59c.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1703204"
+                                                product_id="1703204"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1703206-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/42665a24-e5c4-437d-9b21-c65a008984da.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1703206"
+                                                product_id="1703206"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1853957-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/50ca7f41-ceb8-47b7-ba44-d620326bca5b.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1853957"
+                                                product_id="1853957"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    <div class="col mb-5">
+                                <div class="card h-100 p-2">
+                                    <a
+                                        href="https://bkclothing.com.br/product?code=1853958-camiseta-oversized-nike">
+                                        
+                                        
+                                                                                    <img class="card-img-top"
+                                                src="https://supliutech.nyc3.cdn.digitaloceanspaces.com/compress_images/products2/93226336-fe23-4b0a-a655-2e618be38dad.jpeg" />
+                                                                            </a>
+
+                                    <div class="card-body px-0 pt-3 pb-0">
+                                        <div class="text-start">
+                                                                                                                                                <span
+                                                        class="fw-bolder fs-5">R$ 119,90</span>
+                                                                                            
+                                            <span class="d-block">Camiseta Oversized Nike</span>
+                                        </div>
+                                    </div>
+
+                                                                            <div class="card-footer px-o border-top-0 bg-transparent"
+                                            style="padding-left: 0; padding-right: 0;">
+                                            <div class="btn btn-block w-100 waves-effect waves-light btn-small btnAdd"
+                                                style="background-color: #BEBEBE; color: white; text-overflow: ellipsis; white-space: nowrap;"
+                                                link="https://bkclothing.com.br/cart?method=add&amp;product_id=1853958"
+                                                product_id="1853958"
+                                                variations="[]"
+                                                combinations="null">
+                                                                                                    <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                            </div>
+                    <nav class="d-flex justify-items-center justify-content-between">
+        <div class="justify-content-between flex-fill d-sm-none">
+            <div>
+                <p class="small text-muted">
+                    Mostrando
+                    <span class="fw-semibold">76</span>
+                    de
+                    <span class="fw-semibold">100</span>
+                    dos
+                    <span class="fw-semibold">139</span>
+                    resultados
+                </p>
+            </div>
+            <ul class="pagination">
+                
+                                    <li class="page-item">
+                        <a class="page-link" href="https://bkclothing.com.br?page=3" rel="prev">Anterior</a>
+                    </li>
+                
+                
+                                    <li class="page-item">
+                        <a class="page-link" href="https://bkclothing.com.br?page=5" rel="next">Próximo</a>
+                    </li>
+                            </ul>
+        </div>
+
+        <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between">
+            <div>
+                <p class="small text-muted">
+                    Mostrando
+                    <span class="fw-semibold">76</span>
+                    de
+                    <span class="fw-semibold">100</span>
+                    dos
+                    <span class="fw-semibold">139</span>
+                    resultados
+                </p>
+            </div>
+
+            <div>
+                <ul class="pagination">
+                    
+                                            <li class="page-item">
+                            <a class="page-link" href="https://bkclothing.com.br?page=3" rel="prev" aria-label="Anterior">&lsaquo;</a>
+                        </li>
+                    
+                    
+                                            
+                        
+                        
+                                                                                                                        <li class="page-item"><a class="page-link" href="https://bkclothing.com.br?page=1">1</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://bkclothing.com.br?page=2">2</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://bkclothing.com.br?page=3">3</a></li>
+                                                                                                                                <li class="page-item active" aria-current="page"><span class="page-link">4</span></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://bkclothing.com.br?page=5">5</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://bkclothing.com.br?page=6">6</a></li>
+                                                                                                        
+                    
+                                            <li class="page-item">
+                            <a class="page-link" href="https://bkclothing.com.br?page=5" rel="next" aria-label="Próximo">&rsaquo;</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalSelectVariant" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Escolha as opções</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="GET" action="" id="formWithVariant">
+                        <input type="hidden" name="method" value="add" />
+                        <input type="hidden" id="formWithVariantProduct" name="product_id" value="" />
+                        <input type="hidden" id="formWithVariantCombinations" value="" />
+                        <div id="inputsVariant"></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-bs-dismiss="modal" class="btn btn-secondary">Fechar</a>
+                    <button id="btnAddCartWithVariations" class="btn text-white" type="button"
+                        style="background-color: #BEBEBE;">
+                        <i class="bi bi-cart-fill me-1" style="color: white;"></i> Adicionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="search-form2" class="d-flex w-100  rounded-end "
+                method="get" style="background-color: #fff">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Pesquisar produto...</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex w-100 ">
+                            <input id="search-input2" class="form-control" placeholder="Pesquisar"
+                                aria-label="Pesquisar" name="keyword" style="border: 0; box-shadow: none;"
+                                value="">
+                        </div>
+
+                        <ul class="ps-0 mt-4" style="list-style: none;">
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_228122" value="228122"
+                                            >
+                                        <label for="category_mobile_228122"
+                                            class="form-check-label">Bermudas</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_206842" value="206842"
+                                            >
+                                        <label for="category_mobile_206842"
+                                            class="form-check-label">Calça Cargo</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_206696" value="206696"
+                                            >
+                                        <label for="category_mobile_206696"
+                                            class="form-check-label">Camiseta Oversized</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_228123" value="228123"
+                                            >
+                                        <label for="category_mobile_228123"
+                                            class="form-check-label">Camisetas Premium</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_235015" value="235015"
+                                            >
+                                        <label for="category_mobile_235015"
+                                            class="form-check-label">Conjunto Inverno</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_228126" value="228126"
+                                            >
+                                        <label for="category_mobile_228126"
+                                            class="form-check-label">Conjuntos / Camiseta + Bermuda</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_235479" value="235479"
+                                            >
+                                        <label for="category_mobile_235479"
+                                            class="form-check-label">Jaqueta</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_235014" value="235014"
+                                            >
+                                        <label for="category_mobile_235014"
+                                            class="form-check-label">Moletom</label>
+                                    </div>
+                                </li>
+                                                            <li>
+                                    <div class="mb-2">
+                                        <input type="checkbox" class="form-check-input" name="categories[]"
+                                            id="category_mobile_228146" value="228146"
+                                            >
+                                        <label for="category_mobile_228146"
+                                            class="form-check-label">Sarja + Linho</label>
+                                    </div>
+                                </li>
+                                                    </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #BEBEBE">
+                            Pesquisar
+                            <i class="fas me-2 fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="page-footer" style="background-color: #BEBEBE; margin-top: auto">
+        <div style="width: 100%; padding-top: 16px;">
+            <div class="container">
+                <div class="row">
+                                            <div class="col-12 col-md-6">
+
+                                                            <h3 style="font-size: 1.5rem; color: white;">CATÁLOGO BK CLOTHING</h3>
+                                <p style="font-size: 1rem; color: white;">Rua Santa Catarina 2348 - Floresta</p>
+                            
+
+                            <div style="width: 100%; display: flex; gap: 10px;" class="mb-4">
+                                                                    
+                                    <a href="https://instagram.com/@bkclothiing" style="color: white;">
+                                        <i class="fab fa-instagram" style="font-size: 1.5rem;"></i>
+                                    </a>
+                                
+                                                                    
+                                    <a href="https://facebook.com/BK CLOTHING" style="color: white;">
+                                        <i class="fab fa-facebook" style="font-size: 1.5rem;"></i>
+                                    </a>
+                                                            </div>
+                        </div>
+                    
+                    
+                        
+                        <div class="col-12 col-md-6"
+                            style="display: flex; justify-content: flex-start; flex-direction: column;">
+                            <h3 style="font-size: 1.5rem; color: white;">Formas de pagamento</h3>
+                            <p style="font-size: 1rem; color: white;">🔐 Pagamento 100% seguro utilizando os seguintes
+                                métodos</p>
+                            <div style="position: relative; width: 100%; background-color: #FFF; border-radius: 10px; flex-wrap: wrap;"
+                                class="mb-2 p-1">
+                                                                                                    <img style="width: 100px; padding: 0px 10px;" src="/images/asaas.png" />
+                                                                                                    <img style="width: 110px;" src="/images/credit_card.jpeg" />
+                                                                                                    <img style="width: 110px;" src="/images/pix.png" />
+                                                                                                    <img style="width: 110px;" src="/images/whatsapp-badge.png" />
+                                                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+
+            </footer>
+
+            <div>
+            <a target="_blank"
+                href="https://wa.me/5547988204407">
+                <img class="whatsapp" src="https://bkclothing.com.br/images/whatsapp_green.png">
+            </a>
+        </div>
+    
+    <script>
+        $(document).ready(function() {
+            $('.modal').modal();
+
+            $('.openModalFilter').click(function() {
+                var instance = M.Modal.getInstance(document.getElementById('modalFilter'));
+                instance.open();
+            });
+
+            
+            $('.slider').bxSlider({
+                auto: true
+            });
+        });
+
+        // Função para processar mudanças nas categorias
+        function processCategoryChange() {
+            // Buscar apenas checkboxes do dropdown principal (não do modal)
+            var ids = $('.dropdown-menu input[name="categories[]"]:checked').map(function() {
+                return this.value;
+            }).toArray();
+
+            // Remover duplicatas
+            ids = [...new Set(ids)];
+
+            // Construir URL base
+            var url = new URL('https://bkclothing.com.br/?page=4');
+
+            // Remover parâmetro categories se existir
+            url.searchParams.delete('categories');
+
+            // Adicionar categorias apenas se houver seleções
+            if (ids.length > 0) {
+                url.searchParams.set('categories', ids.join(','));
+            }
+
+            // Redirecionar para a nova URL
+            window.location.href = url.toString();
+        }
+
+        // Event listener para mudanças nos checkboxes do dropdown principal
+        $(document).on('change', '.dropdown-menu input[name="categories[]"]', function() {
+            // Aguardar um pouco para garantir que o estado do checkbox seja atualizado
+            setTimeout(processCategoryChange, 100);
+        });
+
+        $(".cpfcnpj").keydown(function() {
+            try {
+                $(".cpfcnpj").unmask();
+            } catch (e) {}
+
+            var tamanho = $(".cpfcnpj").val().length;
+
+            if (tamanho < 11) {
+                $(".cpfcnpj").mask("999.999.999-99");
+            } else {
+                $(".cpfcnpj").mask("99.999.999/9999-99");
+            }
+
+            var elem = this;
+            setTimeout(function() {
+                elem.selectionStart = elem.selectionEnd = 10000;
+            }, 0);
+            var currentValue = $(this).val();
+            $(this).val('');
+            $(this).val(currentValue);
+        });
+
+        $('.zipcode').mask('00000-000', {
+            reverse: true
+        });
+
+        var behavior = function(val) {
+            return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+        };
+
+        $('.phone').mask(behavior, options = {
+            onKeyPress: function(val, e, field, options) {
+                field.mask(behavior.apply({}, arguments), options);
+            }
+        });
+
+        
+            </script>
+
+        <script>
+        // Função para processar mudanças nas categorias (index)
+        function processCategoryChangeIndex() {
+            // Buscar apenas checkboxes do dropdown principal (não do modal)
+            var ids = $('.dropdown-menu input[name="categories[]"]:checked').map(function() {
+                return this.value;
+            }).toArray();
+
+            // Remover duplicatas
+            ids = [...new Set(ids)];
+
+            // Construir URL base
+            var url = new URL('https://bkclothing.com.br/?page=4');
+
+            // Remover parâmetro categories se existir
+            url.searchParams.delete('categories');
+
+            // Adicionar categorias apenas se houver seleções
+            if (ids.length > 0) {
+                url.searchParams.set('categories', ids.join(','));
+            }
+
+            // Redirecionar para a nova URL
+            window.location.href = url.toString();
+        }
+
+        // Event listener para mudanças nos checkboxes do dropdown principal (index)
+        $(document).on('change', '.dropdown-menu input[name="categories[]"]', function() {
+            // Aguardar um pouco para garantir que o estado do checkbox seja atualizado
+            setTimeout(processCategoryChangeIndex, 100);
+        });
+
+        $('.btnAdd').click(function() {
+            var link = $(this).attr('link');
+            var product_id = $(this).attr('product_id');
+            var variations = JSON.parse($(this).attr('variations'));
+
+            if (variations.length == 0) {
+                window.location = link;
+                return;
+            }
+
+            $("#formWithVariant").attr('action', link);
+            $("#formWithVariantProduct").val(product_id);
+            $("#formWithVariantCombinations").val($(this).attr('combinations'));
+
+            var html = '';
+
+            variations.map((item, k) => {
+                html += '<div>' +
+                    '<div style="font-weight: 400; font-size: 9pt; color: #9e9e9e; margin-bottom: 6px;">' +
+                    item.name + ' *</div>' +
+                    '<div style="display: flex; gap: 24px; margin-bottom: 24px;">';
+
+                item.options.map((o) => {
+
+                    html += '<div>' +
+                        '    <label>' +
+                        '        <input name="variations[' + item.id + ']" value="' + o.id +
+                        '" class="radioOption ' + (k == 0 ? 'firstOptions' : '') +
+                        '" type="radio" onclick="onChangeVariation(event)" ' + (o.disabled == true ?
+                            'disabled' : '') + ' />' +
+                        '        <span style="' + (o.disabled == true ?
+                            'text-decoration: line-through; cursor: default;' : '') + '">' + o
+                        .name + '</span>' +
+                        '    </label>' +
+                        '</div>';
+                });
+
+                html += '</div>' +
+                    '</div>';
+
+            });
+
+            $("#inputsVariant").html(html);
+
+            $('#modalSelectVariant').modal('show');
+        });
+
+        function onChangeVariation(event) {
+
+            var combinationInfo = JSON.parse($('#formWithVariantCombinations').val());
+            var selecteds = $('input.radioOption:checked').toArray().map(i => parseInt(i.value)).filter(i => i > 0);
+
+            if ($(event.target).hasClass('firstOptions')) {
+                $('input.radioOption').not('.firstOptions').attr('checked', false);
+            }
+
+            $('input.radioOption').not('.firstOptions').each(function() {
+
+                if ($(this).val() != "" && combinationInfo) {
+
+                    if (!$(this).hasClass('firstOptions')) {
+                        $(this).attr("disabled", true);
+                        $(this).parent().find('span').css("text-decoration", "line-through");
+                    }
+
+                    var check = [...selecteds];
+                    check.push(parseInt($(this).val()));
+
+                    combinationInfo.some(i => {
+                        if (containsAll(check, i.combination) && i.disabled == false) {
+                            $(this).attr("disabled", false);
+                            $(this).parent().find('span').css("text-decoration", "none");
+                            return true;
+                        }
+                        return false;
+                    });
+                } else
+                    $(this).attr("disabled", false);
+            });
+
+        };
+
+        function containsAll(needles, haystack) {
+            for (var i = 0; i < needles.length; i++) {
+                if ($.inArray(needles[i], haystack) == -1) return false;
+            }
+            return true;
+        }
+
+        $('#btnAddCartWithVariations').click(function() {
+
+            var array = $('input.radioOption').toArray();
+
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+
+                if (!$('input.radioOption[name="' + element.name + '"]:checked').filter(':enabled').val() > 0) {
+                    alert('Todos os campos devem ser selecionados');
+                    return false;
+                }
+            }
+
+            $('#formWithVariant').submit();
+
+        });
+
+        $('#orderBy').change(function(event) {
+            var url = new URL('https://bkclothing.com.br/?page=4');
+            url.searchParams.append('orderBy', event.target.value);
+            window.location.href = url.toString();
+        });
+    </script>
+</body>
+
+</html>

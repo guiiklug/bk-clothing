@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>BK Clothing | Proposta de novo site</title>
+<!--
+  ============================================================
+  APRESENTAÇÃO BK CLOTHING · ONDE EDITAR
+  - Textos: edite direto neste arquivo. Cada página é um <section class="pg">.
+  - Tema: abra com ?tema=claro para a versão clara (padrão: escuro).
+  - Contato do Guilherme: procure por SEU_NUMERO (página 11).
+  - Valores: procure por class="preco" (página 10).
+  - Exportar os dois PDFs: .venv/Scripts/python scripts/exportar_pdf.py
+  ============================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0b0b; --fg: #f3f0ea; --mute: #8f8a80; --accent: #c8b89a;
+    --panel: #121212; --ph: #1a1a1a; --line: rgba(243,240,234,.14);
+    --display: "Bebas Neue", "Arial Narrow", sans-serif;
+    --body: "Jost", system-ui, "Segoe UI", sans-serif;
+    --mx: 120px;          /* margem lateral, igual em todas as páginas */
+    --top: 190px;         /* início da área de conteúdo */
+    --bottom: 130px;      /* fim da área de conteúdo, medido de baixo */
+  }
+  body.claro {
+    --bg: #f6f4ef; --fg: #0b0b0b; --mute: #666056; --accent: #75654a;
+    --panel: #fbfaf7; --ph: #e6e1d7; --line: rgba(11,11,11,.14);
+  }
+  @page { size: 1920px 1080px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #444; }
+  body { font-family: var(--body); font-weight: 300; color: var(--fg); -webkit-font-smoothing: antialiased; }
+  @media print { html, body { background: var(--bg); } }
+
+  .pg {
+    position: relative; width: 1920px; height: 1080px; overflow: hidden;
+    background: var(--bg); color: var(--fg);
+    page-break-after: always; break-after: page;
+  }
+  .pg:last-child { page-break-after: auto; break-after: auto; }
+  @media screen { .pg { margin: 24px auto; } }
+
+  /* cabeçalho e rodapé fixos da grade */
+  .cab, .rod {
+    position: absolute; left: var(--mx); right: var(--mx);
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 16px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--mute);
+  }
+  .cab { top: 72px; }
+  .rod { bottom: 64px; }
+  .cab b { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: .1em; color: var(--fg); }
+  .rod .n { font-family: var(--display); font-size: 24px; letter-spacing: .12em; color: var(--fg); }
+  .rod .n i { font-style: normal; color: var(--mute); }
+  .linha { position: absolute; left: var(--mx); right: var(--mx); height: 1px; background: var(--line); }
+  .linha.t { top: 128px; } .linha.b { bottom: 112px; }
+
+  .area { position: absolute; left: var(--mx); right: var(--mx); top: var(--top); bottom: var(--bottom); }
+
+  /* tipografia */
+  .d { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: .92; letter-spacing: .01em; }
+  .eyebrow { font-size: 17px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--accent); }
+  h2.d { font-size: 118px; }
+  h3.d { font-size: 44px; line-height: 1; }
+  p { font-size: 27px; line-height: 1.5; max-width: 30em; }
+  p.mute, .mute { color: var(--mute); }
+  p.s { font-size: 23px; line-height: 1.5; }
+  em { font-style: normal; color: var(--accent); }
+
+  /* molduras: toda imagem entra numa caixa de proporção fixa */
+  .mold { position: relative; overflow: hidden; background: var(--ph); border: 1px solid var(--line); }
+  .mold img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mold.topo img { object-position: top center; }
+  .mold.cl { background: #ececec; }
+  .leg { margin-top: 14px; font-size: 16px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--mute); }
+
+  /* P1 capa */
+  .capa-g { display: grid; grid-template-columns: 1fr 640px; gap: 96px; height: 100%; }
+  .capa-g .tx { display: flex; flex-direction: column; justify-content: center; }
+  .capa-g h1 { font-size: 250px; line-height: .84; }
+  .capa-g .sub { margin-top: 36px; font-family: var(--display); font-size: 58px; letter-spacing: .06em; color: var(--accent); text-transform: uppercase; display: flex; align-items: center; gap: 28px; line-height: 1; }
+  .capa-g .sub::before { content: ""; width: 96px; height: 1px; background: var(--accent); }
+  .capa-g .info { margin-top: 56px; font-size: 18px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--mute); }
+  .logo-box { background: var(--panel); border: 1px solid var(--line); display: grid; place-items: center; }
+  .logo-box svg { width: 82%; height: auto; color: var(--fg); }
+  svg .s { fill: none; stroke: currentColor; stroke-width: 2; }
+  svg .bk { font-family: var(--body); font-weight: 200; fill: currentColor; }
+  svg .cl { font-family: var(--display); fill: currentColor; }
+  svg .tg { font-family: var(--body); font-weight: 400; fill: var(--mute); letter-spacing: .42em; }
+
+  /* P2 ponto de partida */
+  .p2 { display: grid; grid-template-columns: 1fr 620px; gap: 96px; height: 100%; }
+  .p2 .tx { display: flex; flex-direction: column; justify-content: space-between; }
+  .fatos { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  .fatos div { padding: 28px 32px 0 0; }
+  .fatos div + div { padding-left: 32px; border-left: 1px solid var(--line); }
+  .fatos b { display: block; font-family: var(--display); font-weight: 400; font-size: 84px; line-height: 1; color: var(--accent); }
+  .fatos span { display: block; margin-top: 8px; font-size: 22px; line-height: 1.4; color: var(--mute); }
+
+  /* P3 achados */
+  .ach { list-style: none; border-top: 1px solid var(--line); }
+  .ach li { display: grid; grid-template-columns: 70px 520px 1fr; gap: 0 48px; align-items: start; height: 114px; padding-top: 16px; border-bottom: 1px solid var(--line); }
+  .ach .n { font-family: var(--display); font-size: 36px; color: var(--mute); line-height: 1.1; }
+  .ach h3 { font-family: var(--display); font-weight: 400; font-size: 38px; text-transform: uppercase; line-height: 1.05; }
+  .ach .f { font-size: 20px; line-height: 1.4; color: var(--mute); margin-top: 4px; }
+  .ach .e { font-size: 22px; line-height: 1.4; }
+  .ach .e b { display: block; font-size: 13px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+  .ach h3 + .f { display: none; }
+  .p3-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px; }
+  .p3-top h2 { font-size: 96px; }
+
+  /* P4 hoje */
+  .p4 { display: grid; grid-template-columns: 1090px 1fr; gap: 72px; height: 100%; }
+  .p4 .mold { height: 680px; }
+  .notas { list-style: none; border-top: 1px solid var(--line); margin-top: 40px; }
+  .notas li { padding: 20px 0; border-bottom: 1px solid var(--line); font-size: 23px; line-height: 1.4; }
+  .notas li b { display: block; font-family: var(--display); font-weight: 400; font-size: 32px; letter-spacing: .03em; text-transform: uppercase; margin-bottom: 2px; }
+
+  /* P5 novo site */
+  .p5 { display: grid; grid-template-columns: 560px 1fr; gap: 72px; height: 100%; }
+  .p5 .tx { display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 12px; }
+  .devs { display: grid; grid-template-columns: 720px 296px; gap: 32px; align-items: end; }
+  .devs .d1 { height: 450px; } .devs .d2 { height: 640px; }
+  .p5 .devs { align-self: end; }
+
+  /* P6 antes e depois */
+  .p6-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 36px; }
+  .p6-top h2 { font-size: 96px; }
+  .pares { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0 28px; }
+  .par .mold { height: 252px; }
+  .par .mold + .mold { margin-top: 12px; }
+  .par .tag { font-size: 14px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; margin: 12px 0 8px; color: var(--mute); }
+  .par .tag.novo { color: var(--accent); }
+
+  /* P7 como compra */
+  .p7-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 36px; }
+  .p7-top h2 { font-size: 96px; }
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; }
+  .tres .mold { height: 408px; }
+  .tres .pass { margin-top: 24px; }
+  .tres .pass .num { font-family: var(--display); font-size: 30px; color: var(--accent); letter-spacing: .1em; }
+  .tres .pass h3 { margin: 4px 0 6px; }
+  .tres .pass p { font-size: 22px; max-width: 22em; color: var(--mute); }
+  .zap { background: var(--panel); border: 1px solid var(--line); height: 408px; padding: 30px 36px; font-size: 19px; line-height: 1.55; overflow: hidden; }
+  .zap small { display: block; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 18px; }
+  .zap .bal { border-left: 2px solid var(--accent); padding-left: 20px; }
+  .zap .bal p { font-size: 19px; line-height: 1.55; margin-bottom: 14px; max-width: none; }
+
+  /* P8 o que mais vem junto */
+  .p8-top { display: flex; justify-content: space-between; align-items: end; margin-bottom: 36px; }
+  .p8-top h2 { font-size: 96px; }
+  .quatro { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 64px; }
+  .cel { display: grid; grid-template-columns: 380px 1fr; gap: 32px; align-items: start; }
+  .cel .mold { height: 260px; }
+  .cel h3 { font-size: 38px; margin-bottom: 8px; }
+  .cel p { font-size: 21px; line-height: 1.45; color: var(--mute); }
+  .cel .num { font-family: var(--display); font-size: 24px; color: var(--accent); letter-spacing: .1em; }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+  .duo img { position: static; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .duo span { position: relative; display: block; overflow: hidden; }
+  .duo img.c { position: absolute; inset: 0; }
+  .duo span.cla { filter: none; }
+
+  /* P9 incluso */
+  .p9 { display: grid; grid-template-columns: 1.25fr 1fr; gap: 96px; height: 100%; }
+  .p9 .cabp { margin-bottom: 30px; }
+  .p9 h2 { font-size: 96px; }
+  .lista { list-style: none; border-top: 1px solid var(--line); }
+  .lista li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 25px; line-height: 1.3; }
+  .lista li::before { content: ""; width: 14px; height: 1px; background: var(--accent); margin-top: .7em; }
+  .lista small { display: block; font-size: 19px; color: var(--mute); margin-top: 2px; }
+  .p9 h3 { margin-bottom: 18px; }
+
+  /* P10 investimento e prazo */
+  .p10 { display: grid; grid-template-columns: 1.05fr 1fr; gap: 96px; height: 100%; align-content: space-between; }
+  .p10 .topo { grid-column: 1 / -1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 96px; align-items: end; }
+  .p10 h2 { font-size: 96px; margin-bottom: 14px; }
+  .grande { font-family: var(--display); font-size: 230px; line-height: .8; white-space: nowrap; }
+  .pag { list-style: none; border-top: 1px solid var(--line); }
+  .pag li { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 24px; }
+  .pag small { display: block; font-size: 18px; color: var(--mute); }
+  .preco { font-family: var(--display); font-size: 40px; letter-spacing: .03em; color: var(--accent); white-space: nowrap; line-height: 1; }
+  .grande .preco { font-size: inherit; color: var(--fg); }
+  .opc { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 22px; line-height: 1.3; }
+  .opc b { font-family: var(--display); font-weight: 400; font-size: 32px; letter-spacing: .02em; text-transform: uppercase; display: block; line-height: 1.05; }
+  .etapas { grid-column: 1 / -1; display: grid; grid-template-columns: 300px repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
+  .etapas > div { padding: 26px 32px 0 0; }
+  .etapas > div + div { padding-left: 32px; border-left: 1px solid var(--line); }
+  .etapas .pz { font-family: var(--display); font-size: 84px; line-height: .9; }
+  .etapas .pz em { display: block; font-size: 52px; }
+  .etapas h3 { font-size: 36px; margin: 8px 0 6px; }
+  .etapas p { font-size: 20px; line-height: 1.4; color: var(--mute); max-width: 19em; }
+
+  /* P11 fechamento */
+  .p11 { display: grid; grid-template-columns: 1fr 560px; gap: 96px; height: 100%; }
+  .p11 .tx { display: flex; flex-direction: column; justify-content: center; }
+  .p11 h2 { font-size: 190px; line-height: .86; margin: 22px 0 40px; }
+  .contato { display: inline-block; margin-top: 44px; padding: 20px 34px; border: 1px solid var(--fg); font-size: 20px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+  .contato strong { font-weight: 500; color: var(--accent); }
+  .p11 .logo-box { height: 100%; }
+  .p11 .logo-box svg { width: 78%; }
+</style>
+</head>
+<body>
+
+<!-- ============== 01 CAPA ============== -->
+<section class="pg" id="p1">
+  <div class="cab"><b>BK Clothing</b><span>Joinville/SC</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="capa-g">
+      <div class="tx">
+        <span class="eyebrow">01 / Proposta</span>
+        <h1 class="d" style="margin-top:28px">BK<br>Clothing</h1>
+        <div class="sub">Proposta de novo site</div>
+        <div class="info">Joinville, outubro de 2026</div>
+      </div>
+      <div class="logo-box">
+        <svg viewBox="0 0 600 720"><path class="s" d="M250 110H150V590H250"/><path class="s" d="M350 110H450V590H350"/>
+          <text class="bk" x="300" y="388" text-anchor="middle" font-size="190" letter-spacing="6">BK</text>
+          <text class="cl" x="300" y="472" text-anchor="middle" font-size="74" letter-spacing="3">CLOTHING</text>
+          <text class="tg" x="300" y="668" text-anchor="middle" font-size="12">VISTA ESTILO, VISTA BK CLOTHING</text></svg>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Vista estilo, vista BK Clothing</span><span class="n">01 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 02 PONTO DE PARTIDA ============== -->
+<section class="pg" id="p2">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p2">
+      <div class="tx">
+        <div>
+          <span class="eyebrow">02 / Ponto de partida</span>
+          <h2 class="d" style="margin:26px 0 34px">A loja já<br>vende bem</h2>
+          <p>Bruno, você vende pelo WhatsApp e pelo grupo VIP sem ter vitrine nenhuma na internet. O que está em volta da loja é que ainda não está à altura dela.</p>
+        </div>
+        <div class="fatos">
+          <div><b>135</b><span>produtos no catálogo</span></div>
+          <div><b>VIP</b><span>grupo de clientes no WhatsApp</span></div>
+          <div><b>Floresta</b><span>loja física em Joinville</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="mold" style="height:690px"><img src="img/loja.jpg" alt="Parede da loja com o letreiro BK Clothing"></div>
+        <div class="leg">A loja, no Floresta</div>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Vista estilo, vista BK Clothing</span><span class="n">02 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 03 O QUE ENCONTREI ============== -->
+<section class="pg" id="p3">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p3-top">
+      <div><span class="eyebrow">03 / O que encontrei</span><h2 class="d" style="margin-top:20px">Cinco pontos</h2></div>
+      <p class="mute" style="max-width:25em;font-size:23px">Passei pelo site, pelo Instagram e pelo Linktree como um cliente passaria.</p>
+    </div>
+    <ol class="ach">
+      <li><span class="n">01</span><div><h3>O link sai sem foto no WhatsApp</h3></div><p class="e"><b>Na prática</b>Seu cliente indica a loja e manda um link seco, no canal onde você mais vende.</p></li>
+      <li><span class="n">02</span><div><h3>Produto com pouca informação</h3></div><p class="e"><b>Na prática</b>96 dos 135 produtos têm só uma foto, e quase nenhum tem descrição ou tamanho. A venda começa com "tem no M?".</p></li>
+      <li><span class="n">03</span><div><h3>O site não tem a cara da BK</h3></div><p class="e"><b>Na prática</b>Tema cinza padrão, sem política de troca nem de envio. Quem vem de fora não tem onde pegar confiança.</p></li>
+      <li><span class="n">04</span><div><h3>Links do rodapé quebrados</h3></div><p class="e"><b>Na prática</b>Instagram e Facebook levam para página de erro, justo para quem quer ver mais da loja.</p></li>
+      <li><span class="n">05</span><div><h3>Linktree com endereço do Canadá</h3></div><p class="e"><b>Na prática</b>O bloco mostra "172 Main St W, Listowel" e sugere outros perfis no rodapé.</p></li>
+    </ol>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Nada disso muda o que já funciona: o atendimento no WhatsApp</span><span class="n">03 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 04 HOJE ============== -->
+<section class="pg" id="p4">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p4">
+      <div>
+        <div class="mold topo"><img src="img/site-atual-desktop.jpg" alt="Site atual bkclothing.com.br"></div>
+        <div class="leg">bkclothing.com.br hoje</div>
+      </div>
+      <div>
+        <span class="eyebrow">04 / Hoje</span>
+        <h2 class="d" style="margin-top:20px;font-size:104px">O site<br>de hoje</h2>
+        <ul class="notas">
+          <li><b>Título genérico</b>A página se chama "CATÁLOGO BK CLOTHING".</li>
+          <li><b>Tema padrão</b>Cinza da plataforma, sem a identidade da marca.</li>
+          <li><b>Produto cru</b>Nome, preço e foto. Sem descrição e sem tamanho.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Captura do site atual, feita em outubro de 2026</span><span class="n">04 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 05 O NOVO SITE ============== -->
+<section class="pg" id="p5">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p5">
+      <div class="tx">
+        <div>
+          <span class="eyebrow">05 / O novo site</span>
+          <h2 class="d" style="margin:20px 0 32px">Cara de<br>marca</h2>
+          <p>Visual próprio da BK, com a logo e o slogan na frente. Feito primeiro para a tela do celular, que é onde seu cliente está.</p>
+        </div>
+        <ul class="notas" style="margin-top:0">
+          <li><b>Seleção BK</b>As peças com foto padronizada logo abaixo da capa.</li>
+          <li><b>Do celular ao computador</b>O mesmo site, com o mesmo cuidado nos dois.</li>
+        </ul>
+      </div>
+      <div class="devs">
+        <div><div class="mold d1"><img src="img/c-home-d.jpg" data-l="img/c-home-d-l.jpg" alt="Home no computador"></div><div class="leg">Computador</div></div>
+        <div><div class="mold d2"><img src="img/c-home-m.jpg" data-l="img/c-home-m-l.jpg" alt="Home no celular"></div><div class="leg">Celular</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Demonstração navegável, sem compromisso</span><span class="n">05 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 06 FOTOS PADRONIZADAS ============== -->
+<section class="pg" id="p6">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p6-top">
+      <div><span class="eyebrow">06 / Fotos padronizadas</span><h2 class="d" style="margin-top:20px">Antes e depois</h2></div>
+      <p class="mute" style="max-width:24em;font-size:23px">Mesma peça, fundo único e luz igual. A foto original continua na página do produto.</p>
+    </div>
+    <div class="pares">
+      <div class="par"><div class="mold"><img src="img/antes-1914785.jpg" alt="Jaqueta antes"></div><div class="mold cl"><img src="img/depois-1914785.jpg" alt="Jaqueta depois"></div></div>
+      <div class="par"><div class="mold"><img src="img/antes-1701345.jpg" alt="Bermuda antes"></div><div class="mold cl"><img src="img/depois-1701345.jpg" alt="Bermuda depois"></div></div>
+      <div class="par"><div class="mold"><img src="img/antes-1690115.jpg" alt="Regata antes"></div><div class="mold cl"><img src="img/depois-1690115.jpg" alt="Regata depois"></div></div>
+      <div class="par"><div class="mold"><img src="img/antes-1703184.jpg" alt="Bermuda jeans antes"></div><div class="mold cl"><img src="img/depois-1703184.jpg" alt="Bermuda jeans depois"></div></div>
+      <div class="par"><div class="mold"><img src="img/antes-1703192.jpg" alt="Bag antes"></div><div class="mold cl"><img src="img/depois-1703192.jpg" alt="Bag depois"></div></div>
+      <div class="par"><div class="mold"><img src="img/antes-1849694.jpg" alt="Conjunto antes"></div><div class="mold cl"><img src="img/depois-1849694.jpg" alt="Conjunto depois"></div></div>
+    </div>
+    <div class="pares" style="margin-top:14px">
+      <div class="leg" style="margin:0">Jaqueta Tommy</div><div class="leg" style="margin:0">Bermuda Nike</div><div class="leg" style="margin:0">Regata Nike</div><div class="leg" style="margin:0">Bermuda Jeans</div><div class="leg" style="margin:0">Bag High</div><div class="leg" style="margin:0">Conjunto Nike</div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Em cada par: foto original em cima, foto padronizada embaixo</span><span class="n">06 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 07 COMO O CLIENTE COMPRA ============== -->
+<section class="pg" id="p7">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p7-top">
+      <div><span class="eyebrow">07 / Como o cliente compra</span><h2 class="d" style="margin-top:20px">Do catálogo ao WhatsApp</h2></div>
+    </div>
+    <div class="tres">
+      <div>
+        <div class="mold"><img src="img/c-produto.jpg" data-l="img/c-produto-l.jpg" alt="Página de produto"></div>
+        <div class="pass"><span class="num">01</span><h3 class="d">Escolhe a peça</h3><p>Fotos, tamanho e guia de medidas na própria página.</p></div>
+      </div>
+      <div>
+        <div class="mold"><img src="img/c-sacola.jpg" data-l="img/c-sacola-l.jpg" alt="Sacola"></div>
+        <div class="pass"><span class="num">02</span><h3 class="d">Monta a sacola</h3><p>Soma as peças, vê o total e fecha de uma vez.</p></div>
+      </div>
+      <div>
+        <div class="zap">
+          <small>Mensagem que chega no seu WhatsApp</small>
+          <div class="bal">
+            <p>Olá! Quero fechar este pedido pelo site da BK Clothing:</p>
+            <p>• 1x Jaqueta Tommy (Bege) tam. M, R$ 299,00 [ref 1914786]</p>
+            <p>Total: R$ 299,00</p>
+            <p style="margin-bottom:0">Pode confirmar os tamanhos e o frete?</p>
+          </div>
+        </div>
+        <div class="pass"><span class="num">03</span><h3 class="d">Pedido pronto</h3><p>A conversa já começa com peça, tamanho e total.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Sem cadastro e sem senha</span><span class="n">07 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 08 O QUE MAIS VEM JUNTO ============== -->
+<section class="pg" id="p8">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p8-top">
+      <div><span class="eyebrow">08 / O que mais vem junto</span><h2 class="d" style="margin-top:20px">Além do catálogo</h2></div>
+    </div>
+    <div class="quatro">
+      <div class="cel">
+        <div class="mold"><img src="img/c-links.jpg" data-l="img/c-links-l.jpg" alt="Página de links"></div>
+        <div><span class="num">01</span><h3 class="d">Página de links</h3><p>No lugar do Linktree, dentro do seu domínio. WhatsApp, catálogo, grupo VIP e como chegar, sem propaganda de ninguém.</p></div>
+      </div>
+      <div class="cel">
+        <div class="mold"><img src="img/c-lookbook.jpg" data-l="img/c-lookbook-l.jpg" alt="Lookbook"></div>
+        <div><span class="num">02</span><h3 class="d">Lookbook</h3><p>As coleções organizadas por sessão, para mostrar a peça vestida e o estilo da loja.</p></div>
+      </div>
+      <div class="cel">
+        <div class="mold"><img src="img/c-tema.jpg" alt="Tema escuro e tema claro, lado a lado"></div>
+        <div><span class="num">03</span><h3 class="d">Tema claro e escuro</h3><p>O cliente escolhe como prefere ver a loja, com um toque no cabeçalho.</p></div>
+      </div>
+      <div class="cel">
+        <div class="mold"><img src="img/c-troca.jpg" data-l="img/c-troca-l.jpg" alt="Produto com guia, envio e trocas"></div>
+        <div><span class="num">04</span><h3 class="d">Trocas e envio</h3><p>Guia de medidas, regras de troca e de envio em cada produto e na home, escritas com as suas regras.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Tudo no mesmo visual da BK</span><span class="n">08 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 09 O QUE ESTÁ INCLUSO ============== -->
+<section class="pg" id="p9">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p9">
+      <div>
+        <div class="cabp"><span class="eyebrow">09 / O que está incluso</span><h2 class="d" style="margin-top:20px">Um valor só</h2></div>
+        <h3 class="d">Site completo</h3>
+        <ul class="lista">
+          <li><span>Home <small>A vitrine da loja, com a identidade da BK.</small></span></li>
+          <li><span>Catálogo com filtros e busca <small>Para o cliente achar a peça rápido.</small></span></li>
+          <li><span>Página de produto com tamanhos <small>Fotos, descrição e grade.</small></span></li>
+          <li><span>Sacola que fecha o pedido no WhatsApp <small>A mensagem chega pronta para você.</small></span></li>
+        </ul>
+      </div>
+      <div style="padding-top:216px">
+        <h3 class="d" style="visibility:hidden;height:0;margin:0">.</h3>
+        <ul class="lista" style="margin-top:0">
+          <li><span>Lookbook <small>Galeria das coleções.</small></span></li>
+          <li><span>Página de links <small>No lugar do Linktree, no seu domínio.</small></span></li>
+          <li><span>Políticas de troca e envio <small>Escritas com as suas regras.</small></span></li>
+          <li><span>Migração dos 135 produtos <small>Tudo do catálogo atual vai para o novo.</small></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Domínio bkclothing.com.br apontado, treinamento e 30 dias de ajustes</span><span class="n">09 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 10 INVESTIMENTO E PRAZO ============== -->
+<section class="pg" id="p10">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p10">
+      <div class="topo">
+        <div>
+          <span class="eyebrow">10 / Investimento e prazo</span>
+          <h2 class="d" style="margin-top:20px">Investimento</h2>
+          <!-- VALORES: edite os <span class="preco"> desta página -->
+          <div class="grande"><span class="preco">R$&nbsp;3.990</span></div>
+          <p class="mute s" style="margin-top:14px">Site novo, tudo da página anterior.</p>
+        </div>
+        <div>
+          <ul class="pag">
+            <li><span>À vista no PIX <small>5% de desconto</small></span><span class="preco">R$&nbsp;3.790,50</span></li>
+            <li><span>Parcelado <small>em 3 vezes</small></span><span class="preco">3x R$&nbsp;1.330</span></li>
+          </ul>
+          <div style="margin-top:22px">
+            <div class="opc" style="border-top:1px solid var(--line)"><div><b>Perfil da Empresa no Google</b>Opcional. Cadastro com endereço, horário, fotos e WhatsApp.</div><span class="preco">R$&nbsp;490</span></div>
+            <div class="opc"><div><b>Acompanhamento mensal</b>Opcional. Site e perfil sempre atualizados.</div><span class="preco">a partir de R$&nbsp;690/mês</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="etapas">
+        <div><div class="pz">2 a 3<em>semanas</em></div></div>
+        <div><span class="eyebrow">Etapa 1</span><h3 class="d">Alinhar</h3><p>Uma conversa na loja: logo, fotos e regras de troca e envio.</p></div>
+        <div><span class="eyebrow">Etapa 2</span><h3 class="d">Montar</h3><p>Eu monto o site e migro os 135 produtos. Você acompanha por um link.</p></div>
+        <div><span class="eyebrow">Etapa 3</span><h3 class="d">Publicar</h3><p>No ar em bkclothing.com.br, com treinamento e 30 dias de ajustes.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Os opcionais são separados do site</span><span class="n">10 <i>/ 11</i></span></div>
+</section>
+
+<!-- ============== 11 PRÓXIMO PASSO ============== -->
+<section class="pg" id="p11">
+  <div class="cab"><b>BK Clothing</b><span>Proposta de novo site</span></div>
+  <div class="linha t"></div>
+  <div class="area">
+    <div class="p11">
+      <div class="tx">
+        <span class="eyebrow">11 / Próximo passo</span>
+        <h2 class="d">Passo na loja<br>esta <em>semana</em></h2>
+        <p>Dá uma olhada na demonstração com calma. Se fizer sentido, a gente conversa pessoalmente. Sem compromisso.</p>
+        <!-- CONTATO: troque SEU_NUMERO pelo WhatsApp do Guilherme (DDD + número) -->
+        <div><span class="contato">WhatsApp do Guilherme: <strong id="contato">SEU_NUMERO</strong></span></div>
+      </div>
+      <div class="logo-box">
+        <svg viewBox="0 0 600 720"><path class="s" d="M250 110H150V590H250"/><path class="s" d="M350 110H450V590H350"/>
+          <text class="bk" x="300" y="388" text-anchor="middle" font-size="190" letter-spacing="6">BK</text>
+          <text class="cl" x="300" y="472" text-anchor="middle" font-size="74" letter-spacing="3">CLOTHING</text>
+          <text class="tg" x="300" y="668" text-anchor="middle" font-size="12">VISTA ESTILO, VISTA BK CLOTHING</text></svg>
+      </div>
+    </div>
+  </div>
+  <div class="linha b"></div>
+  <div class="rod"><span>Vista estilo, vista BK Clothing</span><span class="n">11 <i>/ 11</i></span></div>
+</section>
+
+<script>
+  /* ?tema=claro troca as cores e as imagens que têm versão clara */
+  if (new URLSearchParams(location.search).get('tema') === 'claro') {
+    document.body.classList.add('claro');
+    document.querySelectorAll('img[data-l]').forEach(i => i.src = i.dataset.l);
+  }
+</script>
+</body>
+</html>

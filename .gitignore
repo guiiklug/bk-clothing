@@ -1,0 +1,29 @@
+# ambientes e dependências (recriados com pip/npm)
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+# quadros temporários de gravação
+**/_quadros/
+**/tmp/
+instagram/navegacao/tmp/
+# sistema
+Thumbs.db
+.DS_Store
+
+# material bruto pesado que se recria (fica so no computador de quem gerou)
+# fotos originais do catalogo: baixar de novo com  python _coleta/scrape.py
+_coleta/img/*
+!_coleta/img/1914786_0.jpg
+!_coleta/img/1914792_0.jpg
+!_coleta/img/1914792_1.jpg
+!_coleta/img/1914792_2.jpg
+!_coleta/img/1910183_0.jpg
+!_coleta/img/1910184_0.jpg
+!_coleta/img/1910186_0.jpg
+# imagens de IA que nao sao mais usadas, prints de conferencia e de referencia
+_coleta/ai/
+_coleta/conf2/
+_coleta/referencias/
+# videos originais antes da troca de fundo
+instagram/verao/raw/*-cor-antiga.mp4
