@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BK Clothing · Proposta</title>
+<meta name="description" content="Proposta para a BK Clothing: site novo, presença no Google e no Instagram, e o aplicativo BK Gestão ligado ao site.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#dce8ef">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Bebas+Neue&family=Jost:wght@200;300&display=swap" rel="stylesheet">
+
+<script>
+/* =====================================================================
+   CAMPOS EDITÁVEIS: mexa só aqui.
+   - Valores em reais, só o número (3500 = R$ 3.500). null = "a combinar".
+   - Prazos em texto livre ("1 semana", "10 dias"). null = "a definir".
+   - whatsapp: só números, com 55 + DDD. Ex.: "5547999998888".
+   ===================================================================== */
+const CONFIG = {
+  whatsapp: "",                       // ← número que recebe o "Quero fechar"
+  cliente: "Bruno",
+  data: "outubro de 2026",
+  validade: null,                     // ex.: "15 dias". null = não mostra
+
+  pacotes: {
+    presenca: {
+      nome: "Presença BK",
+      resumo: "Site novo, Google Maps, fotos e Instagram, com manutenção todo mês.",
+      implantacao: 3500,
+      mensal: 500,
+      mensalDescricao: "site sempre no ar e todas as atualizações",
+      itens: [
+        "Site novo com catálogo das 135 peças",
+        "Perfil da loja no Google Maps",
+        "Fotos padronizadas das 111 peças que faltam",
+        "Instagram: feed, destaques e modelos de stories",
+        "Acompanhamento mensal: site no ar e atualizações"
+      ],
+      jaVemMarcado: true
+    },
+    gestao: {
+      nome: "BK Gestão",
+      resumo: "Aplicativo de estoque e vendas, ligado ao site.",
+      implantacao: 4000,
+      mensal: 200,
+      mensalDescricao: "app funcionando e atualizado",
+      itens: [
+        "Ligado ao site: venda no site dá baixa sozinha no estoque",
+        "Estoque igual na loja e no site, atualizado na hora",
+        "Venda rápida na loja com Pix, cartão e dinheiro",
+        "Reposição, peças paradas e oferta para o grupo VIP",
+        "Fechamento do dia e relatório do mês",
+        "Aplicativo no celular, com ícone na tela"
+      ],
+      jaVemMarcado: false
+    }
+  },
+
+  prazos: [
+    { etapa: "Alinhamento",      detalhe: "Tamanhos reais, regras de troca e envio, horário e fotos da loja.", prazo: null, pacote: "presenca" },
+    { etapa: "Fotos e catálogo", detalhe: "Padronização das 111 peças que faltam e revisão de nomes e preços.", prazo: null, pacote: "presenca" },
+    { etapa: "Site no ar",       detalhe: "Publicação em bkclothing.com.br, página de links e perfil no Google Maps.", prazo: null, pacote: "presenca" },
+    { etapa: "Instagram",        detalhe: "Feed organizado, capas dos destaques e modelos de stories prontos.", prazo: null, pacote: "presenca" },
+    { etapa: "BK Gestão",        detalhe: "Contagem do estoque inicial, ligação com o site, app no celular e treinamento.", prazo: null, pacote: "gestao" }
+  ],
+  prazoTotal: null                    // ex.: "4 semanas". null = "a definir"
+};
+</script>
+
+<style>
+:root{
+  --bg:#f3f0ea; --fg:#0b0b0b; --fg-rgb:11,11,11; --mute:#676157; --panel:#faf8f4; --accent:#3f5666;
+  --t1:#dce8ef; --t2:#e6dfd0; --t3:#c5d6e1; --k:#0b0b0b; --w:#f3f0ea;
+  --line:rgba(11,11,11,.14); --wl:rgba(243,240,234,.16);
+  --display:"Archivo","Arial Black",sans-serif; --body:"Archivo",system-ui,sans-serif;
+  --pad:clamp(1.25rem,5vw,3rem); --ease:cubic-bezier(.2,.7,.1,1);
+  --safe-b:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);font-size:1rem;line-height:1.55;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+::selection{background:var(--t3)}
+
+/* tipografia */
+h1,h2{font-family:var(--display);font-weight:900;font-stretch:125%;text-transform:uppercase;line-height:.88;letter-spacing:-.02em}
+h2{font-size:clamp(2.2rem,10.5vw,4.6rem)}
+h3{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:1.15rem;line-height:1.15}
+.rot{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.mute{color:var(--mute)}
+.lead{font-size:1.06rem;color:rgba(var(--fg-rgb),.78);max-width:40ch}
+.bb{font-family:"Bebas Neue",sans-serif;font-weight:400;line-height:.9;letter-spacing:.01em}
+
+/* logo */
+.logo{position:relative;display:inline-grid;place-items:center;width:3rem;height:3.5rem;padding:.35rem 0 .25rem;line-height:1}
+.logo::before,.logo::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:1.5px solid currentColor}
+.logo::before{left:0;border-right:0}.logo::after{right:0;border-left:0}
+.logo b{font-family:"Jost",sans-serif;font-weight:200;font-size:1.45rem;letter-spacing:.06em;margin-top:.25rem}
+.logo i{font-family:"Bebas Neue",sans-serif;font-style:normal;font-size:.62rem;letter-spacing:.08em;margin-top:-.1rem}
+
+/* colchete: o elemento da marca usado em toda a página */
+.bk{position:relative;display:inline-block;padding:0 .5em}
+.bk::before,.bk::after{content:"";position:absolute;top:-.12em;bottom:-.12em;width:.32em;border:2px solid currentColor}
+.bk::before{left:0;border-right:0}.bk::after{right:0;border-left:0}
+
+/* estrutura */
+.w{width:100%;max-width:68rem;margin:0 auto;padding:0 var(--pad)}
+.sec{padding:6rem 0;position:relative}
+.cap{display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem}
+.cap .bk{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;line-height:1;padding:.18em .55em .05em}
+.cap .bk::before,.cap .bk::after{border-width:1.5px;top:0;bottom:0}
+.cap .rot{color:var(--mute)}
+.sec-h{margin-bottom:2.4rem}
+.sec-h .lead{margin-top:1.2rem}
+.blue{background:var(--t1)}.sand{background:var(--t2)}.alt{background:var(--panel)}
+.dark{background:var(--k);color:var(--w)}
+.dark .cap .rot,.dark .mute{color:#a39d92}
+.dark .lead{color:rgba(243,240,234,.78)}
+
+/* topo fixo com progresso */
+.top{position:fixed;inset:0 0 auto;z-index:40;display:flex;align-items:center;gap:1rem;padding:.6rem var(--pad);background:rgba(243,240,234,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transform:translateY(-105%);transition:transform .45s var(--ease)}
+.top.on{transform:none}
+.top .logo{width:2rem;height:2.35rem;flex:none}.top .logo b{font-size:.95rem}.top .logo i{font-size:.42rem}
+.top .cur{flex:1;min-width:0;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .cur span{color:var(--mute);margin-right:.5rem}
+.top .pill{flex:none;font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.6rem .85rem;background:var(--k);color:var(--w);text-decoration:none}
+.top .prog{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--fg);transform-origin:left;transform:scaleX(var(--pr,0))}
+
+/* ===== ABERTURA: os colchetes se abrem com a rolagem ===== */
+.abre{height:240svh;position:relative;background:var(--t1)}
+.palco{position:sticky;top:0;height:100svh;overflow:hidden;--e:0;--hw0:5.6rem;--hw1:calc(50vw - var(--pad) + .2rem);--h0:13.4rem;--h1:min(74svh,46rem)}
+.palco .cl,.palco .cr{position:absolute;top:50%;width:3.6rem;height:calc(var(--h0) + (var(--h1) - var(--h0)) * var(--e));transform:translateY(-50%);border:2px solid var(--fg);will-change:left,right,height}
+.palco .cl{border-right:0;left:calc(50% - var(--hw0) - (var(--hw1) - var(--hw0)) * var(--e))}
+.palco .cr{border-left:0;right:calc(50% - var(--hw0) - (var(--hw1) - var(--hw0)) * var(--e))}
+.palco .mc{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;opacity:calc(1 - var(--e) * 2.6);transform:scale(calc(1 - var(--e) * .35))}
+.palco .mc b{font-family:"Jost",sans-serif;font-weight:200;font-size:6.6rem;line-height:.95;letter-spacing:.05em}
+.palco .mc i{font-family:"Bebas Neue",sans-serif;font-style:normal;font-size:2.55rem;letter-spacing:.08em;line-height:1;margin-top:-.2rem}
+.palco .pc{position:absolute;left:50%;top:50%;width:min(32vw,14rem);z-index:1;pointer-events:none;
+  transform:translate(-50%,-50%) translate(calc(var(--tx) * var(--e)),calc(var(--ty) * var(--e))) rotate(calc(var(--r) * var(--e))) scale(calc(.35 + .65 * var(--e)));
+  opacity:calc(var(--e) * 2.4 - .5);filter:drop-shadow(0 1.4rem 1.4rem rgba(30,45,60,.22))}
+.palco .hl{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 calc(var(--pad) + 1.4rem);opacity:calc((var(--e) - .42) * 3.2);transform:translateY(calc((1 - var(--e)) * 2.5rem))}
+.palco h1{font-size:clamp(2.7rem,13.4vw,8rem)}
+.palco h1 span{display:block}
+.palco .hl p{margin-top:1.4rem;max-width:30ch;font-size:1rem}
+.palco .bar{position:absolute;inset:1.2rem var(--pad) auto;display:flex;justify-content:space-between;z-index:3}
+.palco .bar .rot{line-height:1.7}
+.palco .bar .rot:last-child{text-align:right}
+.palco .dica{position:absolute;left:0;right:0;bottom:calc(1.6rem + var(--safe-b));text-align:center;z-index:3;opacity:calc(1 - var(--e) * 5)}
+.palco .dica::after{content:"";display:block;width:1px;height:2.4rem;margin:.7rem auto 0;background:currentColor;transform-origin:top;animation:desce 1.8s var(--ease) infinite}
+@keyframes desce{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+@media (min-width:900px){.palco .pc{width:17rem}}
+
+/* faixa de números */
+.fatos{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.fatos div{padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.fatos div:nth-child(odd){padding-right:1rem;border-right:1px solid var(--line)}
+.fatos div:nth-child(even){padding-left:1rem}
+.fatos .bb{font-size:3.1rem;display:block}
+.fatos small{font-size:.84rem;color:var(--mute);display:block;margin-top:.3rem;line-height:1.35}
+@media (min-width:900px){.fatos{grid-template-columns:repeat(4,1fr)}.fatos div{padding:1.6rem 1.2rem!important;border-right:1px solid var(--line)}.fatos div:last-child{border-right:0}}
+
+/* ===== COMPARADOR (arrastar) ===== */
+.cx{margin-top:4rem}
+.abas{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--fg);position:relative}
+.abas button{position:relative;z-index:1;padding:.95rem .4rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:color .35s}
+.abas button[aria-selected="true"]{color:var(--w)}
+.abas i{position:absolute;top:0;bottom:0;left:0;width:calc(100% / 3);background:var(--fg);transition:transform .5s var(--ease);transform:translateX(calc(100% * var(--a,0)))}
+.chips{display:flex;gap:.45rem;margin:1rem 0 1.6rem;flex-wrap:wrap}
+.chips button{padding:.5rem .8rem;border:1px solid var(--line);font-size:.78rem;font-weight:600;transition:background .3s,border-color .3s}
+.chips button[aria-pressed="true"]{background:#fff;border-color:var(--fg)}
+.cx-palco{display:grid;justify-items:center;position:relative}
+.cx-palco::before,.cx-palco::after{content:"";position:absolute;top:-1rem;bottom:-1rem;width:1.6rem;border:1.5px solid var(--fg);opacity:.9}
+.cx-palco::before{left:0;border-right:0}.cx-palco::after{right:0;border-left:0}
+.fr{position:relative;overflow:hidden;background:#e9e7e2;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;--x:50%;transition:width .5s var(--ease),aspect-ratio .5s var(--ease)}
+.fr.phone{width:min(68vw,17.5rem);aspect-ratio:390/844;border-radius:2.3rem;border:.42rem solid #0b0b0b;box-shadow:0 2rem 3.5rem -1.2rem rgba(20,30,40,.35)}
+.fr.phone::before{content:"";position:absolute;top:.4rem;left:50%;width:30%;height:1.1rem;transform:translateX(-50%);background:#0b0b0b;border-radius:1rem;z-index:4}
+.fr.card{width:min(74vw,25rem);aspect-ratio:var(--ar,1);box-shadow:0 2rem 3rem -1.4rem rgba(20,30,40,.35)}
+.fr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none;-webkit-user-drag:none}
+.fr .a{clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.fr .h{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:#fff;z-index:3;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.fr .h::after{content:"";position:absolute;top:50%;left:50%;width:2.9rem;height:2.9rem;transform:translate(-50%,-50%);border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b0b0b' stroke-width='2'%3E%3Cpath d='m9 7-5 5 5 5M15 7l5 5-5 5'/%3E%3C/svg%3E") center/1.3rem no-repeat;box-shadow:0 .5rem 1.2rem rgba(0,0,0,.2)}
+.fr .tag{position:absolute;bottom:.9rem;z-index:3;padding:.32rem .55rem;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none;transition:opacity .3s}
+.fr .tag.l{left:.9rem;background:rgba(11,11,11,.8);color:#fff}
+.fr .tag.r{right:.9rem;background:#fff;color:#0b0b0b}
+.fr.phone .tag{bottom:1.3rem}
+.atalho{display:flex;justify-content:center;gap:.5rem;margin-top:1.8rem}
+.atalho button{padding:.65rem 1rem;border:1.5px solid var(--fg);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.atalho button:active{background:var(--fg);color:var(--w)}
+.notas{display:grid;gap:.7rem;margin:1.6rem auto 0;max-width:30rem}
+.notas p{display:grid;grid-template-columns:5.6rem 1fr;gap:.8rem;font-size:.93rem;line-height:1.4;align-items:baseline}
+.notas p b{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.notas p:first-child{color:var(--mute)}
+.notas p:last-child b{color:var(--accent)}
+
+/* trilhos */
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 1rem;margin:0 calc(var(--pad)*-1);scrollbar-width:none;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail>*{scroll-snap-align:center;flex:none}
+.dots{display:flex;justify-content:center;gap:.45rem;margin-top:1rem}
+.dots button{width:.45rem;height:.45rem;border-radius:1rem;background:rgba(var(--fg-rgb),.25);transition:width .35s var(--ease),background .35s}
+.dots button[aria-current="true"]{width:1.6rem;background:var(--fg)}
+.dark .dots button{background:rgba(243,240,234,.3)}.dark .dots button[aria-current="true"]{background:var(--w)}
+.phone{position:relative;width:min(72vw,17.5rem);aspect-ratio:390/844;margin:0 auto;border-radius:2.4rem;border:.42rem solid #0b0b0b;background:#0b0b0b;overflow:hidden;box-shadow:0 2rem 3.5rem -1.2rem rgba(20,30,40,.35)}
+.phone::before{content:"";position:absolute;top:.45rem;left:50%;width:30%;height:1.15rem;transform:translateX(-50%);background:#0b0b0b;border-radius:1rem;z-index:3}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:1.95rem;background:#fff}
+
+/* site novo */
+.tela{width:min(78vw,19rem)}
+.tela .phone{width:100%}
+.tela figcaption{margin-top:1.3rem;padding:0 .2rem}
+.tela figcaption h3{margin-bottom:.35rem}
+.tela figcaption p{font-size:.92rem;color:var(--mute);line-height:1.45}
+.recursos{display:grid;margin-top:3rem;border-top:1px solid var(--line)}
+.recursos div{display:grid;grid-template-columns:2.4rem 1fr;gap:.2rem .8rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+.recursos svg{grid-row:span 2;width:1.5rem;height:1.5rem;margin-top:.1rem}
+.recursos b{font-weight:700;font-size:.98rem}
+.recursos span{font-size:.9rem;color:var(--mute);line-height:1.4}
+.recursos .dest{background:rgba(255,255,255,.5);margin:0 -.8rem;padding:1.15rem .8rem}
+@media (min-width:900px){.recursos{grid-template-columns:1fr 1fr 1fr;column-gap:2.5rem}.recursos .dest{margin:0}}
+
+/* app */
+.perguntas{display:grid;gap:.55rem;margin:0 0 3rem}
+.perguntas p{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:clamp(1.25rem,5.6vw,1.9rem);line-height:1.1}
+.perguntas p:nth-child(even){color:#a39d92}
+.resposta{display:flex;align-items:center;gap:.8rem;margin-top:1.4rem}
+.resposta .bb{font-size:2.6rem;color:var(--t3)}
+.horas{display:flex;gap:.45rem;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--pad)*-1) 1.6rem;padding:0 var(--pad)}
+.horas::-webkit-scrollbar{display:none}
+.horas button{flex:none;padding:.55rem .85rem;border:1px solid var(--wl);font-size:.72rem;font-weight:600;letter-spacing:.1em;white-space:nowrap;transition:background .3s,color .3s}
+.horas button[aria-current="true"]{background:var(--w);color:var(--k);border-color:var(--w)}
+.passo{width:min(84vw,21rem)}
+.passo .phone{width:min(66vw,16.5rem);border-color:#1d1d1d;box-shadow:0 2rem 3rem -1rem rgba(0,0,0,.6)}
+.passo .phone::before{background:#1d1d1d}
+.passo .tx{margin-top:1.6rem}
+.passo .hr{font-family:"Bebas Neue",sans-serif;font-size:1.35rem;letter-spacing:.06em;color:var(--t3)}
+.passo h3{font-size:1.35rem;margin:.2rem 0 .55rem}
+.passo p{font-size:.95rem;color:rgba(243,240,234,.75)}
+.passo .ganho{display:inline-block;margin-top:.9rem;padding:.4rem .65rem;background:rgba(197,214,225,.14);color:var(--t1);font-size:.75rem;font-weight:600}
+.passo.site .ganho{background:var(--t1);color:var(--k)}
+.tabela{display:grid;gap:1px;background:var(--wl);margin-top:3.5rem;border:1px solid var(--wl);max-width:46rem}
+.tabela>div{background:var(--k);padding:1.2rem 1.1rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.tabela .rot{grid-column:1/-1;color:#a39d92}
+.tabela p{font-size:.9rem;line-height:1.4}
+.tabela p:first-of-type{color:#8d877c}
+.tabela .cab{background:#151515;padding:.9rem 1.1rem}
+.tabela .cab p{font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tabela .cab p:last-of-type{color:var(--t3)}
+.aviso{font-size:.78rem;color:#8d877c;margin-top:2rem;line-height:1.45}
+
+/* ===== SITE + APP LIGADOS ===== */
+.liga{display:grid;gap:0;max-width:56rem;margin:0 auto}
+@media (min-width:900px){.liga{grid-template-columns:1fr 6rem 1fr;align-items:center}}
+.pn{background:#fff;border:1.5px solid var(--fg);position:relative}
+.pn .tp{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;border-bottom:1px solid var(--line);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.pn .tp span:last-child{color:var(--mute);font-weight:600;letter-spacing:.06em;text-transform:none;font-size:.72rem}
+.pn.app{background:#f3f0ea}
+.pn.app .tp{background:var(--k);color:var(--w);border-color:var(--k)}
+.pn.app .tp span:last-child{color:#a39d92}
+.pn .bd{padding:1rem}
+.prod{display:grid;grid-template-columns:5.4rem 1fr;gap:.9rem;align-items:center}
+.prod .im{aspect-ratio:1;background:var(--t1);display:grid;place-items:center;overflow:hidden}
+.prod .im img{width:88%;filter:drop-shadow(0 .5rem .6rem rgba(30,45,60,.2))}
+.prod small{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.prod h4{font-family:var(--display);font-weight:900;font-stretch:120%;text-transform:uppercase;font-size:1.02rem;line-height:1.05;margin:.15rem 0 .25rem}
+.prod .pr{font-weight:700;font-size:.95rem}
+.tam{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;margin-top:1rem}
+.tam button{position:relative;height:3rem;border:1.5px solid var(--line);font-weight:600;font-size:.95rem;transition:border-color .25s,background .25s,color .25s,opacity .25s}
+.tam button[aria-pressed="true"]{border-color:var(--fg);background:var(--fg);color:#fff}
+.tam button.esg{color:rgba(var(--fg-rgb),.35);text-decoration:line-through;background:repeating-linear-gradient(-45deg,transparent 0 6px,rgba(var(--fg-rgb),.05) 6px 7px)}
+.tam button.esg[aria-pressed="true"]{background:#bdb7ac;border-color:#bdb7ac;color:#fff}
+.tam button em{position:absolute;left:0;right:0;bottom:-1.05rem;font-style:normal;font-size:.55rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#a0522d;text-decoration:none}
+.est{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:#fff}
+.est button{padding:.6rem 0 .5rem;border-right:1px solid var(--line);text-align:center;transition:background .25s}
+.est button:last-child{border-right:0}
+.est button small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.12em;color:var(--mute)}
+.est button .bb{display:block;font-size:2.4rem;transition:color .3s}
+.est button.zero .bb{color:#c0392b}
+.est button[aria-pressed="true"]{background:var(--t1)}
+.est button.pisca .bb{animation:pisca 1s var(--ease)}
+.tam button.pisca{animation:piscab 1s var(--ease)}
+@keyframes pisca{0%{transform:scale(1)}30%{transform:scale(1.35);color:var(--accent)}100%{transform:scale(1)}}
+@keyframes piscab{0%,100%{box-shadow:0 0 0 0 rgba(63,86,102,0)}30%{box-shadow:0 0 0 .35rem rgba(63,86,102,.35)}}
+.acoes{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1rem}
+.acao{height:3.1rem;padding:0 .6rem;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1.5px solid var(--fg);transition:transform .15s,opacity .3s}
+.acao.k{background:var(--fg);color:#fff}
+.acao:active{transform:scale(.97)}
+.acao[disabled]{opacity:.35;pointer-events:none}
+.pn .acao.cheia{grid-column:1/-1}
+.mov{list-style:none;margin-top:1rem;border-top:1px solid var(--line);font-size:.8rem;min-height:5.6rem}
+.mov li{display:grid;grid-template-columns:3rem 1fr auto;gap:.5rem;padding:.45rem 0;border-bottom:1px solid var(--line);animation:entra .5s var(--ease)}
+.mov li time{color:var(--mute)}
+.mov li b{font-weight:700}
+.mov li .m{color:#c0392b;font-weight:700}.mov li .p{color:#2e7d4f;font-weight:700}
+@keyframes entra{from{opacity:0;transform:translateY(-.4rem)}}
+.fio{position:relative;height:5.5rem;display:grid;place-items:center}
+.fio::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:0;border-left:1.5px dashed rgba(var(--fg-rgb),.35)}
+.fio span{position:relative;z-index:1;background:var(--t1);padding:.35rem .6rem;font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.fio i{position:absolute;left:50%;width:.8rem;height:.8rem;margin-left:-.4rem;border-radius:50%;background:var(--accent);box-shadow:0 0 0 .35rem rgba(63,86,102,.18);opacity:0;top:0}
+.fio i.desce{animation:desceb .75s var(--ease) forwards}
+.fio i.sobe{animation:sobeb .75s var(--ease) forwards}
+@keyframes desceb{0%{top:0;opacity:1}100%{top:calc(100% - .8rem);opacity:1}}
+@keyframes sobeb{0%{top:calc(100% - .8rem);opacity:1}100%{top:0;opacity:1}}
+@media (min-width:900px){
+  .fio{height:100%;min-height:8rem}
+  .fio::before{left:0;right:0;top:50%;bottom:auto;width:auto;height:0;border-left:0;border-top:1.5px dashed rgba(var(--fg-rgb),.35)}
+  .fio i{top:50%!important;margin:-.4rem 0 0;left:0}
+  .fio i.desce{animation:direita .75s var(--ease) forwards}.fio i.sobe{animation:esquerda .75s var(--ease) forwards}
+  @keyframes direita{0%{left:0;opacity:1}100%{left:calc(100% - .8rem);opacity:1}}
+  @keyframes esquerda{0%{left:calc(100% - .8rem);opacity:1}100%{left:0;opacity:1}}
+}
+.narra{max-width:56rem;margin:1.6rem auto 0;min-height:4.2rem;padding:1rem 1.1rem;background:var(--k);color:var(--w);font-size:.92rem;line-height:1.45;display:flex;gap:.8rem;align-items:flex-start}
+.narra .bb{font-size:1.5rem;color:var(--t3);flex:none;line-height:1}
+.narra p{transition:opacity .25s}
+.recomeca{display:block;margin:1rem auto 0;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:underline;text-underline-offset:.3em}
+.regras{display:grid;margin-top:3.5rem;border-top:1.5px solid var(--fg);max-width:56rem;margin-left:auto;margin-right:auto}
+.regras div{display:grid;grid-template-columns:2.6rem 1fr;gap:.8rem;padding:1.15rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.regras .bb{font-size:1.7rem;color:var(--accent)}
+.regras b{display:block;font-size:1rem;margin-bottom:.2rem}
+.regras span{font-size:.9rem;color:var(--mute);line-height:1.4}
+@media (min-width:900px){.regras{grid-template-columns:1fr 1fr;column-gap:2.5rem}}
+
+/* marca */
+.loja{position:relative;margin-bottom:3rem}
+.loja img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 40%}
+.loja blockquote{position:absolute;left:0;right:0;bottom:0;padding:5rem 1.2rem 1.3rem;background:linear-gradient(transparent,rgba(11,11,11,.72));color:#fff;font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(1.3rem,6vw,2rem);line-height:1.08;text-transform:uppercase}
+@media (min-width:900px){.marca{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}.loja{position:sticky;top:6rem}}
+.pilar{border-top:1px solid var(--line);padding:1.4rem 0}
+.pilar:last-child{border-bottom:1px solid var(--line)}
+.pilar summary{list-style:none;display:grid;grid-template-columns:2.6rem 1fr 1.4rem;align-items:center;gap:.8rem;cursor:pointer}
+.pilar summary::-webkit-details-marker{display:none}
+.pilar summary .bb{font-size:2rem;color:var(--accent)}
+.pilar summary::after{content:"+";font-size:1.5rem;font-weight:300;text-align:right;transition:transform .35s var(--ease)}
+.pilar[open] summary::after{transform:rotate(45deg)}
+.pilar .bd{padding:1rem 0 0 3.4rem;font-size:.95rem;color:rgba(var(--fg-rgb),.75)}
+.pilar .bd p+p{margin-top:.6rem}
+.pilar .bd b{color:var(--fg)}
+
+/* configurador */
+.pac{display:block;position:relative;border:1.5px solid var(--line);background:var(--panel);padding:1.4rem 1.2rem;margin-bottom:1rem;cursor:pointer;transition:border-color .35s,background .35s,transform .2s}
+.pac:active{transform:scale(.99)}
+.pac input{position:absolute;opacity:0;pointer-events:none}
+.pac.on{border-color:var(--fg);background:#fff}
+.pac .hd{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
+.pac .ck{width:1.8rem;height:1.8rem;border:1.5px solid var(--fg);display:grid;place-items:center;transition:background .3s}
+.pac .ck svg{width:1rem;height:1rem;stroke:var(--w);opacity:0;transform:scale(.4);transition:opacity .3s,transform .35s var(--ease)}
+.pac.on .ck{background:var(--fg)}.pac.on .ck svg{opacity:1;transform:none}
+.pac h3{font-size:1.45rem;font-stretch:120%;text-transform:uppercase}
+.pac .rs{font-size:.9rem;color:var(--mute);margin-top:.35rem;max-width:34ch}
+.pac .vl{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;margin-top:1.1rem}
+.pac .vl .bb{font-size:2.4rem}
+.pac .vl small{font-size:.85rem;color:var(--mute)}
+.pac .vl .mm{flex-basis:100%;font-size:.88rem;color:var(--fg)}
+.pac .vl .mm b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.4rem}
+.pac ul{list-style:none;margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line);display:grid;gap:.5rem;font-size:.9rem}
+.pac li{display:flex;gap:.6rem;align-items:flex-start;line-height:1.35}
+.pac li svg{flex:none;width:1rem;height:1rem;margin-top:.15rem;stroke:var(--accent)}
+.pac .selo{position:absolute;top:-.7rem;left:1.2rem;padding:.25rem .55rem;background:var(--accent);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.total{margin-top:1.8rem;background:var(--k);color:var(--w);padding:1.5rem 1.2rem}
+.total .ln{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--wl)}
+.total .ln:last-of-type{border-bottom:0}
+.total .ln span{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a39d92}
+.total .ln b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.5rem;line-height:1;text-align:right}
+.total .ln b small{font-size:1.1rem;color:#a39d92;margin-left:.2rem}
+.total .obs{font-size:.82rem;color:#a39d92;margin-top:.6rem;min-height:1.2em}
+.btn{display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;height:3.6rem;padding:0 1.4rem;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:transform .2s,opacity .3s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:1.25rem;height:1.25rem}
+.btn.w{background:var(--w);color:var(--k);margin-top:1.2rem}
+.btn[disabled]{opacity:.45}
+
+/* prazos */
+.linha{list-style:none;position:relative;padding-left:2.2rem}
+.linha::before{content:"";position:absolute;left:.55rem;top:.6rem;bottom:.6rem;width:1px;background:var(--line)}
+.linha li{position:relative;padding:0 0 1.9rem;transition:opacity .4s}
+.linha li:last-child{padding-bottom:0}
+.linha li::before{content:"";position:absolute;left:-2.2rem;top:.3rem;width:1.15rem;height:1.15rem;border-radius:50%;background:var(--bg);border:1.5px solid var(--fg)}
+.linha li.off{opacity:.3}
+.linha .t2{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.linha .pz{flex:none;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .55rem;background:var(--t1)}
+.linha .pz.vazio{background:transparent;border:1px dashed rgba(var(--fg-rgb),.35);color:var(--mute)}
+.linha p{font-size:.92rem;color:var(--mute);margin-top:.3rem;line-height:1.45}
+.ptotal{display:flex;justify-content:space-between;align-items:baseline;margin-top:2.2rem;padding-top:1.3rem;border-top:1.5px solid var(--fg)}
+.ptotal b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2.2rem}
+
+/* fechamento */
+.fim{text-align:center;padding:6rem 0 calc(7rem + var(--safe-b))}
+.fim .grande{display:inline-grid;place-items:center;width:7.6rem;height:8.8rem;position:relative;margin-bottom:2.5rem}
+.fim .grande::before,.fim .grande::after{content:"";position:absolute;top:0;bottom:0;width:32%;border:2px solid currentColor}
+.fim .grande::before{left:0;border-right:0}.fim .grande::after{right:0;border-left:0}
+.fim .grande b{font-family:"Jost",sans-serif;font-weight:200;font-size:3.6rem;line-height:1;letter-spacing:.05em}
+.fim .grande i{font-family:"Bebas Neue",sans-serif;font-style:normal;font-size:1.5rem;letter-spacing:.08em;line-height:1;margin-top:-1.4rem}
+.fim h2{font-size:clamp(2.4rem,12vw,5rem);margin-bottom:1.2rem}
+.fim .lead{margin:0 auto 2.2rem}
+.fim .btn{max-width:24rem;margin:0 auto;background:var(--w);color:var(--k)}
+.fim .rod{margin-top:3.5rem;font-size:.75rem;color:#8d877c;line-height:1.7}
+
+/* barra fixa */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:45;display:flex;align-items:center;gap:.8rem;padding:.7rem var(--pad) calc(.7rem + var(--safe-b));background:rgba(11,11,11,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--w);transform:translateY(110%);transition:transform .45s var(--ease)}
+.dock.on{transform:none}
+.dock .v{flex:1;min-width:0;line-height:1.15}
+.dock .v small{display:block;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a39d92}
+.dock .v b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.5rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.dock .v b small{display:inline;font-size:.9rem;letter-spacing:0;text-transform:none;font-family:var(--body);font-weight:500}
+.dock a{flex:none;width:auto;height:3rem;padding:0 1.05rem;font-size:.66rem;background:var(--w);color:var(--k)}
+@media (min-width:900px){.dock{left:auto;right:1.5rem;bottom:1.5rem;width:31rem}}
+.toast{position:fixed;left:50%;bottom:calc(6rem + var(--safe-b));transform:translate(-50%,1rem);z-index:60;background:#fff;color:#0b0b0b;padding:.85rem 1.1rem;font-size:.85rem;box-shadow:0 1rem 2rem rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;width:max-content;max-width:calc(100% - 2.5rem);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* revelação */
+.js .rv{opacity:0;transform:translateY(1.6rem);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .abre{height:100svh}.palco{--e:1!important}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="top" id="top">
+  <span class="logo" aria-label="BK Clothing"><b>BK</b><i>CLOTHING</i></span>
+  <p class="cur" id="cur"><span>00</span>Abertura</p>
+  <a class="pill" href="#investimento">Investimento</a>
+  <i class="prog" id="prog"></i>
+</header>
+
+<!-- ABERTURA -->
+<section class="abre" id="abre" aria-label="Abertura">
+  <div class="palco" id="palco">
+    <div class="bar"><span class="rot">Proposta<br>para <span data-cfg="cliente"></span></span><span class="rot">BK Clothing<br><span data-cfg="data"></span></span></div>
+    <span class="cl" aria-hidden="true"></span><span class="cr" aria-hidden="true"></span>
+    <div class="mc" aria-hidden="true"><b>BK</b><i>CLOTHING</i></div>
+    <img class="pc" src="img/cut-1914786.webp" alt="" style="--tx:-28vw;--ty:-33svh;--r:-14deg">
+    <img class="pc" src="img/cut-1849734.webp" alt="" style="--tx:29vw;--ty:-31svh;--r:10deg">
+    <img class="pc" src="img/cut-1703184.webp" alt="" style="--tx:-27vw;--ty:35svh;--r:9deg">
+    <img class="pc" src="img/cut-1679459.webp" alt="" style="--tx:29vw;--ty:33svh;--r:-8deg">
+    <div class="hl">
+      <h1><span>A BK</span><span>como ela</span><span>merece</span><span>ser vista.</span></h1>
+    </div>
+    <span class="dica rot">Role para abrir</span>
+  </div>
+</section>
+
+<!-- 01 HOJE x PROPOSTA -->
+<section class="sec" id="hoje" data-cap="Hoje e a proposta"><div class="w">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">01</span><span class="rot">Hoje e a proposta</span></div>
+    <h2>Arraste e compare</h2>
+    <p class="lead">A BK vende bem no WhatsApp e no grupo VIP. O que aparece para quem ainda não conhece a loja ainda não está à altura. Arraste o divisor e veja a diferença.</p>
+  </div>
+
+  <div class="fatos rv">
+    <div><span class="bb">0</span><small>resultados da BK no Google Maps</small></div>
+    <div><span class="bb">4+</span><small>meses sem post no feed do Instagram</small></div>
+    <div><span class="bb">135</span><small>peças no catálogo, sem tamanho nem descrição</small></div>
+    <div><span class="bb">2</span><small>links quebrados no rodapé do site, Instagram e Facebook</small></div>
+  </div>
+
+  <div class="cx rv" id="cx">
+    <div class="abas" role="tablist" aria-label="O que comparar"><i></i>
+      <button role="tab" aria-selected="true" data-g="site">Site</button>
+      <button role="tab" aria-selected="false" data-g="insta">Instagram</button>
+      <button role="tab" aria-selected="false" data-g="fotos">Fotos</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="cx-palco">
+      <div class="fr phone" id="fr" role="slider" tabindex="0" aria-label="Arraste para comparar hoje e a proposta" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img class="b" alt=""><img class="a" alt="">
+        <span class="h"></span><span class="tag l">Hoje</span><span class="tag r">Proposta</span>
+      </div>
+    </div>
+    <div class="atalho"><button data-to="100">Hoje</button><button data-to="50">Metade</button><button data-to="0">Proposta</button></div>
+    <div class="notas" id="notas"><p><b>Hoje</b><span></span></p><p><b>Proposta</b><span></span></p></div>
+  </div>
+</div></section>
+
+<!-- 02 SITE NOVO -->
+<section class="sec blue" id="site" data-cap="O site novo"><div class="w">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">02</span><span class="rot">O site novo</span></div>
+    <h2>Pronto para vender</h2>
+    <p class="lead">Já está feito e roda no celular. Quem entra vê a BK como marca, escolhe peça e tamanho, e o pedido chega pronto no WhatsApp da loja.</p>
+  </div>
+  <div class="rail rv" id="rail-site">
+    <figure class="tela"><div class="phone"><img src="img/novo-home.webp" alt="Página inicial do site novo" loading="lazy"></div>
+      <figcaption><h3>Abertura com cara de marca</h3><p>Peças recortadas sobre as cores da BK, barra de avisos e “Drops” com o que chegou por último.</p></figcaption></figure>
+    <figure class="tela"><div class="phone"><img src="img/novo-catalogo.webp" alt="Catálogo do site novo" loading="lazy"></div>
+      <figcaption><h3>Catálogo completo</h3><p>As 135 peças com busca, filtro por categoria e marca, e ordem por preço ou novidade.</p></figcaption></figure>
+    <figure class="tela"><div class="phone"><img src="img/novo-produto.webp" alt="Página de produto do site novo" loading="lazy"></div>
+      <figcaption><h3>Produto que tira dúvida</h3><p>Foto padronizada, cor, tamanhos, guia de medidas e peças parecidas.</p></figcaption></figure>
+    <figure class="tela"><div class="phone"><img src="img/novo-links.webp" alt="Página de links do site novo" loading="lazy"></div>
+      <figcaption><h3>Links da própria BK</h3><p>Sai o Linktree com endereço errado. Entra uma página com WhatsApp, catálogo, grupo VIP e como chegar.</p></figcaption></figure>
+  </div>
+  <div class="dots" data-rail="rail-site"></div>
+  <div class="recursos rv">
+    <div class="dest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><b>Ligado ao estoque</b><span>Com o BK Gestão, o site mostra só o que tem na loja. Esgotou, sai do site sozinho.</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><b>Sacola que vira pedido</b><span>O cliente monta a sacola e o WhatsApp abre com peça, cor, tamanho e total.</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14"/><path d="m3 15 5-5 4 4 3-3 6 6"/></svg><b>Link com foto no WhatsApp</b><span>Quem compartilha o site manda uma prévia com imagem e nome da loja.</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg><b>Achado no Google</b><span>Título, descrição e páginas por categoria para aparecer em “jaqueta masculina Joinville”.</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><b>Feito para o celular</b><span>Rápido no 4G, botões grandes, fácil com uma mão só.</span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h10"/></svg><b>Troca, envio e pagamento</b><span>As regras da loja num lugar só, para o cliente comprar sem medo.</span></div>
+  </div>
+</div></section>
+
+<!-- 03 SITE + APP LIGADOS -->
+<section class="sec blue" id="ligados" data-cap="Site e app ligados" style="padding-top:2rem"><div class="w">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">03</span><span class="rot">Site e app ligados</span></div>
+    <h2>Um estoque só</h2>
+    <p class="lead">O site e o BK Gestão funcionam juntos. Vendeu no site, o estoque baixa sozinho no app. Vendeu na loja, o site se atualiza na hora. Teste aqui:</p>
+  </div>
+
+  <div class="liga rv" id="liga">
+    <div class="pn site">
+      <div class="tp"><span>Site</span><span>bkclothing.com.br</span></div>
+      <div class="bd">
+        <div class="prod"><div class="im"><img src="img/cut-1914786.webp" alt="Jaqueta Tommy bege"></div>
+          <div><small>Tommy Hilfiger</small><h4>Jaqueta Tommy</h4><span class="pr">R$ 299,00</span></div></div>
+        <div class="tam" id="s-tam"></div>
+        <div class="acoes" style="margin-top:1.6rem"><button class="acao k cheia" id="s-comprar">Comprar no site</button></div>
+      </div>
+    </div>
+    <div class="fio" aria-hidden="true"><span>Sincroniza na hora</span><i id="bola"></i></div>
+    <div class="pn app">
+      <div class="tp"><span>BK Gestão</span><span>Estoque · Jaqueta Tommy bege</span></div>
+      <div class="bd">
+        <div class="est" id="a-est"></div>
+        <div class="acoes"><button class="acao k" id="a-vender">Vender na loja</button><button class="acao" id="a-entrada">Chegou +2</button></div>
+        <ul class="mov" id="a-mov" aria-live="polite"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="narra rv" aria-live="polite"><span class="bb">→</span><p id="narra">Toque em um tamanho no site e em “Comprar no site”. Veja o estoque do app baixar sozinho.</p></div>
+  <button class="recomeca" id="recomeca">Recomeçar o teste</button>
+
+  <div class="regras rv">
+    <div><span class="bb">1</span><p><b>Venda no site dá baixa sozinha</b><span>O pedido entra no app e o estoque daquele tamanho cai na hora, sem ninguém digitar nada.</span></p></div>
+    <div><span class="bb">2</span><p><b>Venda na loja atualiza o site</b><span>Vendeu a última peça no balcão? O tamanho aparece como esgotado no site no mesmo segundo.</span></p></div>
+    <div><span class="bb">3</span><p><b>Chegou mercadoria, volta para o site</b><span>Lançou a entrada no app, o tamanho fica disponível de novo para quem está comprando.</span></p></div>
+    <div><span class="bb">4</span><p><b>Nunca vende o que não tem</b><span>Loja e site olham o mesmo estoque. Acaba a venda de peça que já saiu.</span></p></div>
+  </div>
+</div></section>
+
+<!-- 04 APP -->
+<section class="sec dark" id="app" data-cap="App de vendas e estoque"><div class="w">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">04</span><span class="rot">App de vendas e estoque</span></div>
+    <h2>BK Gestão</h2>
+    <p class="lead">Um aplicativo no celular que tira das suas costas o controle da loja. Toda venda, da loja ou do site, baixa o estoque sozinha, e as contas do dia ficam prontas.</p>
+  </div>
+  <div class="perguntas rv">
+    <p>Quantas jaquetas M ainda tem?</p>
+    <p>Quanto entrou hoje no Pix?</p>
+    <p>O que está parado há meses?</p>
+    <p>O que precisa repor?</p>
+    <div class="resposta"><span class="bb">3s</span><span>O BK Gestão responde no tempo de abrir o celular.</span></div>
+  </div>
+  <h3 class="rv" style="font-size:1.35rem;margin-bottom:1rem">Um dia na loja com o app</h3>
+  <div class="horas rv" id="horas"></div>
+  <div class="rail rv" id="rail-app"></div>
+  <div class="dots" data-rail="rail-app"></div>
+  <div class="tabela rv">
+    <div class="cab"><p>Sem sistema</p><p>Com o BK Gestão</p></div>
+    <div><span class="rot">Estoque</span><p>Ir até a arara ou o depósito para ver se tem o tamanho</p><p>Ver no celular, tamanho por tamanho, na frente do cliente</p></div>
+    <div><span class="rot">Venda no site</span><p>Conferir o pedido e dar baixa à mão, depois</p><p>Baixa automática: o estoque cai sozinho na hora</p></div>
+    <div><span class="rot">Venda na loja</span><p>Anotar a venda e lembrar de atualizar o site</p><p>Três toques; o site se atualiza junto</p></div>
+    <div><span class="rot">Fim do dia</span><p>Somar Pix, cartão e dinheiro na mão</p><p>Fechamento pronto, separado por forma de pagamento</p></div>
+    <div><span class="rot">Reposição</span><p>Perceber que acabou quando o cliente pede</p><p>Aviso antes de acabar e lista pronta para o fornecedor</p></div>
+    <div><span class="rot">Peças paradas</span><p>Dinheiro parado na arara sem ninguém notar</p><p>Lista do que não gira e oferta pronta para o grupo VIP</p></div>
+  </div>
+  <p class="aviso rv">As telas usam as peças, os preços e as fotos da BK. Quantidades, custos, clientes e vendas são de exemplo, só para mostrar como funciona.</p>
+</div></section>
+
+<!-- 05 MARCA -->
+<section class="sec" id="marca" data-cap="A loja e a marca"><div class="w">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">05</span><span class="rot">A loja e a marca</span></div>
+    <h2>Mesmo padrão, em todo lugar</h2>
+    <p class="lead">Quem entra na loja vê a BK do jeito certo. A ideia é que quem procura no Google, no Instagram ou recebe um link veja a mesma coisa.</p>
+  </div>
+  <div class="marca">
+    <figure class="loja rv"><img src="img/loja.webp" alt="Parede da loja BK Clothing com o letreiro e o slogan" loading="lazy"><blockquote>A loja já é assim.<br>O digital vai ser também.</blockquote></figure>
+    <div class="rv">
+      <details class="pilar" open><summary><span class="bb">01</span><h3>Aparecer no Google Maps</h3></summary>
+        <div class="bd"><p>Hoje, quem busca “loja de roupa masculina Joinville” não encontra a BK. O perfil da loja no Google traz <b>endereço, horário, fotos, botão de WhatsApp e avaliações</b> de clientes.</p><p>É a forma mais barata de trazer gente nova para a loja física.</p></div></details>
+      <details class="pilar"><summary><span class="bb">02</span><h3>Todas as peças com foto de catálogo</h3></summary>
+        <div class="bd"><p>24 peças já estão no padrão. As outras <b>111</b> ganham a mesma foto: fundo limpo, luz igual, peça inteira.</p><p>É o que mais muda a percepção de valor de quem ainda não conhece a loja.</p></div></details>
+      <details class="pilar"><summary><span class="bb">03</span><h3>Instagram com cara de marca</h3></summary>
+        <div class="bd"><p><b>Feed com padrão</b>, capas de destaque organizadas (novidades, quem usa, tamanhos, envio, loja) e <b>modelos de stories</b> prontos para o dia a dia.</p><p>Sem preço nas artes e sem enfeite: a peça em primeiro lugar.</p></div></details>
+      <details class="pilar"><summary><span class="bb">04</span><h3>Tudo apontando para a BK</h3></summary>
+        <div class="bd"><p>Página de links própria no lugar do Linktree, link com foto no WhatsApp, rodapé com redes que funcionam e o domínio <b>bkclothing.com.br</b> com o site novo.</p></div></details>
+      <details class="pilar"><summary><span class="bb">05</span><h3>Acompanhamento todo mês</h3></summary>
+        <div class="bd"><p>O site fica <b>sempre no ar</b> e recebe <b>todas as atualizações necessárias</b>: peça nova, preço, banner de coleção, ajustes. Você manda pelo WhatsApp e a gente resolve.</p></div></details>
+    </div>
+  </div>
+</div></section>
+
+<!-- 06 INVESTIMENTO -->
+<section class="sec sand" id="investimento" data-cap="Investimento"><div class="w" style="max-width:40rem">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">06</span><span class="rot">Investimento</span></div>
+    <h2>Monte o seu</h2>
+    <p class="lead">Marque o que você quer. O valor muda na hora.</p>
+  </div>
+  <div id="pacotes" class="rv"></div>
+  <div class="total rv" id="total" aria-live="polite">
+    <div class="ln"><span>Implantação</span><b id="t-imp">—</b></div>
+    <div class="ln"><span>Mensal</span><b id="t-men">—</b></div>
+    <p class="obs" id="t-obs"></p>
+    <a class="btn w js-fechar" href="#" role="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Quero fechar</a>
+  </div>
+</div></section>
+
+<!-- 07 PRAZOS -->
+<section class="sec" id="prazos" data-cap="Prazos"><div class="w" style="max-width:40rem">
+  <div class="sec-h rv">
+    <div class="cap"><span class="bk">07</span><span class="rot">Prazos</span></div>
+    <h2>Como acontece</h2>
+    <p class="lead">Do sim até a BK nova no ar, nesta ordem.</p>
+  </div>
+  <ol class="linha rv" id="linha"></ol>
+  <div class="ptotal rv"><span class="rot">Prazo total</span><b id="ptotal">—</b></div>
+</div></section>
+
+<!-- FECHAMENTO -->
+<section class="dark fim" id="fim" data-cap="Vamos fazer?"><div class="w" style="max-width:40rem">
+  <span class="grande rv" aria-label="BK Clothing"><b>BK</b><i>CLOTHING</i></span>
+  <h2 class="rv">Vamos fazer?</h2>
+  <p class="lead rv">Toque no botão e a conversa abre no WhatsApp, já com o que você escolheu.</p>
+  <a class="btn js-fechar rv" href="#" role="button"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>Quero fechar</a>
+  <p class="rod">Proposta para a BK Clothing · <span data-cfg="data"></span><span id="validade"></span><br>Vista estilo, vista BK Clothing.</p>
+</div></section>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <div class="v"><small>Seu investimento</small><b id="d-tot">—</b></div>
+  <a class="btn js-fechar" href="#" role="button" tabindex="-1">Quero fechar</a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(() => {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const brl = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 2 });
+  const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const P = CONFIG.pacotes;
+  const ck = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+  const ok = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+  const hora = () => new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+
+  $$('[data-cfg]').forEach(el => el.textContent = CONFIG[el.dataset.cfg] || '');
+  if (CONFIG.validade) $('#validade').textContent = ' · válida por ' + CONFIG.validade;
+
+  /* ---------- Abertura: colchetes que abrem com a rolagem ---------- */
+  const abre = $('#abre'), palco = $('#palco');
+  const suave = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  function rolagem() {
+    const max = abre.offsetHeight - innerHeight;
+    const p = Math.min(Math.max((scrollY - abre.offsetTop) / (max || 1), 0), 1);
+    if (!calmo) palco.style.setProperty('--e', suave(Math.min(p / .8, 1)).toFixed(4));
+    const doc = document.documentElement;
+    $('#prog').style.setProperty('--pr', (scrollY / (doc.scrollHeight - innerHeight)).toFixed(4));
+    naAbertura = scrollY < abre.offsetTop + max + innerHeight * .4;
+    if (aoRolar) aoRolar();
+  }
+  let naAbertura = true, aoRolar = null;
+  let rq; addEventListener('scroll', () => { cancelAnimationFrame(rq); rq = requestAnimationFrame(rolagem); }, { passive: true });
+  addEventListener('resize', rolagem); rolagem();
+
+  /* ---------- Comparador de arrastar ---------- */
+  const EX = {
+    site: [
+      { n: 'Início', a: 'hoje-site', b: 'novo-home', phone: true, h: 'Título “Catálogo BK Clothing”, com cara de página de atacado.', p: 'Abertura com cara de marca, nas cores e com a logo da BK.' },
+      { n: 'Produto', a: 'hoje-produto', b: 'novo-produto', phone: true, h: 'Foto no chão, sem tamanho e sem descrição.', p: 'Foto padronizada, tamanhos, guia de medidas e sacola.' },
+      { n: 'Links da bio', a: 'hoje-links', b: 'novo-links', phone: true, h: 'Linktree com o endereço de uma loja no Canadá.', p: 'Página da própria BK: WhatsApp, catálogo, grupo VIP e como chegar.' }
+    ],
+    insta: [
+      { n: 'Perfil', a: 'hoje-insta', b: 'novo-insta', phone: true, h: 'Destaques repetidos e bio levando para o Linktree.', p: 'Bio clara e destaques organizados: novidades, quem usa, tamanhos, envio, loja.' },
+      { n: 'Grade', a: 'hoje-grade', b: 'novo-grade', ar: 1, h: 'Cada foto com uma luz e um fundo diferente.', p: 'Grade com padrão, uma ideia por linha. Parece loja grande.' },
+      { n: 'Post', a: 'hoje-post', b: 'novo-post', ar: .8, h: 'Peça no chão de madeira, foto de celular.', p: 'Peça inteira, fundo limpo, sem preço e sem enfeite.' }
+    ],
+    fotos: [
+      { n: 'Bermuda', a: 'antes-1703184', b: 'depois-1703184', ar: 1, h: 'Foto no chão, com etiqueta e sombra.', p: 'Fundo limpo, luz igual, peça inteira à vista.' },
+      { n: 'Jaqueta', a: 'antes-1914785', b: 'depois-1914785', ar: 1, h: 'Peça dobrada no piso de madeira.', p: 'Jaqueta aberta, de frente, como nas lojas grandes.' },
+      { n: 'Conjunto', a: 'antes-1849694', b: 'depois-1849694', ar: 1, h: 'Conjunto sobre o piso, com luz amarelada.', p: 'Conjunto completo, cor fiel, pronto para o site e o Instagram.' },
+      { n: 'Regata', a: 'antes-1690115', b: 'depois-1690115', ar: 1, h: 'Peça clara sobre fundo escuro.', p: 'Peça clara sobre cinza claro, sem cabide.' }
+    ]
+  };
+  const fr = $('#fr'), imA = $('.a', fr), imB = $('.b', fr), chips = $('#chips');
+  let grupo = 'site', xAtual = 50, animX;
+  Object.values(EX).flat().forEach(e => { [e.a, e.b].forEach(s => { const i = new Image(); i.src = `img/${s}.webp`; }); });
+  const setX = v => { xAtual = Math.max(0, Math.min(100, v)); fr.style.setProperty('--x', xAtual + '%'); fr.setAttribute('aria-valuenow', Math.round(xAtual)); };
+  const animarX = (alvo, ms = 650) => {
+    cancelAnimationFrame(animX); if (calmo) return setX(alvo);
+    const de = xAtual; let t0;
+    const go = t => { t0 ??= t; const p = Math.min((t - t0) / ms, 1); setX(de + (alvo - de) * suave(p)); if (p < 1) animX = requestAnimationFrame(go); };
+    animX = requestAnimationFrame(go);
+  };
+  function mostrar(e) {
+    fr.className = 'fr ' + (e.phone ? 'phone' : 'card');
+    fr.style.setProperty('--ar', e.ar || 1);
+    imA.src = `img/${e.a}.webp`; imA.alt = `Hoje: ${e.n}`;
+    imB.src = `img/${e.b}.webp`; imB.alt = `Proposta: ${e.n}`;
+    $('#notas p:first-child span').textContent = e.h;
+    $('#notas p:last-child span').textContent = e.p;
+    setX(50);
+  }
+  function abrirGrupo(g) {
+    grupo = g;
+    const i = ['site', 'insta', 'fotos'].indexOf(g);
+    $('.abas').style.setProperty('--a', i);
+    $$('.abas button').forEach(b => b.setAttribute('aria-selected', b.dataset.g === g));
+    chips.innerHTML = EX[g].map((e, j) => `<button aria-pressed="${j === 0}" data-j="${j}">${e.n}</button>`).join('');
+    $$('button', chips).forEach(b => b.addEventListener('click', () => {
+      $$('button', chips).forEach(x => x.setAttribute('aria-pressed', x === b)); mostrar(EX[g][+b.dataset.j]);
+    }));
+    mostrar(EX[g][0]);
+  }
+  $$('.abas button').forEach(b => b.addEventListener('click', () => abrirGrupo(b.dataset.g)));
+  let arrastando = false;
+  const posX = ev => { const r = fr.getBoundingClientRect(); return (ev.clientX - r.left) / r.width * 100; };
+  fr.addEventListener('pointerdown', ev => { arrastando = true; cancelAnimationFrame(animX); fr.setPointerCapture(ev.pointerId); setX(posX(ev)); });
+  fr.addEventListener('pointermove', ev => { if (arrastando) setX(posX(ev)); });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => fr.addEventListener(t, () => arrastando = false));
+  fr.addEventListener('keydown', ev => {
+    if (ev.key === 'ArrowLeft') { setX(xAtual - 5); ev.preventDefault(); }
+    if (ev.key === 'ArrowRight') { setX(xAtual + 5); ev.preventDefault(); }
+  });
+  $$('.atalho button').forEach(b => b.addEventListener('click', () => animarX(+b.dataset.to)));
+  abrirGrupo('site');
+  new IntersectionObserver((es, o) => es.forEach(e => {
+    if (!e.isIntersecting || calmo) return; o.disconnect();
+    setTimeout(() => { animarX(80, 600); setTimeout(() => animarX(22, 800), 650); setTimeout(() => animarX(50, 600), 1500); }, 300);
+  }), { threshold: .55 }).observe(fr);
+
+  /* ---------- Site + app ligados (simulação) ---------- */
+  const TAM = ['P', 'M', 'G', 'GG'];
+  const INICIAL = { P: 2, M: 1, G: 0, GG: 2 };
+  let est, selS, selA, ocupado = false;
+  const bola = $('#bola'), narra = $('#narra'), mov = $('#a-mov');
+  function falar(t) { narra.style.opacity = 0; setTimeout(() => { narra.innerHTML = t; narra.style.opacity = 1; }, 180); }
+  function pintar(pisca) {
+    $('#s-tam').innerHTML = TAM.map(t => `<button aria-pressed="${t === selS}" class="${est[t] ? '' : 'esg'}${pisca === 's' + t ? ' pisca' : ''}" data-t="${t}">${t}${est[t] === 1 ? '<em>Última</em>' : ''}</button>`).join('');
+    $('#a-est').innerHTML = TAM.map(t => `<button aria-pressed="${t === selA}" class="${est[t] ? '' : 'zero'}${pisca === 'a' + t ? ' pisca' : ''}" data-t="${t}"><small>${t}</small><span class="bb">${est[t]}</span></button>`).join('');
+    $$('#s-tam button').forEach(b => b.addEventListener('click', () => { selS = b.dataset.t; pintar(); }));
+    $$('#a-est button').forEach(b => b.addEventListener('click', () => { selA = b.dataset.t; pintar(); }));
+    $('#s-comprar').disabled = !selS || !est[selS] || ocupado;
+    $('#s-comprar').textContent = !selS ? 'Escolha um tamanho' : est[selS] ? `Comprar ${selS} no site` : `${selS} esgotado`;
+    $('#a-vender').disabled = !est[selA] || ocupado;
+    $('#a-vender').textContent = est[selA] ? `Vender ${selA} na loja` : `${selA} sem estoque`;
+    $('#a-entrada').textContent = `Chegou +2 ${selA}`;
+    $('#a-entrada').disabled = ocupado;
+  }
+  function registrar(txt, delta) {
+    const li = document.createElement('li');
+    li.innerHTML = `<time>${hora()}</time><span>${txt}</span><span class="${delta < 0 ? 'm' : 'p'}">${delta > 0 ? '+' : ''}${delta}</span>`;
+    mov.prepend(li); while (mov.children.length > 3) mov.lastChild.remove();
+  }
+  function viajar(dir, fim) {
+    ocupado = true; pintar();
+    bola.className = ''; void bola.offsetWidth; bola.className = dir;
+    setTimeout(() => { bola.className = ''; ocupado = false; fim(); }, calmo ? 0 : 780);
+  }
+  $('#s-comprar').addEventListener('click', () => {
+    const t = selS; if (!t || !est[t]) return;
+    falar(`Um cliente comprou a jaqueta <b>${t}</b> no site. O pedido está indo para o app…`);
+    viajar('desce', () => {
+      est[t]--; selA = t; registrar(`Venda pelo site · ${t}`, -1); pintar('a' + t);
+      falar(est[t] ? `Pronto: o app deu baixa sozinho. Agora tem <b>${est[t]}</b> no ${t}. Ninguém precisou digitar nada.`
+                   : `Pronto: o app deu baixa sozinho e o <b>${t} esgotou</b>. No site, o ${t} já aparece como esgotado.`);
+      if (!est[t]) setTimeout(() => pintar('s' + t), 300);
+    });
+  });
+  $('#a-vender').addEventListener('click', () => {
+    const t = selA; if (!est[t]) return;
+    est[t]--; registrar(`Venda na loja · ${t}`, -1); pintar('a' + t);
+    falar(`Venda no balcão: <b>${t}</b>. O app avisa o site…`);
+    viajar('sobe', () => {
+      selS = t; pintar('s' + t);
+      falar(est[t] ? `O site já mostra o ${t} com ${est[t] === 1 ? 'só <b>uma peça</b>' : `<b>${est[t]}</b> peças`}.`
+                   : `Era a última. O <b>${t} saiu do site</b> na hora: ninguém compra o que não tem.`);
+    });
+  });
+  $('#a-entrada').addEventListener('click', () => {
+    const t = selA; est[t] += 2; registrar(`Entrada de peças · ${t}`, +2); pintar('a' + t);
+    falar(`Chegou mercadoria: +2 no <b>${t}</b>. Atualizando o site…`);
+    viajar('sobe', () => { selS = t; pintar('s' + t); falar(`O <b>${t}</b> está à venda de novo no site, com ${est[t]} peças.`); });
+  });
+  function recomecar() {
+    est = { ...INICIAL }; selS = 'M'; selA = 'G'; mov.innerHTML = '';
+    registrar('Estoque contado · 5 peças', 0); mov.firstChild.lastChild.textContent = '';
+    pintar(); falar('Toque em um tamanho no site e em “Comprar”. Depois teste “Vender na loja” e “Chegou +2” no app.');
+  }
+  $('#recomeca').addEventListener('click', recomecar);
+  recomecar();
+
+  /* ---------- App: um dia na loja ---------- */
+  const dia = [
+    { h: '09:00', t: 'Abriu a loja', img: '01-inicio', p: 'Na primeira tela: quanto vendeu ontem, o gráfico da semana e o que precisa de atenção, como pedido do site e peça esgotada.', g: 'O dia começa sabendo onde olhar' },
+    { h: '10:30', t: 'Tem a jaqueta no M?', img: '03-estoque', p: 'Busca pelo nome, marca ou cor. A quantidade de cada tamanho aparece na lista, sem ir até a arara.', g: 'Resposta na frente do cliente' },
+    { h: '10:32', t: 'Detalhe da peça', img: '06-produto', p: 'Estoque por tamanho, preço, custo, margem e o que está à venda no site agora.', g: 'Sabe se a peça dá lucro e quando acaba' },
+    { h: '10:35', t: 'Vendeu na loja', img: '09-vender', p: 'Toca na foto da peça, escolhe o tamanho e vai para a sacola. Dá para vender várias peças de uma vez.', g: 'Venda lançada em segundos' },
+    { h: '10:36', t: 'Cobrou', img: '12-cobrar', p: 'Pix, crédito, débito ou dinheiro, com desconto se quiser e o cliente, se quiser guardar o contato.', g: 'Cada real separado por forma de pagamento' },
+    { h: '10:36', t: 'Estoque e site atualizados', img: '14-venda-registrada', p: 'A venda fica registrada, o estoque baixa e o site se atualiza junto. Se o tamanho acabou, ele sai do site e vai para a reposição.', g: 'Ninguém precisa lembrar de dar baixa', site: true },
+    { h: '10:37', t: 'Comprovante no WhatsApp', img: '15-comprovante', p: 'Um toque e o comprovante sai pronto para mandar ao cliente, com peça, tamanho e valor.', g: 'Atendimento com cara de loja grande' },
+    { h: '14:00', t: 'Vendeu no site', img: '20-pedidos', p: 'O pedido do site entra sozinho no app, já com baixa no estoque. Você só confirma e separa a peça.', g: 'Baixa automática das vendas do site', site: true },
+    { h: '16:00', t: 'Peças paradas', img: '22-paradas', p: 'Lista do que está há mais de 45 dias sem vender e quanto dinheiro está parado ali.', g: 'Enxerga o dinheiro parado na arara' },
+    { h: '16:05', t: 'Oferta para o grupo VIP', img: '23-oferta-vip', p: 'Marca as peças, escolhe o desconto e o texto da oferta sai pronto para o grupo VIP.', g: 'Peça parada vira venda' },
+    { h: '17:00', t: 'Hora de repor', img: '24-reposicao', p: 'O que acabou ou está acabando, por tamanho, numa lista pronta para o fornecedor. Quando chega, volta para o site.', g: 'Repõe antes do cliente pedir' },
+    { h: '19:00', t: 'Fechou o dia', img: '29-fechamento', p: 'Quanto vendeu na loja e no site, quantas peças e quanto entrou em Pix, cartão e dinheiro.', g: 'Caixa fechado sem fazer conta' },
+    { h: 'Fim do mês', t: 'Como foi o mês', img: '18-vendas-resumo', p: 'Ticket médio, lucro bruto, peças e categorias que mais vendem. Ajuda a decidir o que comprar.', g: 'Compra o que vende, não o que acha' }
+  ];
+  const railApp = $('#rail-app'), horas = $('#horas');
+  railApp.innerHTML = dia.map(d => `<article class="passo${d.site ? ' site' : ''}"><div class="phone"><img src="img/app-${d.img}.webp" alt="Tela do BK Gestão: ${d.t}" loading="lazy"></div>
+    <div class="tx"><span class="hr">${d.h}</span><h3>${d.t}</h3><p>${d.p}</p><span class="ganho">${d.g}</span></div></article>`).join('');
+  horas.innerHTML = dia.map((d, i) => `<button aria-current="${i === 0}" data-i="${i}">${d.h} · ${d.t}</button>`).join('');
+  $$('button', horas).forEach(b => b.addEventListener('click', () => irPara(railApp, +b.dataset.i)));
+
+  function irPara(rail, i) {
+    const el = rail.children[i]; if (!el) return;
+    rail.scrollTo({ left: el.offsetLeft - (rail.clientWidth - el.clientWidth) / 2, behavior: calmo ? 'auto' : 'smooth' });
+  }
+  $$('.dots').forEach(dots => {
+    const rail = document.getElementById(dots.dataset.rail), n = rail.children.length;
+    dots.innerHTML = Array.from({ length: n }, (_, i) => `<button aria-label="Ir para ${i + 1} de ${n}" aria-current="${i === 0}"></button>`).join('');
+    $$('button', dots).forEach((b, i) => b.addEventListener('click', () => irPara(rail, i)));
+    let raf;
+    rail.addEventListener('scroll', () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => {
+      const mid = rail.scrollLeft + rail.clientWidth / 2; let best = 0, dist = Infinity;
+      [...rail.children].forEach((c, i) => { const d = Math.abs(c.offsetLeft + c.clientWidth / 2 - mid); if (d < dist) { dist = d; best = i; } });
+      $$('button', dots).forEach((b, i) => b.setAttribute('aria-current', i === best));
+      if (rail === railApp) {
+        $$('button', horas).forEach((b, i) => b.setAttribute('aria-current', i === best));
+        const hb = horas.children[best]; horas.scrollTo({ left: hb.offsetLeft - horas.clientWidth / 2 + hb.clientWidth / 2, behavior: 'smooth' });
+      }
+    }); }, { passive: true });
+  });
+
+  /* ---------- Configurador ---------- */
+  const sel = Object.fromEntries(Object.entries(P).map(([k, p]) => [k, !!p.jaVemMarcado]));
+  const preco = v => v == null ? 'a combinar' : brl(v);
+  $('#pacotes').innerHTML = Object.entries(P).map(([k, p]) => `
+    <label class="pac${sel[k] ? ' on' : ''}" data-k="${k}">${k === 'gestao' ? '<span class="selo">Ligado ao site</span>' : ''}
+      <input type="checkbox" ${sel[k] ? 'checked' : ''} aria-label="Incluir ${p.nome}">
+      <div class="hd"><div><h3>${p.nome}</h3><p class="rs">${p.resumo}</p></div><span class="ck">${ck}</span></div>
+      <div class="vl"><span class="bb">${preco(p.implantacao)}</span>${p.implantacao != null ? '<small>implantação</small>' : ''}
+        ${p.mensal != null ? `<span class="mm">+ <b>${brl(p.mensal)}</b>/mês${p.mensalDescricao ? ' · ' + p.mensalDescricao : ''}</span>` : ''}</div>
+      <ul>${p.itens.map(i => `<li>${ok}${i}</li>`).join('')}</ul>
+    </label>`).join('');
+  $$('#pacotes .pac').forEach(l => $('input', l).addEventListener('change', e => {
+    sel[l.dataset.k] = e.target.checked; l.classList.toggle('on', e.target.checked); atualizar();
+  }));
+  const contar = (el, alvo, suf = '') => {
+    const de = +el.dataset.v || 0; el.dataset.v = alvo;
+    if (calmo || de === alvo) { el.innerHTML = brl(alvo) + suf; return; }
+    let t0; const go = t => { t0 ??= t; const p = Math.min((t - t0) / 550, 1), e = 1 - Math.pow(1 - p, 3);
+      el.innerHTML = brl(Math.round(de + (alvo - de) * e)) + suf; if (p < 1) requestAnimationFrame(go); };
+    requestAnimationFrame(go);
+  };
+  function contas() {
+    const ks = Object.keys(P).filter(k => sel[k]); let imp = 0, men = 0; const aComb = [];
+    ks.forEach(k => { const p = P[k]; if (p.implantacao == null) aComb.push(p.nome); else imp += p.implantacao; if (p.mensal != null) men += p.mensal; });
+    return { ks, imp, men, aComb };
+  }
+  function atualizar() {
+    const c = contas();
+    contar($('#t-imp'), c.imp);
+    contar($('#t-men'), c.men, '<small>/mês</small>');
+    $('#t-obs').textContent = !c.ks.length ? 'Marque pelo menos um pacote.'
+      : c.aComb.length ? `+ ${c.aComb.join(' e ')}: valor a combinar na conversa.`
+      : sel.gestao && !sel.presenca ? 'A baixa automática das vendas do site usa o site novo (Presença BK).' : '';
+    $('#d-tot').innerHTML = !c.ks.length ? 'Nada marcado' : `${brl(c.imp)}${c.men ? ` <small>+ ${brl(c.men)}/mês</small>` : ''}`;
+    $$('.js-fechar').forEach(a => { a.toggleAttribute('disabled', !c.ks.length); a.href = linkZap(c); });
+    $$('#linha li').forEach(li => li.classList.toggle('off', !sel[li.dataset.p]));
+  }
+
+  /* ---------- Prazos ---------- */
+  $('#linha').innerHTML = CONFIG.prazos.map(e => `<li data-p="${e.pacote}"><div class="t2"><h3>${e.etapa}</h3>
+    <span class="pz${e.prazo ? '' : ' vazio'}">${e.prazo || 'a definir'}</span></div><p>${e.detalhe}</p></li>`).join('');
+  $('#ptotal').textContent = CONFIG.prazoTotal || 'a definir';
+
+  /* ---------- WhatsApp ---------- */
+  const numero = String(CONFIG.whatsapp || '').replace(/\D/g, '');
+  function linkZap(c) {
+    if (!numero || !c.ks.length) return '#';
+    const linhas = c.ks.map(k => { const p = P[k]; return `• ${p.nome}: ${preco(p.implantacao)}${p.mensal != null ? ` + ${brl(p.mensal)}/mês` : ''}`; });
+    const txt = `Olá! Vi a proposta da BK Clothing e quero fechar:\n\n${linhas.join('\n')}\n\nImplantação: ${brl(c.imp)}${c.aComb.length ? ' (+ ' + c.aComb.join(', ') + ' a combinar)' : ''}${c.men ? `\nMensal: ${brl(c.men)}` : ''}\n\nPodemos conversar?`;
+    return `https://wa.me/${numero}?text=${encodeURIComponent(txt)}`;
+  }
+  const toast = $('#toast'); let tt;
+  const avisar = m => { toast.textContent = m; toast.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('on'), 2600); };
+  $$('.js-fechar').forEach(a => a.addEventListener('click', e => {
+    if (a.getAttribute('href') !== '#') { a.target = '_blank'; a.rel = 'noopener'; return; }
+    e.preventDefault();
+    if (!contas().ks.length) { avisar('Marque pelo menos um pacote.'); $('#investimento').scrollIntoView({ behavior: 'smooth' }); }
+    else avisar('O número do WhatsApp ainda não foi configurado.');
+  }));
+  atualizar();
+
+  /* ---------- Topo, capítulo atual, barra fixa, revelação ---------- */
+  const top = $('#top'), dock = $('#dock'), cur = $('#cur');
+  const vis = { fim: false, total: false };
+  const sync = () => { top.classList.toggle('on', !naAbertura); dock.classList.toggle('on', !naAbertura && !vis.fim && !vis.total); };
+  const ioV = new IntersectionObserver(es => es.forEach(e => { vis[e.target.id] = e.isIntersecting; sync(); }), { threshold: 0.12 });
+  [$('#fim'), $('#total')].forEach(el => ioV.observe(el));
+  aoRolar = sync; sync();
+  const secs = $$('section[data-cap]');
+  const ioCap = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; const i = secs.indexOf(e.target);
+    cur.innerHTML = `<span>${i < 7 ? String(i + 1).padStart(2, '0') : '→'}</span>${e.target.dataset.cap}`;
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  secs.forEach(s => ioCap.observe(s));
+
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>

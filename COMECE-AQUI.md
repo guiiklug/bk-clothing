@@ -99,4 +99,5 @@ E abrir http://localhost:4179 no navegador. Também funciona com duplo clique em
 - Anúncios: `anuncios/index.html`
 - Logos: `logo/logos.jpg`
 - Letras: `_coleta/letras/letras.jpg`
-- Proposta comercial: `site/proposta.html`
+- Proposta comercial (nova, para o celular, com configurador e site + app ligados): `proposta-bk/index.html`. Leia `proposta-bk/LEIAME.md`.
+- Proposta comercial antiga: `site/proposta.html`
