@@ -138,6 +138,12 @@ Passagem de bastão. Quem assumir (Hermes) começa por aqui. Atualizado em 06/10
 - O Guilherme pediu para "brincar com a logo". `logo/logos.jpg` tem a logo atual e oito direções desenhadas em SVG por código (`logo/gerar.py`): A Espelho (B de costas para o K na mesma haste), B Vertical, C Bloco, D Selo, E Corte, F Alta, G Sobreposta, H Clássica. Uma imagem por opção em `logo/opcoes/`.
 - É estudo, não proposta fechada: a loja tem letreiro físico com a logo atual, e trocar logo é decisão do Bruno. Nenhuma foi aplicada ao site.
 
+## Grupo VIP do WhatsApp (pasta `whatsapp/`, 10/10/2026)
+- O grupo tem 182 membros, só admin posta e nenhuma mídia guardada; foto é a logo em fundo branco e a descrição em caixa alta.
+- `gerar.py` monta, na identidade de verão (azul esbranquiçado, areia, preto, off-white, Archivo), quatro opções de foto do grupo (`foto-grupo/`, já pensadas para o corte em círculo), dez modelos de post 1080x1350 (`posts/`: bem-vindo, como funciona, chegou hoje, últimas peças, qual leva, nova coleção, só no grupo, quem usa, loja, todo Brasil) e `index.html` para apresentar. Custo zero.
+- `descricao.txt` é a descrição nova do grupo. `ideias.md` tem o diagnóstico do grupo, o que trocar agora, o calendário semanal de posts, regras de uso e como crescer de 181 para 500.
+- Recomendação: foto `A-azul`, fixar `02-como-funciona`, manter o grupo só para admins.
+
 ## Repositório no GitHub
 - https://github.com/guiiklug/bk-clothing (privado). Colaborador: Carlaocod. `COMECE-AQUI.md` é o resumo para quem entra.
 - Para o repositório não ficar pesado, ficam fora do Git (ver `.gitignore`): as 211 fotos originais do catálogo em `_coleta/img/` (só as 7 que os scripts usam foram mantidas; as outras se baixam de novo com `python _coleta/scrape.py`), `_coleta/ai/`, `_coleta/conf2/`, `_coleta/referencias/` e os vídeos de verão antes da troca de fundo. Esses arquivos continuam no computador do Guilherme.

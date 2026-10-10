@@ -17,6 +17,7 @@ Nada foi publicado na internet e nada é definitivo: tudo aqui é demonstração
 | Instagram, identidade com cor | `instagram/verao/` | Pronta, já na paleta que o Bruno pediu. 2 vídeos. |
 | Vídeos de navegação no Instagram | `instagram/navegacao/` | Prontos, com beat feito por código. |
 | Anúncios para Google | `anuncios/` | Segunda versão, sóbria. A primeira foi rejeitada e está em `_v1-rejeitada/`. |
+| Grupo VIP do WhatsApp | `whatsapp/` | Pronta. Foto do grupo, descrição, 10 modelos de post e `ideias.md` com o que postar. |
 | Estudos de logo | `logo/` | Oito direções desenhadas. O Guilherme ainda não escolheu. |
 | Opções de letra para o site | `_coleta/letras/` | Nove opções. O Guilherme ainda não escolheu. |
 | Material bruto e scripts | `_coleta/` | Catálogo atual da loja (135 produtos, 211 fotos) e os scripts que geram tudo. |
@@ -98,5 +99,6 @@ E abrir http://localhost:4179 no navegador. Também funciona com duplo clique em
 - Vídeos de navegação: `instagram/navegacao/navegacao-verao.mp4` e `navegacao-inverno.mp4`
 - Anúncios: `anuncios/index.html`
 - Logos: `logo/logos.jpg`
+- Grupo do WhatsApp: `whatsapp/index.html`
 - Letras: `_coleta/letras/letras.jpg`
 - Proposta comercial: `site/proposta.html`
