@@ -141,3 +141,43 @@ Passagem de bastão. Quem assumir (Hermes) começa por aqui. Atualizado em 06/10
 ## Repositório no GitHub
 - https://github.com/guiiklug/bk-clothing (privado). Colaborador: Carlaocod. `COMECE-AQUI.md` é o resumo para quem entra.
 - Para o repositório não ficar pesado, ficam fora do Git (ver `.gitignore`): as 211 fotos originais do catálogo em `_coleta/img/` (só as 7 que os scripts usam foram mantidas; as outras se baixam de novo com `python _coleta/scrape.py`), `_coleta/ai/`, `_coleta/conf2/`, `_coleta/referencias/` e os vídeos de verão antes da troca de fundo. Esses arquivos continuam no computador do Guilherme.
+
+## Vídeos de demonstração (pastas `video/` e `videos/`, 08/10/2026)
+- Feitos com a skill `video-demonstracao`, igual à Perfect Hair: o script navega o site quadro a quadro, sem gravar a tela.
+- `videos/apresentacao-completa.mp4` (deitado, 144 s): site2 no computador, no celular e o Instagram de verão, com cartelas. `apresentacao-site.mp4` (75 s) e `apresentacao-instagram.mp4` (em pé, 72 s) são os recortes. Os trechos brutos ficam na mesma pasta.
+- `instagram/simulacao.html` é o perfil navegável para abrir ao vivo.
+- Para regravar quando o site mudar: `python video/roteiro.py` (ou `computador`, `celular`, `instagram` para um trecho só). `video/preparar.py` refaz logo, capas e fonte.
+- O botão do WhatsApp nunca é clicado no vídeo; o ponteiro chega nele e para.
+
+## Drop de bermudas de basquete (pasta `drop-jordan/`, 10/10/2026)
+- Feito com o Guilherme dentro da loja, a partir de 7 fotos de celular (em `orig/`), para mostrar ao Bruno como fica um drop novo. Três cores: preta, gelo e verde.
+- `pack/` fotos padronizadas, `cut/` recortes, `feed/` 6 posts, `stories/` 2, `anuncio/` 3 formatos no estilo sóbrio, `video/bermuda-preta.mp4` (5 s). `python drop-jordan/gerar.py` refaz as artes; sem preço.
+- Custo: cerca de 20 créditos (3 fotos, 1 quadro inicial e 1 vídeo). Foto de celular não tem endereço público, então sobe por `media_upload` e `curl -X PUT` com só o cabeçalho Content-Type (o urllib do Python dá 403).
+- Pedido dele nesta rodada: ser fiel aos detalhes da peça. O que funcionou foi descrever no prompt cada detalhe (faixas do cós, losango lateral, cordão, logo nos dois lados) e conferir lado a lado com a foto original (`pack/_conf.jpg`).
+- `criativo.py` grava `criativo/drop-bermudas.mp4`: vídeo de venda de 15 s por código, com corte no beat, sem crédito.
+- `letras.py` gera `letras/A..E.jpg`: cinco letras para os criativos, cada uma em título e em marca d'água. **O Bruno escolheu a C, Big Shoulders Display 900.** O drop já está nela; site2 e artes antigas continuam em Archivo larga até ele pedir a troca.
+
+## Drop de verão (pasta `drop-verao/`, 10/10/2026)
+- Também feito com o Guilherme na loja, a partir de 18 fotos (`orig/`). Pedido: organizar por hierarquia de peça, falar de verão, posts e vídeos para o Instagram, post do grupo VIP, gastando o mínimo de crédito.
+- Doze peças de quatro marcas, na ordem de importância que ele definiu: **Jordan** (bermuda em cinco cores, com mais espaço), **Nike** (bermuda cargo e short preto), **Brooksfield** (short de praia azul e verde-água), **Tommy Hilfiger** (short com listra lateral em três cores).
+- Custo: 8,25 créditos. Só as três peças fotografadas em cima da mesa (cargo e as bermudas creme e menta) passaram pelo Higgsfield (`pack/`). As seis com foto limpa foram recortadas direto da foto real com `python recortar.py`, que também endireita a peça e tira a etiqueta de tamanho. Preta, gelo e verde vêm do drop anterior. Ele aprovou as fotos.
+- **Duas versões de texto foram rejeitadas antes desta:** palavra solta gigante ("Praia", "Quadra", "Rua", depois "Basquete", "Listra") ele achou brega e grande demais. O que ficou, decidido por perguntas na loja, está no cabeçalho de `base.py`: frase normal na abertura de cada marca, peça grande com o nome pequeno no resto, bordão "Vista estilo, vista BK Clothing" na capa, "Seu verão começa na BK.", marcas escritas e com símbolo.
+- `marcas.py` e a pasta `marcas/` guardam os símbolos (Jordan da Wikipédia em inglês, Nike e Tommy do Wikimedia Commons, Brooksfield enviado por ele). São marcas de terceiros, usadas só ao lado das peças delas.
+- `python gerar.py` → `feed/` 18 posts (`grade.jpg` mostra o perfil), `stories/` 7, `whatsapp/` convite do grupo VIP e aviso do drop para postar dentro do grupo.
+- `python video.py` → `videos/`: `verao.mp4` (campanha, 24 s, só com as peças tratadas: as fotos de celular da loja ele mandou tirar), `jordan.mp4`, `nike.mp4`, `brooksfield.mp4`, `tommy.mp4` e `grupo-vip.mp4`. `python video.py --roteiro verao` mostra um quadro por cena antes de gravar. Tudo por código; o beat é `beat.wav` (`python beat.py 34`, cópia do de `instagram/navegacao/`).
+- `textos.md` tem legendas, ordem de postagem e as mensagens do WhatsApp.
+- Grupo VIP: a vantagem combinada é ver e reservar antes, sem promessa de desconto. Tamanhos e preços não entraram em nada.
+- Nos stories, as opções de "Qual você leva?" vão em letra grande entre dois fios. A caixa preta que imitava a figurinha de enquete ele não gostou.
+
+## Vídeos do grupo, das básicas e dos conjuntos (pasta `drop-pecas/`, 10/10/2026)
+- Pedido dele, ainda na loja: um vídeo para as pessoas entrarem no grupo VIP com as melhores peças, um apresentando as básicas e outro com os conjuntos e as bermudas. Tudo por código, Higgsfield só para tratar peça. Custo: **9,75 créditos**, só nas básicas.
+- As fotos vieram em sete zips em `peças/` (11 de básicas, 21 de conjuntos e bermudas) e estão em `drop-pecas/orig/` como `b01..b11` e `c01..c21` (`python preparar.py`).
+- `python recortar.py` recorta os conjuntos e as bermudas direto da foto (peça estendida no chão), em `cut/`. As básicas vieram como foto de modelo do fornecedor; a primeira versão do vídeo usou essas fotos e ele rejeitou ("não quero foto com modelo"). Agora o Higgsfield gera três imagens com várias cores cada (`pack/camisetas.png` com seis, `texturizadas.png` com quatro, `polos.png` com três polos e a camisa), em grade de células iguais, e o mesmo `recortar.py` separa cada célula num recorte. Pedir várias cores numa imagem só saiu por 9,75 créditos em vez de uns 38.
+- `python video.py` → `videos/grupo.mp4` (22 s, mistura as peças do drop de verão, do site e as novas), `basicas.mp4` (23 s) e `conjuntos-bermudas.mp4` (22 s). O começo é lento de propósito: ele achou que passava rápido demais para ler, então cada frase fica dois tempos parada e as primeiras peças ficam dois tempos antes de os cortes acelerarem. O catálogo de peças com nome, marca e fundo está no começo do script; `--roteiro` mostra um quadro por cena.
+- Marcas escritas só quando estão legíveis na peça ou na etiqueta: Nike, High, Thug Nine, Hurley, além das do site (Lacoste, Diesel). Dois conjuntos de jaqueta e short (`c01`, `c04`) e um par de shorts (`c09`) ficaram sem marca porque o patch não dá para ler. A marca das básicas ele não informou.
+- Ficaram de fora: `c03` (foto de uma pessoa na rua, sem saber de quem é) e `c11` (boné).
+
+## Pasta para postar (`sequencia-postagem/`, 10/10/2026)
+- `python organizar.py` apaga e refaz a pasta: nove dias, um por subpasta, com as artes e os vídeos copiados e numerados na ordem de postar (abertura, Jordan em dois dias, Nike, Brooksfield, Tommy, básicas, conjuntos e bermudas, grupo VIP). `COMO-POSTAR.txt` repete a ordem com a legenda de cada item.
+- São cópias, fora do git. Se uma arte ou um vídeo mudar, rodar o script de novo. A sequência e as legendas ficam na lista `SEQ` do script.
+- Básicas e conjuntos têm só o vídeo (Reels): não há post de feed nem story dessas duas linhas.

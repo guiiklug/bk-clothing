@@ -1,0 +1,38 @@
+{
+  "usuario": "bkclothiing",
+  "nome": "BK CLOTHING",
+  "avatar": "../video/logo.png",
+  "cor": "#dce8ef",
+  "bio": ["Moda masculina · Joinville", "Jaquetas, oversized, bermudas e acessórios", "Loja: Rua Santa Catarina, 2348 · Floresta", "Enviamos para todo o Brasil"],
+  "link": "bkclothing.com.br/links",
+  "numeros": [["444", "posts"], ["1.428", "seguidores"], ["1.226", "seguindo"]],
+  "destaques": [
+    {"capa": "../video/capas/novo.jpg", "nome": "Novidades", "inicio": 0},
+    {"capa": "../video/capas/tamanhos.jpg", "nome": "Tamanhos", "inicio": 2},
+    {"capa": "../video/capas/quem-usa.jpg", "nome": "Quem usa", "inicio": 3},
+    {"capa": "../video/capas/loja.jpg", "nome": "Loja", "inicio": 3},
+    {"capa": "../video/capas/vip.jpg", "nome": "Grupo VIP", "inicio": 0}
+  ],
+  "posts": [
+    {"imagens": ["verao/feed/01-verao-1.jpg"], "legenda": "Verão 27 chegou."},
+    {"imagens": ["verao/feed/02-verao-2.jpg"], "legenda": "Verão 27 chegou."},
+    {"imagens": ["verao/feed/03-verao-3.jpg"], "legenda": "Verão 27 chegou."},
+    {"imagens": ["verao/feed/04-video-tee.jpg"], "legenda": "Camiseta preta. Chama no direct."},
+    {"imagens": ["verao/feed/05-detalhe-tee.jpg"], "legenda": "De perto."},
+    {"imagens": ["verao/feed/06-nova.jpg"], "legenda": "Nova coleção na loja e no site."},
+    {"imagens": ["verao/feed/07-cargo.jpg", "verao/feed/08-cargo-off.jpg", "verao/feed/09-jeans.jpg"], "legenda": "Bermudas: cargo, off-white e jeans. Chama no direct."},
+    {"imagens": ["verao/feed/08-cargo-off.jpg"], "legenda": "Cargo off-white."},
+    {"imagens": ["verao/feed/09-jeans.jpg"], "legenda": "Jeans."},
+    {"imagens": ["verao/feed/10-no-corpo-1.jpg"], "legenda": "Polo oversized."},
+    {"imagens": ["verao/feed/11-polo.jpg", "verao/feed/10-no-corpo-1.jpg", "verao/feed/12-no-corpo-2.jpg"], "legenda": "Polo oversized, na peça e no corpo."},
+    {"imagens": ["verao/feed/12-no-corpo-2.jpg"], "legenda": "Polo oversized."},
+    {"imagens": ["verao/feed/13-regata.jpg"], "legenda": "Regata."},
+    {"imagens": ["verao/feed/14-video-conjunto.jpg"], "legenda": "Conjunto."},
+    {"imagens": ["verao/feed/15-bag.jpg"], "legenda": "Bag."},
+    {"imagens": ["verao/feed/16-pochete.jpg"], "legenda": "Pochete."},
+    {"imagens": ["verao/feed/17-logo.jpg"], "legenda": "Vista estilo, vista BK Clothing."},
+    {"imagens": ["verao/feed/18-conjunto.jpg"], "legenda": "Conjunto branco."}
+  ],
+  "stories": ["verao/stories/1-chegou.jpg", "verao/stories/2-enquete.jpg", "verao/stories/3-ainda-tem.jpg", "verao/stories/4-quem-usa.jpg"],
+  "aviso": "Demonstração criada a partir do Instagram público da BK Clothing"
+}

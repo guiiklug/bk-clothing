@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BK CLOTHING | Instagram (simulação)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:#dce8ef;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#f3f5f7;-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}
+.fone{position:relative;width:100%;max-width:430px;height:100%;background:#0b0f14;overflow:hidden}
+@media (min-width:520px){body{align-items:center}.fone{height:min(calc(100% - 48px),880px);border-radius:34px;box-shadow:0 0 0 12px #111,0 30px 60px rgba(0,0,0,.45)}}
+.tela{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;background:#0b0f14}
+.tela::-webkit-scrollbar,.car::-webkit-scrollbar{display:none}
+.av{flex:none;border-radius:50%;background:#fff center/cover}
+.topo{display:flex;align-items:center;gap:14px;padding:16px 16px 10px;font-weight:700;font-size:16px}
+.topo span{flex:1}
+.cab{display:flex;gap:20px;padding:8px 16px 4px;align-items:center}
+.cab .av{width:82px;height:82px}
+.nome{font-weight:600;font-size:13.5px;line-height:1.25;margin-bottom:9px}
+.nums{display:flex;gap:22px}
+.nums b{display:block;font-size:15px}
+.nums small{font-size:12px;color:#e3e6ea}
+.bio{padding:8px 16px 2px;font-size:13px;line-height:1.4}
+.bio a{color:#8fb4ff;display:block}
+.bts{display:flex;gap:6px;padding:11px 16px}
+.bts div{flex:1;background:#252b33;border-radius:8px;text-align:center;padding:8px 0;font-weight:600;font-size:13px}
+.bts div:last-child{flex:none;width:34px}
+.dest{display:flex;gap:12px;padding:6px 16px 12px;overflow-x:auto;scrollbar-width:none}
+.dest button{flex:none;width:64px;text-align:center;font-size:11px}
+.dest i{display:block;width:58px;height:58px;border-radius:50%;margin:0 auto 6px;background-size:123px auto;background-position:center;box-shadow:0 0 0 2px #0b0f14,0 0 0 3.5px #5a6470}
+.abas{display:flex;border-bottom:1px solid #1d232b}
+.abas div{flex:1;text-align:center;padding:10px 0;font-size:16px;color:#7d8794}
+.abas div:first-child{color:#fff;border-bottom:2px solid #fff}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.grade button{position:relative;aspect-ratio:3/4;background-size:cover;background-position:center}
+.grade button[data-n]::after{content:'';position:absolute;right:7px;top:7px;width:13px;height:13px;border:2px solid #fff;border-radius:3px;box-shadow:3px -3px 0 -1px #0b0f14,3px -3px 0 1px #fff}
+.aviso{padding:12px 16px 16px;font-size:10.5px;color:#7d8794;text-align:center}
+.barra{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:14px;padding:13px 14px;background:#0b0f14;font-weight:700;font-size:16px;border-bottom:1px solid #1d232b}
+.barra button{font-size:26px;line-height:.7;padding:4px 8px 8px 2px}
+.autor{display:flex;align-items:center;gap:10px;padding:10px 14px;font-weight:600;font-size:13px}
+.autor .av{width:32px;height:32px}
+.palco{position:relative}
+.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.car img{flex:none;width:100%;scroll-snap-align:start;display:block}
+.conta{position:absolute;right:10px;top:10px;background:rgba(0,0,0,.6);border-radius:12px;font-size:11.5px;font-weight:600;padding:4px 9px}
+.seta{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.85);color:#111;font-size:18px;line-height:1}
+.seta.e{left:8px}.seta.d{right:8px}
+.pontos{display:flex;justify-content:center;gap:4px;padding:10px 0 2px;min-height:18px}
+.pontos i{width:6px;height:6px;border-radius:50%;background:#4a525c}
+.pontos i.on{background:#4a9cf5}
+.acoes{display:flex;gap:16px;padding:8px 14px 4px}
+.acoes svg{width:25px;height:25px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.leg{padding:6px 14px 30px;font-size:13.5px;line-height:1.42}
+#story{background:#000;overflow:hidden}
+#story img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.barras{position:absolute;z-index:2;top:9px;left:8px;right:8px;display:flex;gap:4px}
+.barras div{flex:1;height:2.5px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.barras i{display:block;height:100%;width:0;background:#fff}
+.st-cab{position:absolute;z-index:2;top:20px;left:12px;right:12px;display:flex;align-items:center;gap:9px;font-weight:600;font-size:13px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.st-cab .av{width:32px;height:32px}
+.st-cab span{flex:1}
+.st-cab button{font-size:24px;line-height:1;padding:4px 6px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.zona{position:absolute;z-index:1;top:70px;bottom:0}
+.zona.e{left:0;width:32%}.zona.d{right:0;width:68%}
+</style>
+</head>
+<body>
+<div class="fone">
+  <div class="tela" id="perfil">
+    <div class="topo">‹ <span class="usuario"></span> ···</div>
+    <div class="cab"><i class="av"></i><div><div class="nome"></div><div class="nums" id="nums"></div></div></div>
+    <div class="bio" id="bio"></div>
+    <div class="bts"><div>Seguindo</div><div>Mensagem</div><div>+</div></div>
+    <div class="dest" id="dest"></div>
+    <div class="abas"><div>▦</div><div>▷</div><div>⟲</div><div>◫</div></div>
+    <div class="grade" id="grade"></div>
+    <div class="aviso" id="aviso"></div>
+  </div>
+  <div class="tela" id="post" hidden>
+    <div class="barra"><button id="voltar" aria-label="Voltar">‹</button>Publicações</div>
+    <div class="autor"><i class="av"></i><span class="usuario"></span></div>
+    <div class="palco"><div class="car" id="car"></div><div class="conta" id="conta"></div>
+      <button class="seta e" id="ant" aria-label="Anterior">‹</button><button class="seta d" id="prox" aria-label="Próxima">›</button></div>
+    <div class="pontos" id="pontos"></div>
+    <div class="acoes"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M20.5 11.6a8.3 8.3 0 0 1-12.3 7.3L3.5 20.5l1.6-4.5A8.3 8.3 0 1 1 20.5 11.6z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.8 18-3.7-7.5L3 9.8 21 3z"/></svg></div>
+    <p class="leg" id="leg"></p>
+  </div>
+  <div class="tela" id="story" hidden>
+    <div class="barras" id="barras"></div>
+    <div class="st-cab"><i class="av"></i><span class="usuario"></span><button id="fechar" aria-label="Fechar">✕</button></div>
+    <img id="st-img" alt="">
+    <button class="zona e" id="st-ant" aria-label="Story anterior"></button><button class="zona d" id="st-prox" aria-label="Próximo story"></button>
+  </div>
+</div>
+<script>
+var D = {"usuario": "bkclothiing", "nome": "BK CLOTHING", "avatar": "../video/logo.png", "cor": "#dce8ef", "bio": ["Moda masculina · Joinville", "Jaquetas, oversized, bermudas e acessórios", "Loja: Rua Santa Catarina, 2348 · Floresta", "Enviamos para todo o Brasil"], "link": "bkclothing.com.br/links", "numeros": [["444", "posts"], ["1.428", "seguidores"], ["1.226", "seguindo"]], "destaques": [{"capa": "../video/capas/novo.jpg", "nome": "Novidades", "inicio": 0}, {"capa": "../video/capas/tamanhos.jpg", "nome": "Tamanhos", "inicio": 2}, {"capa": "../video/capas/quem-usa.jpg", "nome": "Quem usa", "inicio": 3}, {"capa": "../video/capas/loja.jpg", "nome": "Loja", "inicio": 3}, {"capa": "../video/capas/vip.jpg", "nome": "Grupo VIP", "inicio": 0}], "posts": [{"imagens": ["verao/feed/01-verao-1.jpg"], "legenda": "Verão 27 chegou."}, {"imagens": ["verao/feed/02-verao-2.jpg"], "legenda": "Verão 27 chegou."}, {"imagens": ["verao/feed/03-verao-3.jpg"], "legenda": "Verão 27 chegou."}, {"imagens": ["verao/feed/04-video-tee.jpg"], "legenda": "Camiseta preta. Chama no direct."}, {"imagens": ["verao/feed/05-detalhe-tee.jpg"], "legenda": "De perto."}, {"imagens": ["verao/feed/06-nova.jpg"], "legenda": "Nova coleção na loja e no site."}, {"imagens": ["verao/feed/07-cargo.jpg", "verao/feed/08-cargo-off.jpg", "verao/feed/09-jeans.jpg"], "legenda": "Bermudas: cargo, off-white e jeans. Chama no direct."}, {"imagens": ["verao/feed/08-cargo-off.jpg"], "legenda": "Cargo off-white."}, {"imagens": ["verao/feed/09-jeans.jpg"], "legenda": "Jeans."}, {"imagens": ["verao/feed/10-no-corpo-1.jpg"], "legenda": "Polo oversized."}, {"imagens": ["verao/feed/11-polo.jpg", "verao/feed/10-no-corpo-1.jpg", "verao/feed/12-no-corpo-2.jpg"], "legenda": "Polo oversized, na peça e no corpo."}, {"imagens": ["verao/feed/12-no-corpo-2.jpg"], "legenda": "Polo oversized."}, {"imagens": ["verao/feed/13-regata.jpg"], "legenda": "Regata."}, {"imagens": ["verao/feed/14-video-conjunto.jpg"], "legenda": "Conjunto."}, {"imagens": ["verao/feed/15-bag.jpg"], "legenda": "Bag."}, {"imagens": ["verao/feed/16-pochete.jpg"], "legenda": "Pochete."}, {"imagens": ["verao/feed/17-logo.jpg"], "legenda": "Vista estilo, vista BK Clothing."}, {"imagens": ["verao/feed/18-conjunto.jpg"], "legenda": "Conjunto branco."}], "stories": ["verao/stories/1-chegou.jpg", "verao/stories/2-enquete.jpg", "verao/stories/3-ainda-tem.jpg", "verao/stories/4-quem-usa.jpg"], "aviso": "Demonstração criada a partir do Instagram público da BK Clothing"};
+var el = function (id) { return document.getElementById(id); };
+[].forEach.call(document.querySelectorAll('.usuario'), function (e) { e.textContent = D.usuario; });
+[].forEach.call(document.querySelectorAll('.av'), function (e) { e.style.backgroundImage = 'url("' + D.avatar + '")'; });
+document.querySelector('.nome').textContent = D.nome;
+el('nums').innerHTML = D.numeros.map(function (n) { return '<div><b>' + n[0] + '</b><small>' + n[1] + '</small></div>'; }).join('');
+el('bio').innerHTML = D.bio.join('<br>') + (D.link ? '<a>' + D.link + '</a>' : '');
+el('aviso').textContent = D.aviso || '';
+el('dest').innerHTML = D.destaques.map(function (d, i) { return '<button data-i="' + i + '"><i style="background-image:url(' + d.capa + ')"></i>' + d.nome + '</button>'; }).join('');
+el('grade').innerHTML = D.posts.map(function (p, i) { return '<button data-i="' + i + '"' + (p.imagens.length > 1 ? ' data-n' : '') + ' style="background-image:url(' + p.imagens[0] + ')" aria-label="Publicação ' + (i + 1) + '"></button>'; }).join('');
+
+var car = el('car'), total = 1;
+function marcar() {
+  var n = Math.round(car.scrollLeft / car.clientWidth);
+  el('conta').textContent = (n + 1) + '/' + total;
+  [].forEach.call(el('pontos').children, function (p, i) { p.className = i === n ? 'on' : ''; });
+  el('ant').hidden = total < 2 || n === 0; el('prox').hidden = total < 2 || n === total - 1;
+}
+car.addEventListener('scroll', marcar);
+var sim = window.sim = {
+  manual: location.search.indexOf('manual') > -1, atual: 0, relogio: null,
+  abrirPost: function (i) {
+    var p = D.posts[i]; total = p.imagens.length;
+    car.innerHTML = p.imagens.map(function (s) { return '<img src="' + s + '" alt="">'; }).join('');
+    el('pontos').innerHTML = total > 1 ? p.imagens.map(function () { return '<i></i>'; }).join('') : '';
+    el('conta').hidden = total < 2;
+    el('leg').innerHTML = '<b>' + D.usuario + '</b> ' + (p.legenda || '');
+    el('post').hidden = false; el('post').scrollTop = 0; car.scrollLeft = 0; marcar();
+  },
+  fecharPost: function () { el('post').hidden = true; },
+  slide: function (delta) { car.scrollTo({ left: car.scrollLeft + delta * car.clientWidth, behavior: 'smooth' }); },
+  abrirStory: function (i) {
+    el('barras').innerHTML = D.stories.map(function () { return '<div><i></i></div>'; }).join('');
+    el('story').hidden = false; sim.irStory(i);
+  },
+  irStory: function (i) {
+    if (i < 0) i = 0;
+    if (i >= D.stories.length) return sim.fecharStory();
+    sim.atual = i; el('st-img').src = D.stories[i]; sim.progresso(0);
+    clearInterval(sim.relogio);
+    if (!sim.manual) { var t0 = Date.now(); sim.relogio = setInterval(function () { var p = (Date.now() - t0) / 4500; sim.progresso(Math.min(1, p)); if (p >= 1) sim.irStory(i + 1); }, 50); }
+  },
+  progresso: function (p) { [].forEach.call(el('barras').children, function (b, k) { b.firstChild.style.width = (k < sim.atual ? 100 : k === sim.atual ? p * 100 : 0) + '%'; }); },
+  fecharStory: function () { clearInterval(sim.relogio); el('story').hidden = true; }
+};
+el('grade').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) sim.abrirPost(+b.dataset.i); });
+el('dest').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b && D.stories.length) sim.abrirStory(D.destaques[+b.dataset.i].inicio || 0); });
+el('voltar').onclick = sim.fecharPost; el('fechar').onclick = sim.fecharStory;
+el('ant').onclick = function () { sim.slide(-1); }; el('prox').onclick = function () { sim.slide(1); };
+el('st-ant').onclick = function () { sim.irStory(sim.atual - 1); }; el('st-prox').onclick = function () { sim.irStory(sim.atual + 1); };
+</script>
+</body>
+</html>

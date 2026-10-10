@@ -1,0 +1,33 @@
+{
+  "marca": "BK Clothing",
+  "logo": "logo.png",
+  "logo_redondo": true,
+  "cor": "#dce8ef",
+  "fonte": "ArchivoBlack-Regular.ttf",
+  "frase": "Vista estilo, vista BK Clothing.",
+  "rodape": "Demonstração criada a partir do site e do Instagram públicos da BK Clothing",
+  "pasta": "../videos",
+  "saidas": {
+    "apresentacao-site.mp4": [
+      {"olho": "BK Clothing · demonstração", "titulo": "O site", "sub": "No computador e no celular."},
+      "../videos/site-computador.mp4",
+      {"titulo": "No celular"},
+      "../videos/site-celular.mp4",
+      "fim"
+    ],
+    "apresentacao-instagram.mp4": [
+      {"olho": "BK Clothing · demonstração", "titulo": "O Instagram", "sub": "Perfil, destaques e publicações."},
+      "../videos/instagram-celular.mp4",
+      "fim"
+    ],
+    "apresentacao-completa.mp4": [
+      {"olho": "BK Clothing · demonstração", "titulo": "O site", "sub": "No computador e no celular."},
+      "../videos/site-computador.mp4",
+      {"titulo": "No celular"},
+      "../videos/site-celular.mp4",
+      {"olho": "BK Clothing · demonstração", "titulo": "O Instagram", "sub": "Perfil, destaques e publicações."},
+      "../videos/instagram-celular.mp4",
+      "fim"
+    ]
+  }
+}

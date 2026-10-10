@@ -82,8 +82,8 @@ python -m http.server 4179 --directory site2
 E abrir http://localhost:4179 no navegador. Também funciona com duplo clique em `site2/index.html`.
 
 ### Rotina de quem divide o projeto
-- **Antes de começar:** pedir ao Claude para puxar as atualizações do GitHub.
-- **Ao terminar:** pedir para salvar e enviar.
+- **Antes de começar:** pedir ao Claude para puxar as atualizações do GitHub e ler o `RELATORIO.md`, que conta o que o outro fez. A entrada mais nova fica em cima.
+- **Ao terminar:** o Claude atualiza o `RELATORIO.md` e envia ao GitHub sozinho, por regra do `CLAUDE.md`. Se ele não fizer, pedir para salvar e enviar.
 - **Combinar quem mexe em quê.** Texto e código o Git junta sozinho; imagem e vídeo não, e a versão de um substitui a do outro.
 
 ## O que não vem com o repositório
@@ -100,3 +100,6 @@ E abrir http://localhost:4179 no navegador. Também funciona com duplo clique em
 - Logos: `logo/logos.jpg`
 - Letras: `_coleta/letras/letras.jpg`
 - Proposta comercial: `site/proposta.html`
+- Drop de verão (posts, stories, vídeos): `drop-verao/grade.jpg` mostra o feed; o resto em `drop-verao/feed`, `stories` e `videos`
+- Vídeos do grupo VIP, das básicas e dos conjuntos: `drop-pecas/videos`
+- Tudo na ordem de postar: rodar `python organizar.py` e abrir `sequencia-postagem/`

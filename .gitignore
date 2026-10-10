@@ -25,5 +25,17 @@ _coleta/img/*
 _coleta/ai/
 _coleta/conf2/
 _coleta/referencias/
+# copia numerada do que vai ser postado: refazer com  python organizar.py
+sequencia-postagem/
+# fotos brutas da loja e do fornecedor (tem gente aparecendo; o repositorio e publico). Os recortes prontos ficam em cut/ e pack/
+peças/
+drop-*/orig/
+# sobras de gravacao de video: quadros, pagina temporaria, rascunho de cenas e copia de trabalho do giro
+**/_q-*/
+**/_video-*.html
+**/_roteiro-*.jpg
+**/_giro.mp4
+# pasta de rascunho da sessao que fez o video do aplicativo
+app/video/apresentacao/_trabalho/
 # videos originais antes da troca de fundo
 instagram/verao/raw/*-cor-antiga.mp4
